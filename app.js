@@ -380,11 +380,9 @@ function initThemeToggle() {
     themeToggle.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        console.log('Theme toggle clicked');
 
         const currentTheme = document.documentElement.getAttribute('data-color-scheme') || 'light';
         const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        console.log('Switching from', currentTheme, 'to', newTheme);
         setTheme(newTheme);
         localStorage.setItem('preferredTheme', newTheme);
     });
@@ -393,7 +391,6 @@ function initThemeToggle() {
         document.documentElement.setAttribute('data-color-scheme', theme);
         themeIcon.textContent = theme === 'light' ? '🌙' : '☀️';
         themeToggle.setAttribute('aria-label', `Switch to ${theme === 'light' ? 'dark' : 'light'} theme`);
-        console.log('Theme set to:', theme);
     }
 }
 
@@ -484,9 +481,12 @@ function updatePageContent() {
     contactItems[3].textContent = '⏰ ' + t.contact.info.response + ':';
 
     // Footer
-    document.querySelector('.footer__section h4:first-child').textContent = t.footer.quickLinks;
-    document.querySelector('.footer__section h4:nth-child(2)').textContent = t.footer.certifications;
-    document.querySelector('.footer__section h4:last-child').textContent = t.footer.legal;
+    const footerSections = document.querySelectorAll('.footer__section h4');
+    if (footerSections.length >= 3) {
+        footerSections[0].textContent = t.footer.quickLinks;
+        footerSections[1].textContent = t.footer.certifications;
+        footerSections[2].textContent = t.footer.legal;
+    }
 
     // Update form placeholder
     document.querySelector('#message').setAttribute('placeholder', t.contact.form.message + '...');
@@ -857,7 +857,6 @@ const animationStyles = `
 }
 
 .header--scrolled {
-    background: rgba(var(--color-surface-rgb, 255, 255, 255), 0.95);
     backdrop-filter: blur(10px);
 }
 `;

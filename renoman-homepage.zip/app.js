@@ -421,8 +421,7 @@ const animationStyles = `
     transform: translateY(0) !important;
 }
 
-.header--scrolled {
-    background: rgba(var(--color-surface-rgb, 255, 255, 255), 0.95);
+.header--scrolled {    
     backdrop-filter: blur(10px);
 }
 `;
