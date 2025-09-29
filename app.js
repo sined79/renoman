@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScrolling();
     initScrollEffects();
     initProjectSlideshow();
+    initPolicyOffcanvas();
 });
 
 // Navigation functionality
@@ -148,7 +149,24 @@ const translations = {
         footer: {
             quickLinks: "Quick Links",
             certifications: "Certifications",
-            legal: "Legal"
+            legal: "Legal",
+            privacyPolicy: "Privacy Policy",
+            termsConditions: "Terms & Conditions",
+        },
+        cookies: {
+            bannerDescription: "We use cookies on our site to enhance your user experience, provide personalized content, and analyze our traffic. <a href=\"https://your-website.com/cookie-policy\" target=\"_blank\">Cookie Policy.</a>",
+            acceptAllButtonText: "Accept all",
+            acceptAllButtonAccessibleLabel: "Accept all cookies",
+            rejectNonEssentialButtonText: "Reject non-essential",
+            rejectNonEssentialButtonAccessibleLabel: "Reject non-essential",
+            preferencesButtonText: "Preferences",
+            preferencesButtonAccessibleLabel: "Toggle preferences",
+            preferencesTitle: "Customize your cookie preferences",
+            preferencesDescription: "We respect your right to privacy. You can choose not to allow some types of cookies. Your cookie preferences will apply across our website.",
+            creditLinkText: "Get this banner for free",
+            creditLinkAccessibleLabel: "Get this banner for free",
+            necessaryCookieName: "Necessary",
+            necessaryCookieDescription: "These cookies are necessary for the website to function properly and cannot be switched off. They help with things like logging in and setting your privacy preferences."
         }
     },
     FR: {
@@ -237,7 +255,24 @@ const translations = {
         footer: {
             quickLinks: "Liens Rapides",
             certifications: "Certifications",
-            legal: "Mentions Légales"
+            legal: "Mentions Légales",
+            privacyPolicy: "Politique de Confidentialité",
+            termsConditions: "Conditions Générales",
+        },
+        cookies: {
+            bannerDescription: "Nous utilisons des cookies sur notre site pour améliorer votre expérience utilisateur, fournir du contenu personnalisé et analyser notre trafic. <a href=\"https://your-website.com/cookie-policy\" target=\"_blank\">Politique de cookies.</a>",
+            acceptAllButtonText: "Tout accepter",
+            acceptAllButtonAccessibleLabel: "Accepter tous les cookies",
+            rejectNonEssentialButtonText: "Refuser les non-essentiels",
+            rejectNonEssentialButtonAccessibleLabel: "Refuser les cookies non-essentiels",
+            preferencesButtonText: "Préférences",
+            preferencesButtonAccessibleLabel: "Basculer les préférences",
+            preferencesTitle: "Personnalisez vos préférences de cookies",
+            preferencesDescription: "Nous respectons votre droit à la vie privée. Vous pouvez choisir de ne pas autoriser certains types de cookies. Vos préférences de cookies s'appliqueront sur l'ensemble de notre site web.",
+            creditLinkText: "Obtenez cette bannière gratuitement",
+            creditLinkAccessibleLabel: "Obtenez cette bannière gratuitement",
+            necessaryCookieName: "Nécessaires",
+            necessaryCookieDescription: "Ces cookies sont nécessaires au bon fonctionnement du site web et ne peuvent pas être désactivés. Ils aident à des choses comme la connexion et la définition de vos préférences de confidentialité."
         }
     },
     NL: {
@@ -326,13 +361,30 @@ const translations = {
         footer: {
             quickLinks: "Snelle Links",
             certifications: "Certificeringen",
-            legal: "Juridische Vermeldingen"
+            legal: "Juridische Vermeldingen",
+            privacyPolicy: "Privacybeleid",
+            termsConditions: "Algemene Voorwaarden"
+        },
+        cookies: {
+            bannerDescription: "We gebruiken cookies op onze site om uw gebruikerservaring te verbeteren, gepersonaliseerde inhoud te bieden en ons verkeer te analyseren. <a href=\"https://your-website.com/cookie-policy\" target=\"_blank\">Cookiebeleid.</a>",
+            acceptAllButtonText: "Alles accepteren",
+            acceptAllButtonAccessibleLabel: "Alle cookies accepteren",
+            rejectNonEssentialButtonText: "Niet-essentiële weigeren",
+            rejectNonEssentialButtonAccessibleLabel: "Niet-essentiële cookies weigeren",
+            preferencesButtonText: "Voorkeuren",
+            preferencesButtonAccessibleLabel: "Voorkeuren schakelen",
+            preferencesTitle: "Pas uw cookievoorkeuren aan",
+            preferencesDescription: "We respecteren uw recht op privacy. U kunt ervoor kiezen bepaalde soorten cookies niet toe te staan. Uw cookievoorkeuren gelden voor onze gehele website.",
+            creditLinkText: "Krijg deze banner gratis",
+            creditLinkAccessibleLabel: "Krijg deze banner gratis",
+            necessaryCookieName: "Noodzakelijk",
+            necessaryCookieDescription: "Deze cookies zijn noodzakelijk voor de goede werking van de website en kunnen niet worden uitgeschakeld. Ze helpen bij zaken zoals inloggen en het instellen van uw privacyvoorkeuren."
         }
     }
 };
 
 // Current language
-let currentLang = 'EN';
+window.currentLang = 'EN';
 
 // Language picker functionality
 function initLanguagePicker() {
@@ -358,6 +410,7 @@ function initLanguagePicker() {
 
     // Load saved language preference
     const savedLang = localStorage.getItem('preferredLanguage') || 'EN';
+    window.currentLang = savedLang;
     switchLanguage(savedLang);
 
     // Set active button
@@ -366,6 +419,9 @@ function initLanguagePicker() {
         langButtons.forEach(btn => btn.classList.remove('active'));
         savedButton.classList.add('active');
     }
+
+    // Update cookie banner with initial language
+    updateCookieBannerLanguage();
 }
 
 // Theme toggle functionality
@@ -396,8 +452,55 @@ function initThemeToggle() {
 
 // Switch language function
 function switchLanguage(lang) {
-    currentLang = lang;
+    window.currentLang = lang;
     updatePageContent();
+    updateCookieBannerLanguage();
+}
+
+// Update cookie banner language
+function updateCookieBannerLanguage() {
+    const t = translations[currentLang];
+    if (window.silktideCookieBannerManager && t.cookies) {
+        window.silktideCookieBannerManager.updateCookieBannerConfig({
+            background: {
+                showBackground: true
+            },
+            cookieIcon: {
+                position: "bottomRight"
+            },
+            cookieTypes: [
+                {
+                    id: "necessary",
+                    name: t.cookies.necessaryCookieName,
+                    description: t.cookies.necessaryCookieDescription,
+                    required: true,
+                    onAccept: function() {
+                        console.log('Add logic for the required Necessary here');
+                    }
+                }
+            ],
+            text: {
+                banner: {
+                    description: t.cookies.bannerDescription,
+                    acceptAllButtonText: t.cookies.acceptAllButtonText,
+                    acceptAllButtonAccessibleLabel: t.cookies.acceptAllButtonAccessibleLabel,
+                    rejectNonEssentialButtonText: t.cookies.rejectNonEssentialButtonText,
+                    rejectNonEssentialButtonAccessibleLabel: t.cookies.rejectNonEssentialButtonAccessibleLabel,
+                    preferencesButtonText: t.cookies.preferencesButtonText,
+                    preferencesButtonAccessibleLabel: t.cookies.preferencesButtonAccessibleLabel
+                },
+                preferences: {
+                    title: t.cookies.preferencesTitle,
+                    description: t.cookies.preferencesDescription,
+                    creditLinkText: t.cookies.creditLinkText,
+                    creditLinkAccessibleLabel: t.cookies.creditLinkAccessibleLabel
+                }
+            },
+            position: {
+                banner: "bottomCenter"
+            }
+        });
+    }
 }
 
 // Update all page content based on current language
@@ -488,6 +591,17 @@ function updatePageContent() {
         footerSections[2].textContent = t.footer.legal;
     }
 
+    // Footer links
+    const footerLinks = document.querySelectorAll('.footer__links a[data-policy]');
+    footerLinks.forEach(link => {
+        const policy = link.getAttribute('data-policy');
+        if (policy === 'privacy') {
+            link.textContent = t.footer.privacyPolicy;
+        } else if (policy === 'terms') {
+            link.textContent = t.footer.termsConditions;
+        }
+    });
+
     // Update form placeholder
     document.querySelector('#message').setAttribute('placeholder', t.contact.form.message + '...');
 
@@ -508,8 +622,7 @@ function initContactForm() {
     
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        
-        // Get form data
+
         const formData = new FormData(contactForm);
         const data = {
             name: formData.get('name'),
@@ -518,38 +631,48 @@ function initContactForm() {
             message: formData.get('message')
         };
         
-        // Validate form
         if (!validateContactForm(data)) {
             return;
         }
         
-        // Show loading state
         contactForm.classList.add('submitting');
         const submitButton = contactForm.querySelector('button[type="submit"]');
         const originalText = submitButton.textContent;
         submitButton.textContent = 'Sending...';
         
-        // Simulate form submission (replace with actual API call)
-        setTimeout(() => {
+        // Préparer un envoi POST vers Formsubmit avec fetch
+        fetch('https://formsubmit.co/foguemaurice@gmail.com', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'  // On demande une réponse JSON
+            }
+        })
+        .then(response => {
             contactForm.classList.remove('submitting');
             submitButton.textContent = originalText;
-            
-            // Show success message
-            showSuccessMessage();
-            
-            // Reset form
-            contactForm.reset();
-
-            // Show notification
-            const successNotifications = {
-                EN: 'Message sent successfully! We will respond within 24 hours.',
-                FR: 'Message envoyé avec succès ! Nous répondrons dans les 24 heures.',
-                NL: 'Bericht succesvol verzonden! We reageren binnen 24 uur.'
-            };
-            showNotification(successNotifications[currentLang]);
-        }, 2000);
+            if (response.ok) {
+                showSuccessMessage();
+                contactForm.reset();
+                const successNotifications = {
+                    EN: 'Message sent successfully! We will respond within 24 hours.',
+                    FR: 'Message envoyé avec succès ! Nous répondrons dans les 24 heures.',
+                    NL: 'Bericht succesvol verzonden! We reageren binnen 24 uur.'
+                };
+                showNotification(successNotifications[currentLang]);
+            } else {
+                throw new Error('Network response was not ok.');
+            }
+        })
+        .catch(error => {
+            contactForm.classList.remove('submitting');
+            submitButton.textContent = originalText;
+            showNotification('An error occurred, please try again later.');
+            console.error('Form submission error:', error);
+        });
     });
 }
+
 
 // Form validation
 function validateContactForm(data) {
@@ -1024,9 +1147,9 @@ function openSlideshow(projectName) {
 // Get all images for a project
 function getProjectImages(projectName) {
     const imageMap = {
-        'vilvoorde': ['Sungrow-1.jpg'],
-        'go4zero': ['GO4ZERO-1.jpg'],
-        'climatesolution': ['Climatesolutions-1.jpg']
+        'vilvoorde': ['projects/sungrow/sungrow-1.jpg'],
+        'go4zero': ['projects/go4zero/go4zero-1.jpg'],
+        'climatesolution': ['projects/climate-solutions/climate-solutions-1.jpg']
     };
 
     return imageMap[projectName] || ['photo-placeholder.svg'];
@@ -1072,3 +1195,94 @@ window.addEventListener('load', function() {
         });
     }, 500);
 });
+
+// Policy Offcanvas functionality
+function initPolicyOffcanvas() {
+    const policyLinks = document.querySelectorAll('[data-policy]');
+    const offcanvas = document.getElementById('policyOffcanvas');
+    const offcanvasClose = document.getElementById('offcanvasClose');
+    const offcanvasOverlay = offcanvas.querySelector('.offcanvas__overlay');
+
+    // Add click listeners to policy links
+    policyLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const policy = this.getAttribute('data-policy');
+            openPolicyOffcanvas(policy);
+        });
+    });
+
+    // Close offcanvas when clicking close button
+    if (offcanvasClose) {
+        offcanvasClose.addEventListener('click', closePolicyOffcanvas);
+    }
+
+    // Close offcanvas when clicking overlay
+    if (offcanvasOverlay) {
+        offcanvasOverlay.addEventListener('click', closePolicyOffcanvas);
+    }
+
+    // Close offcanvas on ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && offcanvas.classList.contains('open')) {
+            closePolicyOffcanvas();
+        }
+    });
+}
+
+function openPolicyOffcanvas(policy) {
+    const offcanvas = document.getElementById('policyOffcanvas');
+    const policyTitle = document.getElementById('policyTitle');
+    const policyContent = document.getElementById('policyContent');
+
+    // Get current language
+    const currentLang = window.currentLang || 'EN';
+
+    // Set title based on policy and language
+    const titles = {
+        privacy: {
+            EN: 'Privacy Policy',
+            FR: 'Politique de Confidentialité',
+            NL: 'Privacybeleid'
+        },
+        terms: {
+            EN: 'Terms & Conditions',
+            FR: 'Conditions Générales',
+            NL: 'Algemene Voorwaarden'
+        }
+    };
+
+    policyTitle.textContent = titles[policy][currentLang];
+
+    // Load content
+    const contentId = `${policy}-${currentLang.toLowerCase()}`;
+    const contentElement = document.getElementById(contentId);
+
+    if (contentElement) {
+        policyContent.innerHTML = contentElement.innerHTML;
+    } else {
+        policyContent.innerHTML = '<p>Content not available for the selected language.</p>';
+    }
+
+    // Show offcanvas
+    offcanvas.style.display = 'block';
+    // Force reflow
+    offcanvas.offsetHeight;
+    offcanvas.classList.add('open');
+
+    // Prevent body scroll
+    document.body.style.overflow = 'hidden';
+}
+
+function closePolicyOffcanvas() {
+    const offcanvas = document.getElementById('policyOffcanvas');
+
+    offcanvas.classList.remove('open');
+
+    // Hide after transition
+    setTimeout(() => {
+        offcanvas.style.display = 'none';
+        // Restore body scroll
+        document.body.style.overflow = '';
+    }, 250); // Match transition duration
+}

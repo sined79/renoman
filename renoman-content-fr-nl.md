@@ -5,7 +5,7 @@
 ### Logo et Navigation
 - **Logo**: RENOMAN SRL
 - **Menu Navigation**:
-  - Home / Accueil / Home
+  - Home / Accueiiil / Home
   - Services / Services / Diensten
   - About / À propos / Over ons
   - Projects / Projets / Projecten
