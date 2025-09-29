@@ -641,7 +641,7 @@ function initContactForm() {
         submitButton.textContent = 'Sending...';
         
         // Préparer un envoi POST vers Formsubmit avec fetch
-        fetch('https://formsubmit.co/foguemaurice@gmail.com', {
+        fetch('https://formsubmit.co/fouguemaurice@gmail.com', {
             method: 'POST',
             body: formData,
             headers: {
