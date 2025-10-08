@@ -1,0 +1,20 @@
+{
+  "sungrow": {
+    "folder": "projects/sungrow",
+    "images": [
+      "sungrow-1.jpg"
+    ]
+  },
+  "go4zero": {
+    "folder": "projects/go4zero",
+    "images": [
+      "go4zero-1.jpg"
+    ]
+  },
+  "climatesolutions": {
+    "folder": "projects/climatesolutions",
+    "images": [
+      "climate-solutions-1.jpg"
+    ]
+  }
+}

@@ -1,0 +1,562 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "derniere_modification": "2025-10-08",
+    "description": "Contenus multilingues du site RENOMAN"
+  },
+
+  "seo": {
+    "_section": "Meta tags pour le référencement (SEO)",
+    "titre_page": {
+      "en": "RENOMAN SRL - Energy Storage & Electrical Installations | Belgium",
+      "fr": "RENOMAN SRL - Stockage d'Énergie & Installations Électriques | Belgique",
+      "nl": "RENOMAN SRL - Energieopslag & Elektrische Installaties | België"
+    },
+    "description": {
+      "en": "Professional energy storage systems and industrial electrical installations in Belgium. RGIE certified, 20+ years experience. BESS, solar integration, energy optimization.",
+      "fr": "Systèmes de stockage d'énergie professionnels et installations électriques industrielles en Belgique. Certifié RGIE, 20+ ans d'expérience. BESS, intégration solaire, optimisation énergétique.",
+      "nl": "Professionele energieopslagsystemen en industriële elektrische installaties in België. AREI-gecertificeerd, 20+ jaar ervaring. BESS, zonne-integratie, energie-optimalisatie."
+    },
+    "keywords": {
+      "en": "energy storage, BESS, electrical installation, RGIE, Belgium, battery systems, industrial electrical, energy optimization, Wezembeek-Oppem",
+      "fr": "stockage énergie, BESS, installation électrique, RGIE, Belgique, systèmes batteries, électrique industriel, optimisation énergétique, Wezembeek-Oppem",
+      "nl": "energieopslag, BESS, elektrische installatie, AREI, België, batterijsystemen, industriële elektriciteit, energie-optimalisatie, Wezembeek-Oppem"
+    },
+    "og_title": {
+      "en": "RENOMAN SRL - Energy Storage & Electrical Installations",
+      "fr": "RENOMAN SRL - Stockage d'Énergie & Installations Électriques",
+      "nl": "RENOMAN SRL - Energieopslag & Elektrische Installaties"
+    },
+    "og_description": {
+      "en": "Transform your energy infrastructure with professional BESS and electrical solutions. RGIE certified, 20+ years experience in Belgium.",
+      "fr": "Transformez votre infrastructure énergétique avec des solutions BESS et électriques professionnelles. Certifié RGIE, 20+ ans d'expérience en Belgique.",
+      "nl": "Transformeer uw energie-infrastructuur met professionele BESS en elektrische oplossingen. AREI-gecertificeerd, 20+ jaar ervaring in België."
+    },
+    "og_image": {
+      "url": "https://sined79.github.io/renoman/assets/og-image.jpg",
+      "alt": {
+        "en": "RENOMAN SRL - Energy Storage Solutions",
+        "fr": "RENOMAN SRL - Solutions de Stockage d'Énergie",
+        "nl": "RENOMAN SRL - Energieopslagoplossingen"
+      },
+      "width": "1200",
+      "height": "630"
+    },
+    "twitter_card": "summary_large_image",
+    "canonical_base": "https://www.renomansprl.com",
+    "langue_alternatives": {
+      "_description": "URLs alternatives pour hreflang",
+      "en": "https://www.renomansprl.com/en",
+      "fr": "https://www.renomansprl.com/fr",
+      "nl": "https://www.renomansprl.com/nl"
+    }
+  },
+
+  "navigation": {
+    "_section": "Menu de navigation principal",
+    "accueil": { "en": "Home", "fr": "Accueil", "nl": "Home" },
+    "services": { "en": "Services", "fr": "Services", "nl": "Diensten" },
+    "a_propos": { "en": "About", "fr": "À propos", "nl": "Over ons" },
+    "projets": { "en": "Projects", "fr": "Projets", "nl": "Projecten" },
+    "clients": { "en": "Clients", "fr": "Clients", "nl": "Klanten" },
+    "contact": { "en": "Contact", "fr": "Contact", "nl": "Contact" }
+  },
+
+  "section_hero": {
+    "_section": "Bannière d'accueil (première section visible)",
+    "titre_principal": {
+      "en": "Energy Storage and Electrical Installations",
+      "fr": "Stockage d'Énergie et Installations Électriques",
+      "nl": "Energieopslag en Elektrische Installaties"
+    },
+    "sous_titre": {
+      "en": "Helping businesses achieve energy transition and cost optimization",
+      "fr": "Accompagner les entreprises vers la transition énergétique et l'optimisation des coûts",
+      "nl": "Bedrijven helpen bij energietransitie en kostenoptimalisatie"
+    },
+    "bouton_audit": {
+      "en": "Free Energy Audit",
+      "fr": "Audit Énergétique Gratuit",
+      "nl": "Gratis Energie-Audit"
+    },
+    "bouton_projets": {
+      "en": "View Our Projects",
+      "fr": "Voir Nos Projets",
+      "nl": "Bekijk Onze Projecten"
+    }
+  },
+
+  "section_services": {
+    "_section": "Section des 3 services principaux",
+    "titre": {
+      "en": "OUR SERVICES",
+      "fr": "NOS SERVICES",
+      "nl": "ONZE DIENSTEN"
+    },
+    "sous_titre": {
+      "en": "Diverse solutions tailored to your every need",
+      "fr": "Solutions diversifiées adaptées à tous vos besoins",
+      "nl": "Diverse oplossingen op maat van uw behoeften"
+    },
+    "service_1_stockage": {
+      "_description": "Premier service - Stockage d'énergie",
+      "titre": {
+        "en": "Energy Storage Systems",
+        "fr": "Systèmes de Stockage d'Énergie",
+        "nl": "Energieopslagsystemen"
+      },
+      "description": {
+        "en": "Installation of industrial and commercial battery systems for cost reduction and energy independence",
+        "fr": "Installation de systèmes de batteries industriels et commerciaux pour la réduction des coûts et l'indépendance énergétique",
+        "nl": "Installatie van industriële en commerciële batterijsystemen voor kostenreductie en energie-onafhankelijkheid"
+      },
+      "details": {
+        "en": ["System sizing", "BESS installation", "Grid integration", "Maintenance"],
+        "fr": ["Dimensionnement système", "Installation BESS", "Intégration réseau", "Maintenance"],
+        "nl": ["Systeemdimensionering", "BESS-installatie", "Netintegratie", "Onderhoud"]
+      },
+      "bouton_action": {
+        "en": "Request Quote",
+        "fr": "Demander un Devis",
+        "nl": "Offerte Aanvragen"
+      }
+    },
+    "service_2_installation": {
+      "_description": "Deuxième service - Installation électrique",
+      "titre": {
+        "en": "Industrial Electrical Installation",
+        "fr": "Installation Électrique Industrielle",
+        "nl": "Industriële Elektrische Installatie"
+      },
+      "description": {
+        "en": "Complete electrical solutions for industrial and commercial facilities, RGIE compliance",
+        "fr": "Solutions électriques complètes pour installations industrielles et commerciales, conformité RGIE",
+        "nl": "Complete elektrische oplossingen voor industriële en commerciële faciliteiten, AREI-conform"
+      },
+      "details": {
+        "en": ["High voltage cabling", "Electrical panels", "Certification", "Inspections"],
+        "fr": ["Câblage haute tension", "Tableaux électriques", "Certification", "Inspections"],
+        "nl": ["Hoogspanningsbekabeling", "Elektrische panelen", "Certificering", "Inspecties"]
+      },
+      "bouton_action": {
+        "en": "Consult Expert",
+        "fr": "Consulter un Expert",
+        "nl": "Expert Raadplegen"
+      }
+    },
+    "service_3_optimisation": {
+      "_description": "Troisième service - Optimisation énergétique",
+      "titre": {
+        "en": "Energy Optimization",
+        "fr": "Optimisation Énergétique",
+        "nl": "Energie-optimalisatie"
+      },
+      "description": {
+        "en": "Technical support and optimization solutions to maximize energy efficiency",
+        "fr": "Support technique et solutions d'optimisation pour maximiser l'efficacité énergétique",
+        "nl": "Technische ondersteuning en optimalisatieoplossingen om energie-efficiëntie te maximaliseren"
+      },
+      "details": {
+        "en": ["Energy audits", "Optimization strategies", "Monitoring", "Cost-benefit analysis"],
+        "fr": ["Audits énergétiques", "Stratégies d'optimisation", "Surveillance", "Analyse coût-bénéfice"],
+        "nl": ["Energie-audits", "Optimalisatiestrategieën", "Monitoring", "Kosten-batenanalyse"]
+      },
+      "bouton_action": {
+        "en": "Schedule Audit",
+        "fr": "Planifier un Audit",
+        "nl": "Audit Inplannen"
+      }
+    }
+  },
+
+  "section_a_propos": {
+    "_section": "Section À propos de l'entreprise",
+    "titre": {
+      "en": "ABOUT RENOMAN",
+      "fr": "À PROPOS DE RENOMAN",
+      "nl": "OVER RENOMAN"
+    },
+    "paragraphe_1": {
+      "en": "RENOMAN SRL, based in Wezembeek-Oppem, Belgium, specialized in energy storage and electrical engineering since 2015. Our experienced team of 6 electrical engineers combines over 20 years of experience.",
+      "fr": "RENOMAN SRL, basée à Wezembeek-Oppem, Belgique, spécialisée dans le stockage d'énergie et l'ingénierie électrique depuis 2015. Notre équipe expérimentée de 6 ingénieurs électriciens combine plus de 20 ans d'expérience.",
+      "nl": "RENOMAN SRL, gevestigd in Wezembeek-Oppem, België, gespecialiseerd in energieopslag en elektrotechniek sinds 2015. Ons ervaren team van 6 elektrotechnische ingenieurs combineert meer dan 20 jaar ervaring."
+    },
+    "paragraphe_2": {
+      "en": "RGIE certifications, partnerships with ENGIE, Sungrow, Holcim. Commitment: safety, transparency, customer satisfaction throughout Benelux.",
+      "fr": "Certifications RGIE, partenariats avec ENGIE, Sungrow, Holcim. Engagement : sécurité, transparence, satisfaction client dans tout le Benelux.",
+      "nl": "AREI-certificeringen, partnerschappen met ENGIE, Sungrow, Holcim. Engagement: veiligheid, transparantie, klanttevredenheid in de hele Benelux."
+    },
+    "mission_titre": {
+      "en": "Mission:",
+      "fr": "Mission :",
+      "nl": "Missie:"
+    },
+    "mission_texte": {
+      "en": "Accelerate energy transition with innovative, reliable, and cost-effective electrical solutions.",
+      "fr": "Accélérer la transition énergétique avec des solutions électriques innovantes, fiables et rentables.",
+      "nl": "De energietransitie versnellen met innovatieve, betrouwbare en kosteneffectieve elektrische oplossingen."
+    },
+    "statistiques": {
+      "clients": {
+        "en": "Professional Clients",
+        "fr": "Clients Professionnels",
+        "nl": "Professionele Klanten"
+      },
+      "experience": {
+        "en": "Years Experience",
+        "fr": "Années d'Expérience",
+        "nl": "Jaar Ervaring"
+      },
+      "conformite": {
+        "en": "RGIE Compliance",
+        "fr": "Conformité RGIE",
+        "nl": "AREI Conform"
+      },
+      "reponse": {
+        "en": "Response Time",
+        "fr": "Temps de Réponse",
+        "nl": "Reactietijd"
+      }
+    }
+  },
+
+  "section_projets": {
+    "_section": "Section présentant les projets récents",
+    "titre": {
+      "en": "RECENT PROJECTS",
+      "fr": "PROJETS RÉCENTS",
+      "nl": "RECENTE PROJECTEN"
+    },
+    "sous_titre": {
+      "en": "Discover our latest projects",
+      "fr": "Découvrez nos derniers projets",
+      "nl": "Ontdek onze nieuwste projecten"
+    },
+    "projet_1_vilvoorde": {
+      "titre": {
+        "en": "Vilvoorde BESS – ENGIE/Sungrow",
+        "fr": "Vilvoorde BESS – ENGIE/Sungrow",
+        "nl": "Vilvoorde BESS – ENGIE/Sungrow"
+      },
+      "description": {
+        "en": "Complete description with results: 2MWh installed, 30% peak cost reduction, 6-month installation",
+        "fr": "Description complète avec résultats : 2MWh installés, 30% de réduction des coûts de pointe, installation en 6 mois",
+        "nl": "Volledige beschrijving met resultaten: 2MWh geïnstalleerd, 30% piekkosten reductie, 6 maanden installatie"
+      },
+      "capacite_label": {
+        "en": "Capacity:",
+        "fr": "Capacité :",
+        "nl": "Capaciteit:"
+      },
+      "reduction_label": {
+        "en": "Cost Reduction:",
+        "fr": "Réduction des Coûts :",
+        "nl": "Kostenreductie:"
+      },
+      "delai_label": {
+        "en": "Timeline:",
+        "fr": "Délai :",
+        "nl": "Tijdlijn:"
+      },
+      "delai_valeur": {
+        "en": "6 months",
+        "fr": "6 mois",
+        "nl": "6 maanden"
+      }
+    },
+    "projet_2_go4zero": {
+      "titre": {
+        "en": "GO4Zero – Holcim & CBMI",
+        "fr": "GO4Zero – Holcim & CBMI",
+        "nl": "GO4Zero – Holcim & CBMI"
+      },
+      "description": {
+        "en": "Energy monitoring system, carbon footprint reduction, improved system efficiency",
+        "fr": "Système de surveillance énergétique, réduction empreinte carbone, efficacité système améliorée",
+        "nl": "Energiemonitoringsysteem, CO2-voetafdruk vermindering, verbeterde systeemefficiëntie"
+      },
+      "tag_1": {
+        "en": "Energy Monitoring",
+        "fr": "Surveillance Énergétique",
+        "nl": "Energiemonitoring"
+      },
+      "tag_2": {
+        "en": "Carbon Reduction",
+        "fr": "Réduction Carbone",
+        "nl": "CO2-reductie"
+      },
+      "tag_3": {
+        "en": "System Efficiency",
+        "fr": "Efficacité Système",
+        "nl": "Systeemefficiëntie"
+      }
+    },
+    "projet_3_climate": {
+      "titre": {
+        "en": "ClimateSolution – HVAC",
+        "fr": "ClimateSolution – HVAC",
+        "nl": "ClimateSolution – HVAC"
+      },
+      "description": {
+        "en": "Smart HVAC electrical integration, automated climate control, consumption optimization",
+        "fr": "Intégration électrique HVAC intelligente, contrôle climatique automatisé, optimisation consommation",
+        "nl": "Slimme HVAC elektrische integratie, geautomatiseerde klimaatbeheersing, verbruiksoptimalisatie"
+      },
+      "tag_1": {
+        "en": "Smart Integration",
+        "fr": "Intégration Intelligente",
+        "nl": "Slimme Integratie"
+      },
+      "tag_2": {
+        "en": "Automated Control",
+        "fr": "Contrôle Automatisé",
+        "nl": "Geautomatiseerde Controle"
+      },
+      "tag_3": {
+        "en": "Optimization",
+        "fr": "Optimisation",
+        "nl": "Optimalisatie"
+      }
+    }
+  },
+
+  "section_clients": {
+    "_section": "Section logos des clients",
+    "titre": {
+      "en": "OUR CLIENTS",
+      "fr": "NOS CLIENTS",
+      "nl": "ONZE KLANTEN"
+    },
+    "sous_titre": {
+      "en": "Trusted partners in energy solutions",
+      "fr": "Partenaires de confiance dans les solutions énergétiques",
+      "nl": "Vertrouwde partners in energieoplossingen"
+    }
+  },
+
+  "section_contact": {
+    "_section": "Formulaire et informations de contact",
+    "titre": {
+      "en": "Contact Our Experts",
+      "fr": "Contactez Nos Experts",
+      "nl": "Contacteer Onze Experts"
+    },
+    "formulaire": {
+      "_description": "Labels des champs du formulaire",
+      "nom": {
+        "en": "Name *",
+        "fr": "Nom *",
+        "nl": "Naam *"
+      },
+      "email": {
+        "en": "Email *",
+        "fr": "E-mail *",
+        "nl": "E-mail *"
+      },
+      "type_projet": {
+        "en": "Project Type",
+        "fr": "Type de Projet",
+        "nl": "Projecttype"
+      },
+      "type_projet_placeholder": {
+        "en": "Select project type...",
+        "fr": "Sélectionnez le type de projet...",
+        "nl": "Selecteer projecttype..."
+      },
+      "type_stockage": {
+        "en": "Energy Storage",
+        "fr": "Stockage d'Énergie",
+        "nl": "Energieopslag"
+      },
+      "type_installation": {
+        "en": "Electrical Installation",
+        "fr": "Installation Électrique",
+        "nl": "Elektrische Installatie"
+      },
+      "type_audit": {
+        "en": "Energy Audit",
+        "fr": "Audit Énergétique",
+        "nl": "Energie-audit"
+      },
+      "type_maintenance": {
+        "en": "Maintenance",
+        "fr": "Maintenance",
+        "nl": "Onderhoud"
+      },
+      "type_consultation": {
+        "en": "Consultation",
+        "fr": "Consultation",
+        "nl": "Consultatie"
+      },
+      "message": {
+        "en": "Message",
+        "fr": "Message",
+        "nl": "Bericht"
+      },
+      "message_placeholder": {
+        "en": "Tell us about your project...",
+        "fr": "Parlez-nous de votre projet...",
+        "nl": "Vertel ons over uw project..."
+      },
+      "bouton_envoi": {
+        "en": "Send Request",
+        "fr": "Envoyer la Demande",
+        "nl": "Verzoek Verzenden"
+      }
+    },
+    "informations": {
+      "_description": "Labels des informations de contact",
+      "adresse_label": {
+        "en": "📍 Address:",
+        "fr": "📍 Adresse :",
+        "nl": "📍 Adres:"
+      },
+      "telephone_label": {
+        "en": "📞 Phone:",
+        "fr": "📞 Téléphone :",
+        "nl": "📞 Telefoon:"
+      },
+      "email_label": {
+        "en": "📧 Email:",
+        "fr": "📧 E-mail :",
+        "nl": "📧 E-mail:"
+      },
+      "temps_reponse_label": {
+        "en": "⏰ Response Time:",
+        "fr": "⏰ Temps de Réponse :",
+        "nl": "⏰ Reactietijd:"
+      },
+      "temps_reponse_valeur": {
+        "en": "24 hours guaranteed",
+        "fr": "24 heures garanties",
+        "nl": "24 uur gegarandeerd"
+      }
+    }
+  },
+
+  "pied_de_page": {
+    "_section": "Footer - Liens et mentions légales",
+    "description": {
+      "en": "Professional energy storage and electrical solutions since 2015",
+      "fr": "Solutions professionnelles de stockage d'énergie et d'électricité depuis 2015",
+      "nl": "Professionele energieopslag en elektrische oplossingen sinds 2015"
+    },
+    "liens_rapides": {
+      "en": "Quick Links",
+      "fr": "Liens Rapides",
+      "nl": "Snelle Links"
+    },
+    "certifications": {
+      "en": "Certifications",
+      "fr": "Certifications",
+      "nl": "Certificeringen"
+    },
+    "certification_rgie": {
+      "en": "RGIE Certified",
+      "fr": "Certifié RGIE",
+      "nl": "AREI Gecertificeerd"
+    },
+    "partenaire_engie": {
+      "en": "ENGIE Partner",
+      "fr": "Partenaire ENGIE",
+      "nl": "ENGIE Partner"
+    },
+    "partenaire_sungrow": {
+      "en": "Sungrow Partner",
+      "fr": "Partenaire Sungrow",
+      "nl": "Sungrow Partner"
+    },
+    "mentions_legales": {
+      "en": "Legal",
+      "fr": "Mentions Légales",
+      "nl": "Juridische Vermeldingen"
+    },
+    "politique_confidentialite": {
+      "en": "Privacy Policy",
+      "fr": "Politique de Confidentialité",
+      "nl": "Privacybeleid"
+    },
+    "conditions_generales": {
+      "en": "Terms & Conditions",
+      "fr": "Conditions Générales",
+      "nl": "Algemene Voorwaarden"
+    },
+    "copyright": {
+      "en": "© 2025 RENOMAN SRL. All rights reserved.",
+      "fr": "© 2025 RENOMAN SRL. Tous droits réservés.",
+      "nl": "© 2025 RENOMAN SRL. Alle rechten voorbehouden."
+    }
+  },
+
+  "politique_confidentialite": {
+    "_section": "Contenu de la politique de confidentialité",
+    "titre": {
+    "en": "Privacy Policy",
+    "fr": "Politique de Confidentialité",
+    "nl": "Privacybeleid"
+    },
+    "texte": {
+      "en": "<p>Renoman SPRL respects your privacy and is committed to protecting your personal data as required by the GDPR.</p><ul><li><strong>Data Collection:</strong> We collect personal data such as your name, email, and contact details only when you voluntarily provide them via contact forms or newsletters.</li><li><strong>Use of Data:</strong> Your data is used solely to respond to your inquiries and manage customer relations.</li><li><strong>Data Sharing:</strong> We do not share your personal data with third parties without your consent, except as required by law.</li><li><strong>Cookies:</strong> Our website uses cookies to enhance user experience. You will be informed and may consent or refuse their use.</li><li><strong>User Rights:</strong> You have rights to access, rectify, and delete your personal data. Contact us at <a href=\"mailto:privacy@renomansprl.com\">privacy@renomansprl.com</a>.</li><li><strong>Data Security:</strong> We implement technical and organizational measures to secure your data.</li><li><strong>Data Retention:</strong> Personal data is kept only as long as necessary for the purpose collected.</li></ul>",
+      "fr": "<p>Renoman SPRL respecte votre vie privée et s'engage à protéger vos données personnelles conformément au RGPD.</p><ul><li><strong>Collecte de Données :</strong> Nous collectons vos données personnelles (nom, email, contact) uniquement lorsque vous les fournissez volontairement via nos formulaires ou newsletters.</li><li><strong>Utilisation :</strong> Les données servent uniquement à répondre à vos demandes et gérer la relation client.</li><li><strong>Partage des Données :</strong> Nous ne partageons pas vos données avec des tiers sans votre consentement, sauf obligations légales.</li><li><strong>Cookies :</strong> Le site utilise des cookies pour améliorer l'expérience utilisateur. Vous en serez informé et pouvez consentir ou refuser.</li><li><strong>Droits des Utilisateurs :</strong> Vous pouvez accéder, rectifier ou supprimer vos données personnelles en contactant <a href=\"mailto:privacy@renomansprl.com\">privacy@renomansprl.com</a>.</li><li><strong>Sécurité :</strong> Mesures techniques et organisationnelles assurent la protection de vos données.</li><li><strong>Conservation :</strong> Les données sont conservées uniquement aussi longtemps que nécessaire.</li></ul>",
+      "nl": "<p>Renoman SPRL respecteert uw privacy en zet zich in om uw persoonlijke gegevens te beschermen volgens de AVG.</p><ul><li><strong>Gegevensverzameling:</strong> We verzamelen persoonsgegevens zoals naam, e-mailadres en contactgegevens alleen wanneer u deze vrijwillig verstrekt via contactformulieren of nieuwsbrieven.</li><li><strong>Gebruik van Gegevens:</strong> Uw gegevens worden uitsluitend gebruikt om uw vragen te beantwoorden en klantenrelaties te beheren.</li><li><strong>Delen van Gegevens:</strong> We delen uw gegevens niet met derden zonder uw toestemming, behalve indien wettelijk vereist.</li><li><strong>Cookies:</strong> Onze website gebruikt cookies om de gebruikerservaring te verbeteren. U wordt geïnformeerd en kunt toestemming geven of weigeren.</li><li><strong>Gebruikersrechten:</strong> U heeft het recht op inzage, correctie en verwijdering van uw gegevens. Contact: <a href=\"mailto:privacy@renomansprl.com\">privacy@renomansprl.com</a>.</li><li><strong>Gegevensbeveiliging:</strong> Technische en organisatorische maatregelen zijn genomen om uw gegevens te beveiligen.</li><li><strong>Bewaring:</strong> Persoonsgegevens worden bewaard zolang als nodig is voor het beoogde doel.</li></ul>"
+    }
+  },
+
+  "conditions_generales": {
+    "_section": "Contenu des conditions générales",
+    "titre": {
+      "en": "Terms & Conditions",
+      "fr": "Conditions Générales",
+      "nl": "Algemene Voorwaarden"
+    },
+    "texte": {
+      "en": "<p>Welcome to Renoman SPRL. These Terms and Conditions govern your use of our website and services. By accessing or using this site, you agree to comply with these terms.</p><ol><li><strong>Company Information</strong><br>Renoman SPRL, registered in Belgium, provides expertise in Energy Storage and Electrical Installations.</li><li><strong>Use of Website</strong><br>You agree to use this website only for lawful purposes and not to harm or disrupt the site or services.</li><li><strong>Intellectual Property</strong><br>All content on this website is the intellectual property of Renoman SPRL and may not be copied or used without permission.</li><li><strong>Liability</strong><br>Renoman SPRL provides information \"as is\" and is not liable for any damages resulting from the use of this website.</li><li><strong>Changes to Terms</strong><br>We reserve the right to modify these Terms at any time with immediate effect upon posting.</li><li><strong>Governing Law</strong><br>These Terms are governed by Belgian law. Disputes are subject to the courts of Liège.</li></ol>",
+      "fr": "<p>Bienvenue chez Renoman SPRL. Ces Conditions Générales régissent l'utilisation de notre site internet et de nos services. En accédant à ce site, vous acceptez de respecter ces conditions.</p><ol><li><strong>Informations sur la Société</strong><br>Renoman SPRL, enregistrée en Belgique, spécialisée dans le stockage d'énergie et les installations électriques.</li><li><strong>Utilisation du Site</strong><br>Vous vous engagez à utiliser ce site de manière légale et à ne pas nuire au fonctionnement du site ou des services.</li><li><strong>Propriété Intellectuelle</strong><br>Tout contenu de ce site est la propriété intellectuelle de Renoman SPRL et ne peut être copié ou utilisé sans autorisation.</li><li><strong>Responsabilité</strong><br>Renoman SPRL publie les informations \"telles quelles\" et décline toute responsabilité pour tout dommage causé par l'utilisation du site.</li><li><strong>Modification des Conditions</strong><br>Nous nous réservons le droit de modifier ces Conditions à tout moment, avec effet immédiat dès leur publication.</li><li><strong>Droit Applicable</strong><br>Ces Conditions sont régies par le droit belge, et les litiges relèvent des tribunaux de Liège.</li></ol>",
+      "nl": "<p>Welkom bij Renoman SPRL. Deze algemene voorwaarden regelen het gebruik van onze website en diensten. Door toegang te krijgen tot deze site, gaat u akkoord met deze voorwaarden.</p><ol><li><strong>Bedrijfsinformatie</strong><br>Renoman SPRL, geregistreerd in België, gespecialiseerd in energieopslag en elektrische installaties.</li><li><strong>Gebruik van de Website</strong><br>U gaat ermee akkoord de website alleen voor legale doeleinden te gebruiken en geen schade toe te brengen aan de site of diensten.</li><li><strong>Intellectuele Eigendom</strong><br>Alle inhoud op deze website is intellectueel eigendom van Renoman SPRL en mag niet worden gekopieerd of gebruikt zonder toestemming.</li><li><strong>Aansprakelijkheid</strong><br>Renoman SPRL biedt informatie \"zoals deze is\" en is niet aansprakelijk voor schade voortvloeiend uit het gebruik van deze website.</li><li><strong>Wijziging van Voorwaarden</strong><br>We behouden ons het recht voor deze voorwaarden op elk moment te wijzigen met onmiddellijke ingang na plaatsing.</li><li><strong>Toepasselijk Recht</strong><br>Deze voorwaarden worden beheerst door Belgisch recht en geschillen worden voorgelegd aan de rechtbanken van Luik.</li></ol>"
+    }
+  },
+
+
+  "cookies": {
+    "_section": "Bannière et préférences cookies",
+    "cookies_necessaires": {
+      "en": "Necessary",
+      "fr": "Nécessaires",
+      "nl": "Noodzakelijk"
+    },
+    "description_cookies_necessaires": {
+      "en": "These cookies are necessary for the website to function properly and cannot be switched off. They help with things like logging in and setting your privacy preferences.",
+      "fr": "Ces cookies sont nécessaires au bon fonctionnement du site web et ne peuvent pas être désactivés. Ils aident à des choses comme la connexion et la définition de vos préférences de confidentialité.",
+      "nl": "Deze cookies zijn noodzakelijk voor de goede werking van de website en kunnen niet worden uitgeschakeld. Ze helpen bij zaken zoals inloggen en het instellen van uw privacyvoorkeuren."
+    }
+  },
+
+  "messages": {
+    "_section": "Messages de notification et retours utilisateur",
+    "succes_envoi": {
+      "en": "Thank you! Your message has been sent successfully.",
+      "fr": "Merci ! Votre message a été envoyé avec succès.",
+      "nl": "Dank je wel! Je bericht is succesvol verzonden."
+    },
+    "erreur_envoi": {
+      "en": "An error occurred, please try again later.",
+      "fr": "Une erreur s'est produite, veuillez réessayer plus tard.",
+      "nl": "Er is een fout opgetreden, probeer het later opnieuw."
+    },
+    "erreur_nom": {
+      "en": "Name must be at least 2 characters long",
+      "fr": "Le nom doit contenir au moins 2 caractères",
+      "nl": "Naam moet minstens 2 tekens bevatten"
+    },
+    "erreur_email": {
+      "en": "Please enter a valid email address",
+      "fr": "Veuillez saisir une adresse e-mail valide",
+      "nl": "Gelieve een geldig e-mailadres in te voeren"
+    },
+    "envoi_en_cours": {
+      "en": "Sending...",
+      "fr": "Envoi en cours...",
+      "nl": "Verzenden..."
+    }
+  }
+}

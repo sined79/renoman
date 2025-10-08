@@ -3,37 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RENOMAN SRL - Energy Storage and Electrical Installations</title>
-    <meta name="description" content="RENOMAN SRL - Professional energy storage systems and electrical installations in Belgium. RGIE certified, 20+ years experience.">
+    
+    <!-- Title & Description -->
+    <title id="pageTitle">RENOMAN SRL - Energy Storage and Electrical Installations</title>
+    <meta name="description" id="pageDescription" content="Professional energy storage systems and electrical installations in Belgium. RGIE certified, 20+ years experience.">
+    <meta name="keywords" id="pageKeywords" content="energy storage, BESS, electrical installation, RGIE, Belgium">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" id="ogUrl" content="https://www.renomansprl.com/">
+    <meta property="og:title" id="ogTitle" content="RENOMAN SRL - Energy Storage & Electrical Installations">
+    <meta property="og:description" id="ogDescription" content="Transform your energy infrastructure with professional BESS and electrical solutions.">
+    <meta property="og:image" id="ogImage" content="https://www.renomansprl.com/renoman1200x630.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" id="ogImageAlt" content="RENOMAN SRL - Energy Storage Solutions">
+    <meta property="og:locale" id="ogLocale" content="en_US">
+    <meta property="og:site_name" content="RENOMAN SRL">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" id="twitterUrl" content="https://www.renomansprl.com/">
+    <meta name="twitter:title" id="twitterTitle" content="RENOMAN SRL - Energy Storage & Electrical Installations">
+    <meta name="twitter:description" id="twitterDescription" content="Transform your energy infrastructure with professional BESS and electrical solutions.">
+    <meta name="twitter:image" id="twitterImage" content="https://www.renomansprl.com/renoman1200x630.png">
+    
+    <!-- Hreflang for multilingual -->
+    <link rel="alternate" hreflang="en" href="https://www.renomansprl.com/en" id="hreflangEn">
+    <link rel="alternate" hreflang="fr" href="https://www.renomansprl.com/fr" id="hreflangFr">
+    <link rel="alternate" hreflang="nl" href="https://www.renomansprl.com/nl" id="hreflangNl">
+    <link rel="alternate" hreflang="x-default" href="https://www.renomansprl.com/" id="hreflangDefault">
+    
+    <!-- Canonical -->
+    <link rel="canonical" id="canonicalUrl" href="https://www.renomansprl.com/">
+    
     <link rel="stylesheet" href="style.css">
     
+    <!-- Cookie banner scripts -->
     <link rel="stylesheet" id="silktide-consent-manager-css" href="cookie-banner/silktide-consent-manager.css">
     <script src="cookie-banner/silktide-consent-manager.js"></script>
     <script>
     silktideCookieBannerManager.updateCookieBannerConfig({
-    background: {
-        showBackground: true
-    },
-    cookieIcon: {
-        position: "bottomRight"
-    },
-    cookieTypes: [
-        {
-        id: "necessary",
-        name: "Necessary",
-        description: "<p>These cookies are necessary for the website to function properly and cannot be switched off. They help with things like logging in and setting your privacy preferences.</p>",
-        required: true,
-        onAccept: function() {
-            console.log('Add logic for the required Necessary here');
-        }
-        }
-    ],
-    position: {
-        banner: "bottomCenter"
-    }
+        background: { showBackground: true },
+        cookieIcon: { position: "bottomRight" },
+        cookieTypes: [{
+            id: "necessary",
+            name: "Necessary",
+            description: "<p>These cookies are necessary for the website to function properly and cannot be switched off.</p>",
+            required: true,
+            onAccept: function() {
+                console.log('Necessary cookies accepted');
+            }
+        }],
+        position: { banner: "bottomCenter" }
     });
     </script>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -54,12 +80,12 @@
             </div>
 
             <ul class="nav__menu">
-                <li><a href="#home" class="nav__link">Home</a></li>
-                <li><a href="#services" class="nav__link">Services</a></li>
-                <li><a href="#about" class="nav__link">About</a></li>
-                <li><a href="#projects" class="nav__link">Projects</a></li>
-                <li><a href="#clients" class="nav__link">Clients</a></li>
-                <li><a href="#contact" class="nav__link">Contact</a></li>
+                <li><a href="#home" class="nav__link" data-i18n="navigation.accueil">Home</a></li>
+                <li><a href="#services" class="nav__link" data-i18n="navigation.services">Services</a></li>
+                <li><a href="#about" class="nav__link" data-i18n="navigation.a_propos">About</a></li>
+                <li><a href="#projects" class="nav__link" data-i18n="navigation.projets">Projects</a></li>
+                <li><a href="#clients" class="nav__link" data-i18n="navigation.clients">Clients</a></li>
+                <li><a href="#contact" class="nav__link" data-i18n="navigation.contact">Contact</a></li>
             </ul>
 
             <div class="nav__controls">
@@ -85,16 +111,13 @@
     <section id="home" class="hero">
         <div class="hero__content container">
             <div class="hero__text">
-                <h1 class="hero__title">Energy Storage and Electrical Installations</h1>
-                <p class="hero__subtitle">Helping businesses achieve energy transition and cost optimization</p>
+                <h1 class="hero__title" data-i18n="section_hero.titre_principal">Energy Storage and Electrical Installations</h1>
+                <p class="hero__subtitle" data-i18n="section_hero.sous_titre">Helping businesses achieve energy transition and cost optimization</p>
                 <div class="hero__cta">
-                    <a href="#contact" class="btn btn--primary btn--lg">Free Energy Audit</a>
-                    <a href="#projects" class="btn btn--primary btn--lg">View Our Projects</a>
+                    <a href="#contact" class="btn btn--primary btn--lg" data-i18n="section_hero.bouton_audit">Free Energy Audit</a>
+                    <a href="#projects" class="btn btn--primary btn--lg" data-i18n="section_hero.bouton_projets">View Our Projects</a>
                 </div>
             </div>
-            <!--<div class="hero__visual">
-                <div class="hero__icon">⚡🔋</div>
-            </div>-->
         </div>
     </section>
 
@@ -102,48 +125,51 @@
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">OUR SERVICES</h2>
-                <p class="section-subtitle">Diverse solutions tailored to your every need</p>
+                <h2 class="section-title" data-i18n="section_services.titre">OUR SERVICES</h2>
+                <p class="section-subtitle" data-i18n="section_services.sous_titre">Diverse solutions tailored to your every need</p>
             </div>
             
             <div class="services__grid">
+                <!-- Service Card 1: Energy Storage -->
                 <div class="service-card">
                     <div class="service-card__icon">🔋</div>
-                    <h3 class="service-card__title">Energy Storage Systems</h3>
-                    <p class="service-card__description">Installation of industrial and commercial battery systems for cost reduction and energy independence</p>
+                    <h3 class="service-card__title" data-i18n="section_services.service_1_stockage.titre">Energy Storage Systems</h3>
+                    <p class="service-card__description" data-i18n="section_services.service_1_stockage.description">Installation of industrial and commercial battery systems for cost reduction and energy independence</p>
                     <ul class="service-card__details">
-                        <li>System sizing</li>
-                        <li>BESS installation</li>
-                        <li>Grid integration</li>
-                        <li>Maintenance</li>
+                        <li data-i18n="section_services.service_1_stockage.details.0">System sizing</li>
+                        <li data-i18n="section_services.service_1_stockage.details.1">BESS installation</li>
+                        <li data-i18n="section_services.service_1_stockage.details.2">Grid integration</li>
+                        <li data-i18n="section_services.service_1_stockage.details.3">Maintenance</li>
                     </ul>
-                    <a href="#contact" class="btn btn--primary">Request Quote</a>
+                    <a href="#contact" class="btn btn--primary" data-i18n="section_services.service_1_stockage.bouton_action">Request Quote</a>
                 </div>
 
+                <!-- Service Card 2: Industrial Electrical -->
                 <div class="service-card">
                     <div class="service-card__icon">⚙️</div>
-                    <h3 class="service-card__title">Industrial Electrical Installation</h3>
-                    <p class="service-card__description">Complete electrical solutions for industrial and commercial facilities, RGIE compliance</p>
+                    <h3 class="service-card__title" data-i18n="section_services.service_2_installation.titre">Industrial Electrical Installation</h3>
+                    <p class="service-card__description" data-i18n="section_services.service_2_installation.description">Complete electrical solutions for industrial and commercial facilities, RGIE compliance</p>
                     <ul class="service-card__details">
-                        <li>High voltage cabling</li>
-                        <li>Electrical panels</li>
-                        <li>Certification</li>
-                        <li>Inspections</li>
+                        <li data-i18n="section_services.service_2_installation.details.0">High voltage cabling</li>
+                        <li data-i18n="section_services.service_2_installation.details.1">Electrical panels</li>
+                        <li data-i18n="section_services.service_2_installation.details.2">Certification</li>
+                        <li data-i18n="section_services.service_2_installation.details.3">Inspections</li>
                     </ul>
-                    <a href="#contact" class="btn btn--primary">Consult Expert</a>
+                    <a href="#contact" class="btn btn--primary" data-i18n="section_services.service_2_installation.bouton_action">Consult Expert</a>
                 </div>
 
+                <!-- Service Card 3: Energy Optimization -->
                 <div class="service-card">
                     <div class="service-card__icon">📊</div>
-                    <h3 class="service-card__title">Energy Optimization</h3>
-                    <p class="service-card__description">Technical support and optimization solutions to maximize energy efficiency</p>
+                    <h3 class="service-card__title" data-i18n="section_services.service_3_optimisation.titre">Energy Optimization</h3>
+                    <p class="service-card__description" data-i18n="section_services.service_3_optimisation.description">Technical support and optimization solutions to maximize energy efficiency</p>
                     <ul class="service-card__details">
-                        <li>Energy audits</li>
-                        <li>Optimization strategies</li>
-                        <li>Monitoring</li>
-                        <li>Cost-benefit analysis</li>
+                        <li data-i18n="section_services.service_3_optimisation.details.0">Energy audits</li>
+                        <li data-i18n="section_services.service_3_optimisation.details.1">Optimization strategies</li>
+                        <li data-i18n="section_services.service_3_optimisation.details.2">Monitoring</li>
+                        <li data-i18n="section_services.service_3_optimisation.details.3">Cost-benefit analysis</li>
                     </ul>
-                    <a href="#contact" class="btn btn--primary">Schedule Audit</a>
+                    <a href="#contact" class="btn btn--primary" data-i18n="section_services.service_3_optimisation.bouton_action">Schedule Audit</a>
                 </div>
             </div>
         </div>
@@ -154,30 +180,30 @@
         <div class="container">
             <div class="about__content">
                 <div class="about__text">
-                    <h2 class="section-title">ABOUT RENOMAN</h2>
+                    <h2 class="section-title" data-i18n="section_a_propos.titre">ABOUT RENOMAN</h2>
                     <div class="about__description">
-                        <p>RENOMAN SRL, based in Wezembeek-Oppem, Belgium, specialized in energy storage and electrical engineering since 2015. Our experienced team of 6 electrical engineers combines over 20 years of experience.</p>
-                        <p>RGIE certifications, partnerships with ENGIE, Sungrow, Holcim. Commitment: safety, transparency, customer satisfaction throughout Benelux.</p>
-                        <p><strong>Mission:</strong> Accelerate energy transition with innovative, reliable, and cost-effective electrical solutions.</p>
+                        <p data-i18n="section_a_propos.paragraphe_1">RENOMAN SRL, based in Wezembeek-Oppem, Belgium, specialized in energy storage and electrical engineering since 2015. Our experienced team of 6 electrical engineers combines over 20 years of experience.</p>
+                        <p data-i18n="section_a_propos.paragraphe_2">RGIE certifications, partnerships with ENGIE, Sungrow, Holcim. Commitment: safety, transparency, customer satisfaction throughout Benelux.</p>
+                        <p><strong data-i18n="section_a_propos.mission_titre">Mission:</strong> <span data-i18n="section_a_propos.mission_texte">Accelerate energy transition with innovative, reliable, and cost-effective electrical solutions.</span></p>
                     </div>
                 </div>
                 
                 <div class="stats">
                     <div class="stat-card">
                         <div class="stat-card__number">50+</div>
-                        <div class="stat-card__label">Professional Clients</div>
+                        <div class="stat-card__label" data-i18n="section_a_propos.statistiques.clients">Professional Clients</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-card__number">20+</div>
-                        <div class="stat-card__label">Years Experience</div>
+                        <div class="stat-card__label" data-i18n="section_a_propos.statistiques.experience">Years Experience</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-card__number">100%</div>
-                        <div class="stat-card__label">RGIE Compliance</div>
+                        <div class="stat-card__label" data-i18n="section_a_propos.statistiques.conformite">RGIE Compliance</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-card__number">24h</div>
-                        <div class="stat-card__label">Response Time</div>
+                        <div class="stat-card__label" data-i18n="section_a_propos.statistiques.reponse">Response Time</div>
                     </div>
                 </div>
             </div>
@@ -188,62 +214,65 @@
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">RECENT PROJECTS</h2>
-                <p class="section-subtitle">Discover our latest projects</p>
+                <h2 class="section-title" data-i18n="section_projets.titre">RECENT PROJECTS</h2>
+                <p class="section-subtitle" data-i18n="section_projets.sous_titre">Discover our latest projects</p>
             </div>
             
             <div class="projects__grid">
+                <!-- Project 1: Vilvoorde -->
                 <div class="project-card">
                     <div class="project-card__photo">
-                        <img src="projects/sungrow/sungrow-1.jpg" alt="Vilvoorde BESS Project" class="project-photo" data-project="vilvoorde">
+                        <img src="projects/sungrow/sungrow-1.jpg" alt="Vilvoorde BESS Project" class="project-photo" data-project="sungrow">
                     </div>
                     <div class="project-card__header">
-                        <h3 class="project-card__title">Vilvoorde BESS – ENGIE/Sungrow</h3>
+                        <h3 class="project-card__title" data-i18n="section_projets.projet_1_vilvoorde.titre">Vilvoorde BESS – ENGIE/Sungrow</h3>
                     </div>
-                    <p class="project-card__description">Complete description with results: 2MWh installed, 30% peak cost reduction, 6-month installation</p>
+                    <p class="project-card__description" data-i18n="section_projets.projet_1_vilvoorde.description">Complete description with results: 2MWh installed, 30% peak cost reduction, 6-month installation</p>
                     <div class="project-card__results">
                         <div class="result-item">
-                            <span class="result-label">Capacity:</span>
+                            <span class="result-label" data-i18n="section_projets.projet_1_vilvoorde.capacite_label">Capacity:</span>
                             <span class="result-value">2MWh</span>
                         </div>
                         <div class="result-item">
-                            <span class="result-label">Cost Reduction:</span>
+                            <span class="result-label" data-i18n="section_projets.projet_1_vilvoorde.reduction_label">Cost Reduction:</span>
                             <span class="result-value">30%</span>
                         </div>
                         <div class="result-item">
-                            <span class="result-label">Timeline:</span>
-                            <span class="result-value">6 months</span>
+                            <span class="result-label" data-i18n="section_projets.projet_1_vilvoorde.delai_label">Timeline:</span>
+                            <span class="result-value" data-i18n="section_projets.projet_1_vilvoorde.delai_valeur">6 months</span>
                         </div>
                     </div>
                 </div>
 
+                <!-- Project 2: GO4Zero -->
                 <div class="project-card">
                     <div class="project-card__photo">
                         <img src="projects/go4zero/go4zero-1.jpg" alt="GO4Zero Project" class="project-photo" data-project="go4zero">
                     </div>
                     <div class="project-card__header">
-                        <h3 class="project-card__title">GO4Zero – Holcim & CBMI</h3>
+                        <h3 class="project-card__title" data-i18n="section_projets.projet_2_go4zero.titre">GO4Zero – Holcim & CBMI</h3>
                     </div>
-                    <p class="project-card__description">Energy monitoring system, carbon footprint reduction, improved system efficiency</p>
+                    <p class="project-card__description" data-i18n="section_projets.projet_2_go4zero.description">Energy monitoring system, carbon footprint reduction, improved system efficiency</p>
                     <div class="project-card__features">
-                        <span class="feature-tag">Energy Monitoring</span>
-                        <span class="feature-tag">Carbon Reduction</span>
-                        <span class="feature-tag">System Efficiency</span>
+                        <span class="feature-tag" data-i18n="section_projets.projet_2_go4zero.tag_1">Energy Monitoring</span>
+                        <span class="feature-tag" data-i18n="section_projets.projet_2_go4zero.tag_2">Carbon Reduction</span>
+                        <span class="feature-tag" data-i18n="section_projets.projet_2_go4zero.tag_3">System Efficiency</span>
                     </div>
                 </div>
 
+                <!-- Project 3: ClimateSolution -->
                 <div class="project-card">
                     <div class="project-card__photo">
-                        <img src="projects/climate-solutions/climate-solutions-1.jpg" alt="ClimateSolution Project" class="project-photo" data-project="climatesolution">
+                        <img src="projects/climatesolutions/climate-solutions-1.jpg" alt="ClimateSolution Project" class="project-photo" data-project="climatesolutions">
                     </div>
                     <div class="project-card__header">
-                        <h3 class="project-card__title">ClimateSolution – HVAC</h3>
+                        <h3 class="project-card__title" data-i18n="section_projets.projet_3_climate.titre">ClimateSolution – HVAC</h3>
                     </div>
-                    <p class="project-card__description">Smart HVAC electrical integration, automated climate control, consumption optimization</p>
+                    <p class="project-card__description" data-i18n="section_projets.projet_3_climate.description">Smart HVAC electrical integration, automated climate control, consumption optimization</p>
                     <div class="project-card__features">
-                        <span class="feature-tag">Smart Integration</span>
-                        <span class="feature-tag">Automated Control</span>
-                        <span class="feature-tag">Optimization</span>
+                        <span class="feature-tag" data-i18n="section_projets.projet_3_climate.tag_1">Smart Integration</span>
+                        <span class="feature-tag" data-i18n="section_projets.projet_3_climate.tag_2">Automated Control</span>
+                        <span class="feature-tag" data-i18n="section_projets.projet_3_climate.tag_3">Optimization</span>
                     </div>
                 </div>
             </div>
@@ -254,8 +283,8 @@
     <section id="clients" class="clients">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">OUR CLIENTS</h2>
-                <p class="section-subtitle">Trusted partners in energy solutions</p>
+                <h2 class="section-title" data-i18n="section_clients.titre">OUR CLIENTS</h2>
+                <p class="section-subtitle" data-i18n="section_clients.sous_titre">Trusted partners in energy solutions</p>
             </div>
 
             <div class="clients__grid">
@@ -292,57 +321,57 @@
         <div class="container">
             <div class="contact__content">
                 <div class="contact__info">
-                    <h2 class="section-title">Contact Our Experts</h2>
+                    <h2 class="section-title" data-i18n="section_contact.titre">Contact Our Experts</h2>
                     <div class="contact-details">
                         <div class="contact-item">
-                            <strong>📍 Address:</strong>
+                            <strong data-i18n="section_contact.informations.adresse_label">📍 Address:</strong>
                             <span>Wezembeek-Oppem, Belgium</span>
                         </div>
                         <div class="contact-item">
-                            <strong>📞 Phone:</strong>
+                            <strong data-i18n="section_contact.informations.telephone_label">📞 Phone:</strong>
                             <span>+32 (0) 487 257823</span>
                         </div>
                         <div class="contact-item">
-                            <strong>📧 Email:</strong>
+                            <strong data-i18n="section_contact.informations.email_label">📧 Email:</strong>
                             <span><a href="mailto:renomansprl@gmail.com">renomansprl@gmail.com</a></span>
                         </div>
                         <div class="contact-item">
-                            <strong>⏰ Response Time:</strong>
-                            <span>24 hours guaranteed</span>
+                            <strong data-i18n="section_contact.informations.temps_reponse_label">⏰ Response Time:</strong>
+                            <span data-i18n="section_contact.informations.temps_reponse_valeur">24 hours guaranteed</span>
                         </div>
                     </div>
                 </div>
 
                 <form class="contact-form" id="contactForm">
                     <div class="form-group">
-                        <label for="name" class="form-label">Name *</label>
+                        <label for="name" class="form-label" data-i18n="section_contact.formulaire.nom">Name *</label>
                         <input type="text" id="name" name="name" class="form-control" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="email" class="form-label">Email *</label>
+                        <label for="email" class="form-label" data-i18n="section_contact.formulaire.email">Email *</label>
                         <input type="email" id="email" name="email" class="form-control" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="projectType" class="form-label">Project Type</label>
+                        <label for="projectType" class="form-label" data-i18n="section_contact.formulaire.type_projet">Project Type</label>
                         <select id="projectType" name="projectType" class="form-control">
-                            <option value="">Select project type...</option>
-                            <option value="energy-storage">Energy Storage</option>
-                            <option value="electrical-installation">Electrical Installation</option>
-                            <option value="energy-audit">Energy Audit</option>
-                            <option value="maintenance">Maintenance</option>
-                            <option value="consultation">Consultation</option>
+                            <option value="" data-i18n="section_contact.formulaire.type_projet_placeholder">Select project type...</option>
+                            <option value="energy-storage" data-i18n="section_contact.formulaire.type_stockage">Energy Storage</option>
+                            <option value="electrical-installation" data-i18n="section_contact.formulaire.type_installation">Electrical Installation</option>
+                            <option value="energy-audit" data-i18n="section_contact.formulaire.type_audit">Energy Audit</option>
+                            <option value="maintenance" data-i18n="section_contact.formulaire.type_maintenance">Maintenance</option>
+                            <option value="consultation" data-i18n="section_contact.formulaire.type_consultation">Consultation</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea id="message" name="message" class="form-control" rows="4" placeholder="Tell us about your project..."></textarea>
+                        <label for="message" class="form-label" data-i18n="section_contact.formulaire.message">Message</label>
+                        <textarea id="message" name="message" class="form-control" rows="4" data-i18n-placeholder="section_contact.formulaire.message_placeholder"></textarea>
                     </div>
                     <input type="hidden" name="_subject" value="New submission!">
                     <input type="hidden" name="_cc" value="renomansprl@gmail.com">
-                    <button type="submit" class="btn btn--primary btn--full-width">Send Request</button>
+                    <button type="submit" class="btn btn--primary btn--full-width" data-i18n="section_contact.formulaire.bouton_envoi">Send Request</button>
                 </form>
             </div>
         </div>
@@ -357,41 +386,41 @@
                         <span class="logo__icon">⚡</span>
                         <span class="logo__text">RENOMAN SRL</span>
                     </div>
-                    <p>Professional energy storage and electrical solutions since 2015</p>
+                    <p data-i18n="pied_de_page.description">Professional energy storage and electrical solutions since 2015</p>
                 </div>
                 
                 <div class="footer__section">
-                    <h4>Quick Links</h4>
+                    <h4 data-i18n="pied_de_page.liens_rapides">Quick Links</h4>
                     <ul class="footer__links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#clients">Clients</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#home" data-i18n="navigation.accueil">Home</a></li>
+                        <li><a href="#services" data-i18n="navigation.services">Services</a></li>
+                        <li><a href="#about" data-i18n="navigation.a_propos">About</a></li>
+                        <li><a href="#projects" data-i18n="navigation.projets">Projects</a></li>
+                        <li><a href="#clients" data-i18n="navigation.clients">Clients</a></li>
+                        <li><a href="#contact" data-i18n="navigation.contact">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer__section">
-                    <h4>Certifications</h4>
+                    <h4 data-i18n="pied_de_page.certifications">Certifications</h4>
                     <ul class="footer__links">
-                        <li>RGIE Certified</li>
-                        <li>ENGIE Partner</li>
-                        <li>Sungrow Partner</li>
+                        <li data-i18n="pied_de_page.certification_rgie">RGIE Certified</li>
+                        <li data-i18n="pied_de_page.partenaire_engie">ENGIE Partner</li>
+                        <li data-i18n="pied_de_page.partenaire_sungrow">Sungrow Partner</li>
                     </ul>
                 </div>
                 
                 <div class="footer__section">
-                    <h4>Legal</h4>
+                    <h4 data-i18n="pied_de_page.mentions_legales">Legal</h4>
                     <ul class="footer__links">
-                        <li><a href="#" data-policy="privacy">Privacy Policy</a></li>
-                        <li><a href="#" data-policy="terms">Terms & Conditions</a></li>
+                        <li><a href="#" data-policy="privacy" data-i18n="pied_de_page.politique_confidentialite">Privacy Policy</a></li>
+                        <li><a href="#" data-policy="terms" data-i18n="pied_de_page.conditions_generales">Terms & Conditions</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer__bottom">
-                <p>&copy; 2025 RENOMAN SRL. All rights reserved.</p>
+                <p data-i18n="pied_de_page.copyright">&copy; 2025 RENOMAN SRL. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -412,122 +441,6 @@
         </div>
     </div>
 
-    <!-- Hidden policy content -->
-    <div id="privacy-en" style="display: none;">
-        <h3>Privacy Policy</h3>
-        <p>Renoman SPRL respects your privacy and is committed to protecting your personal data as required by the GDPR.</p>
-
-        <ul>
-            <li><strong>Data Collection:</strong> We collect personal data such as your name, email, and contact details only when you voluntarily provide them via contact forms or newsletters.</li>
-            <li><strong>Use of Data:</strong> Your data is used solely to respond to your inquiries and manage customer relations.</li>
-            <li><strong>Data Sharing:</strong> We do not share your personal data with third parties without your consent, except as required by law.</li>
-            <li><strong>Cookies:</strong> Our website uses cookies to enhance user experience. You will be informed and may consent or refuse their use.</li>
-            <li><strong>User Rights:</strong> You have rights to access, rectify, and delete your personal data. Contact us at privacy@renomansprl.com.</li>
-            <li><strong>Data Security:</strong> We implement technical and organizational measures to secure your data.</li>
-            <li><strong>Data Retention:</strong> Personal data is kept only as long as necessary for the purpose collected.</li>
-        </ul>
-    </div>
-    <div id="privacy-fr" style="display: none;">
-        <h3>Politique de Confidentialité</h3>
-        <p>Renoman SPRL respecte votre vie privée et s’engage à protéger vos données personnelles conformément au RGPD.</p>
-        <ul>
-            <li><strong>Collecte de Données:</strong> Nous collectons vos données personnelles (nom, email, contact) uniquement lorsque vous les fournissez volontairement via nos formulaires ou newsletters.</li>
-            <li><strong>Utilisation:</strong> Les données servent uniquement à répondre à vos demandes et gérer la relation client.</li>
-            <li><strong>Partage des Données:</strong> Nous ne partageons pas vos données avec des tiers sans votre consentement, sauf obligations légales.</li>
-            <li><strong>Cookies:</strong> Le site utilise des cookies pour améliorer l’expérience utilisateur. Vous en serez informé et pouvez consentir ou refuser.</li>
-            <li><strong>Droits des Utilisateurs:</strong> Vous pouvez accéder, rectifier ou supprimer vos données personnelles en contactant privacy@renomansprl.com.</li>
-            <li><strong>Sécurité :</strong> Mesures techniques et organisationnelles assurent la protection de vos données.</li>
-            <li><strong>Conservation :</strong> Les données sont conservées uniquement aussi longtemps que nécessaire.</li>
-        </ul>
-
-    </div>
-    <div id="privacy-nl" style="display: none;">
-        <h3>Privacybeleid</h3>
-        <p>Renoman SPRL respecteert uw privacy en zet zich in om uw persoonlijke gegevens te beschermen volgens de AVG.</p>
-
-        <ul>
-            <li><strong>Gegevensverzameling:</strong> We verzamelen persoonsgegevens zoals naam, e-mailadres en contactgegevens alleen wanneer u deze vrijwillig verstrekt via contactformulieren of nieuwsbrieven.</li>
-            <li><strong>Gebruik van Gegevens:</strong> Uw gegevens worden uitsluitend gebruikt om uw vragen te beantwoorden en klantenrelaties te beheren.</li>
-            <li><strong>Delen van Gegevens:</strong> We delen uw gegevens niet met derden zonder uw toestemming, behalve indien wettelijk vereist.</li>
-            <li><strong>Cookies:</strong> Onze website gebruikt cookies om de gebruikerservaring te verbeteren. U wordt geïnformeerd en kunt toestemming geven of weigeren.</li>
-            <li><strong>Gebruikersrechten:</strong> U heeft het recht op inzage, correctie en verwijdering van uw gegevens. Contact: privacy@renomansprl.com.</li>
-            <li><strong>Gegevensbeveiliging:</strong> Technische en organisatorische maatregelen zijn genomen om uw gegevens te beveiligen.</li>
-            <li><strong>Bewaring:</strong> Persoonsgegevens worden bewaard zolang als nodig is voor het beoogde doel.</li>
-        </ul>
-    </div>
-
-    <div id="terms-en" style="display: none;">
-        <h3>Terms & Conditions</h3>
-        <p>Welcome to Renoman SPRL. These Terms and Conditions govern your use of our website and services. By accessing or using this site, you agree to comply with these terms.</p>
-        
-        <ol>
-        <li><strong>Company Information</strong><br />
-        Renoman SPRL, registered in Belgium, provides expertise in Energy Storage and Electrical Installations.</li>
-
-        <li><strong>Use of Website</strong><br />
-        You agree to use this website only for lawful purposes and not to harm or disrupt the site or services.</li>
-
-        <li><strong>Intellectual Property</strong><br />
-        All content on this website is the intellectual property of Renoman SPRL and may not be copied or used without permission.</li>
-
-        <li><strong>Liability</strong><br />
-        Renoman SPRL provides information "as is" and is not liable for any damages resulting from the use of this website.</li>
-
-        <li><strong>Changes to Terms</strong><br />
-        We reserve the right to modify these Terms at any time with immediate effect upon posting.</li>
-
-        <li><strong>Governing Law</strong><br />
-        These Terms are governed by Belgian law. Disputes are subject to the courts of Liège.</li>
-        </ol>
-    </div>
-    <div id="terms-fr" style="display: none;">
-        <h3>Conditions Générales</h3>
-        <p>Bienvenue chez Renoman SPRL. Ces Conditions Générales régissent l’utilisation de notre site internet et de nos services. En accédant à ce site, vous acceptez de respecter ces conditions.</p>
-        <ol>
-        <li><strong>Informations sur la Société</strong><br />
-        Renoman SPRL, enregistrée en Belgique, spécialisée dans le stockage d’énergie et les installations électriques.</li>
-
-        <li><strong>Utilisation du Site</strong><br />
-        Vous vous engagez à utiliser ce site de manière légale et à ne pas nuire au fonctionnement du site ou des services.</li>
-
-        <li><strong>Propriété Intellectuelle</strong><br />
-        Tout contenu de ce site est la propriété intellectuelle de Renoman SPRL et ne peut être copié ou utilisé sans autorisation.</li>
-
-        <li><strong>Responsabilité</strong><br />
-        Renoman SPRL publie les informations “telles quelles” et décline toute responsabilité pour tout dommage causé par l’utilisation du site.</li>
-
-        <li><strong>Modification des Conditions</strong><br />
-        Nous nous réservons le droit de modifier ces Conditions à tout moment, avec effet immédiat dès leur publication.</li>
-
-        <li><strong>Droit Applicable</strong><br />
-        Ces Conditions sont régies par le droit belge, et les litiges relèvent des tribunaux de Liège.</li>
-        </ol>
-    </div>
-    <div id="terms-nl" style="display: none;">
-        <h3>Algemene Voorwaarden</h3>
-        <p>Welkom bij Renoman SPRL. Deze algemene voorwaarden regelen het gebruik van onze website en diensten. Door toegang te krijgen tot deze site, gaat u akkoord met deze voorwaarden.</p>
-        <ol>
-        <li><strong>Bedrijfsinformatie</strong><br />
-        Renoman SPRL, geregistreerd in België, gespecialiseerd in energieopslag en elektrische installaties.</li>
-
-        <li><strong>Gebruik van de Website</strong><br />
-        U gaat ermee akkoord de website alleen voor legale doeleinden te gebruiken en geen schade toe te brengen aan de site of diensten.</li>
-
-        <li><strong>Intellectuele Eigendom</strong><br />
-        Alle inhoud op deze website is intellectueel eigendom van Renoman SPRL en mag niet worden gekopieerd of gebruikt zonder toestemming.</li>
-
-        <li><strong>Aansprakelijkheid</strong><br />
-        Renoman SPRL biedt informatie “zoals deze is” en is niet aansprakelijk voor schade voortvloeiend uit het gebruik van deze website.</li>
-
-        <li><strong>Wijziging van Voorwaarden</strong><br />
-        We behouden ons het recht voor deze voorwaarden op elk moment te wijzigen met onmiddellijke ingang na plaatsing.</li>
-
-        <li><strong>Toepasselijk Recht</strong><br />
-        Deze voorwaarden worden beheerst door Belgisch recht en geschillen worden voorgelegd aan de rechtbanken van Luik.</li>
-        </ol>
-    </div>
-
-
-    <script src="app.js"></script>
+    <script src="home.js"></script>
 </body>
 </html>
