@@ -66,7 +66,7 @@
     "_section": "Bannière d'accueil (première section visible)",
     "titre_principal": {
       "en": "Energy Storage and Electrical Installations",
-      "fr": "Stockage d'Énergie et Installations Électriques !",
+      "fr": "Stockage d'Énergie et Installations Électriques",
       "nl": "Energieopslag en Elektrische Installaties"
     },
     "sous_titre": {
@@ -254,21 +254,6 @@
         "en": "Energy monitoring system, carbon footprint reduction, improved system efficiency",
         "fr": "Système de surveillance énergétique, réduction empreinte carbone, efficacité système améliorée",
         "nl": "Energiemonitoringsysteem, CO2-voetafdruk vermindering, verbeterde systeemefficiëntie"
-      },
-      "tag_1": {
-        "en": "Energy Monitoring",
-        "fr": "Surveillance Énergétique",
-        "nl": "Energiemonitoring"
-      },
-      "tag_2": {
-        "en": "Carbon Reduction",
-        "fr": "Réduction Carbone",
-        "nl": "CO2-reductie"
-      },
-      "tag_3": {
-        "en": "System Efficiency",
-        "fr": "Efficacité Système",
-        "nl": "Systeemefficiëntie"
       }
     },
     "projet_3_climate": {
@@ -281,21 +266,6 @@
         "en": "Smart HVAC electrical integration, automated climate control, consumption optimization",
         "fr": "Intégration électrique HVAC intelligente, contrôle climatique automatisé, optimisation consommation",
         "nl": "Slimme HVAC elektrische integratie, geautomatiseerde klimaatbeheersing, verbruiksoptimalisatie"
-      },
-      "tag_1": {
-        "en": "Smart Integration",
-        "fr": "Intégration Intelligente",
-        "nl": "Slimme Integratie"
-      },
-      "tag_2": {
-        "en": "Automated Control",
-        "fr": "Contrôle Automatisé",
-        "nl": "Geautomatiseerde Controle"
-      },
-      "tag_3": {
-        "en": "Optimization",
-        "fr": "Optimisation",
-        "nl": "Optimalisatie"
       }
     }
   },
