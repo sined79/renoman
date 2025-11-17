@@ -8,6 +8,18 @@ let currentLang = 'en';
 document.addEventListener('DOMContentLoaded', function() {
     // Load JSON content first
     loadContent().then(() => {
+        const savedLang = localStorage.getItem('preferred-language') || 'EN';
+        currentLang = savedLang.toLowerCase();
+        
+        // Update language buttons state
+        const langButtons = document.querySelectorAll('.lang-btn');
+        langButtons.forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.lang === savedLang);
+        });
+        
+        // Apply content from JSON IMMEDIATELY
+        updatePageContent();
+
         // Initialize all functionality after content is loaded
         initNavigation();
         initLanguagePicker();
@@ -18,9 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
         initProjectSlideshow();
         initPolicyOffcanvas();
         
-        // Apply initial language
-        const savedLang = localStorage.getItem('preferred-language') || 'en';
-        currentLang = savedLang.toLowerCase();
         updatePageContent();
     });
 });
@@ -40,6 +49,44 @@ async function loadContent() {
         contentData = {};
     }
 }
+
+// Update all page content with current language
+function updatePageContent() {
+    // Force update for all elements with data-i18n attribute
+    const elements = document.querySelectorAll('[data-i18n]');
+    
+    elements.forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        const translation = getText(key);
+        
+        if (translation) {
+            element.textContent = translation;
+        } else if (element.textContent.trim() === '') {
+            // If empty and no translation found, show a placeholder
+            console.warn(`No translation found for: ${key}`);
+        }
+    });
+    
+    // Update placeholders
+    const placeholderElements = document.querySelectorAll('[data-i18n-placeholder]');
+    placeholderElements.forEach(element => {
+        const key = element.getAttribute('data-i18n-placeholder');
+        const translation = getText(key);
+        if (translation) {
+            element.placeholder = translation;
+        }
+    });
+    
+    // Update meta tags
+    updateSEOMetaTags();
+    
+    // Update select options
+    updateSelectOptions();
+    
+    // Update cookie banner
+    updateCookieBanner();
+}
+
 
 // Helper function to get nested property from object
 function getNestedProperty(obj, path) {
