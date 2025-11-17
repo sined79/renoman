@@ -242,26 +242,6 @@
         "en": "Complete description with results: 2MWh installed, 30% peak cost reduction, 6-month installation",
         "fr": "Description complète avec résultats : 2MWh installés, 30% de réduction des coûts de pointe, installation en 6 mois",
         "nl": "Volledige beschrijving met resultaten: 2MWh geïnstalleerd, 30% piekkosten reductie, 6 maanden installatie"
-      },
-      "capacite_label": {
-        "en": "Capacity:",
-        "fr": "Capacité :",
-        "nl": "Capaciteit:"
-      },
-      "reduction_label": {
-        "en": "Cost Reduction:",
-        "fr": "Réduction des Coûts :",
-        "nl": "Kostenreductie:"
-      },
-      "delai_label": {
-        "en": "Timeline:",
-        "fr": "Délai :",
-        "nl": "Tijdlijn:"
-      },
-      "delai_valeur": {
-        "en": "6 months",
-        "fr": "6 mois",
-        "nl": "6 maanden"
       }
     },
     "projet_2_go4zero": {
