@@ -182,9 +182,9 @@
       "nl": "RENOMAN SRL, gevestigd in Wezembeek-Oppem, België, gespecialiseerd in energieopslag en elektrotechniek sinds 2015. Ons ervaren team van 6 elektrotechnische ingenieurs combineert meer dan 20 jaar ervaring."
     },
     "paragraphe_2": {
-      "en": "RGIE certifications, partnerships with ENGIE, Sungrow, Holcim. Commitment: safety, transparency, customer satisfaction throughout Benelux.",
-      "fr": "Certifications RGIE, partenariats avec ENGIE, Sungrow, Holcim. Engagement : sécurité, transparence, satisfaction client dans tout le Benelux.",
-      "nl": "AREI-certificeringen, partnerschappen met ENGIE, Sungrow, Holcim. Engagement: veiligheid, transparantie, klanttevredenheid in de hele Benelux."
+      "en": "RGIE certifications, collaboration with ENGIE, Sungrow, Holcim. Commitment: safety, transparency, customer satisfaction throughout Benelux.",
+      "fr": "Certifications RGIE, collaboration avec ENGIE, Sungrow, Holcim. Engagement : sécurité, transparence, satisfaction client dans tout le Benelux.",
+      "nl": "AREI-certificeringen, samenwerking met ENGIE, Sungrow, Holcim. Engagement: veiligheid, transparantie, klanttevredenheid in de hele Benelux."
     },
     "mission_titre": {
       "en": "Mission:",
@@ -455,11 +455,6 @@
       "en": "RGIE Certified",
       "fr": "Certifié RGIE",
       "nl": "AREI Gecertificeerd"
-    },
-    "partenaire_engie": {
-      "en": "ENGIE Partner",
-      "fr": "Partenaire ENGIE",
-      "nl": "ENGIE Partner"
     },
     "partenaire_sungrow": {
       "en": "Sungrow Partner",
