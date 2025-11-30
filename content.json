@@ -234,38 +234,39 @@
     },
     "projet_1_vilvoorde": {
       "titre": {
-        "en": "Vilvoorde BESS – ENGIE/Sungrow",
-        "fr": "Vilvoorde BESS – ENGIE/Sungrow",
-        "nl": "Vilvoorde BESS – ENGIE/Sungrow"
+        "en": "ENGIE BESS Vilvoorde 880 MWh",
+        "fr": "NGIE BESS Vilvoorde 880 MWh",
+        "nl": "NGIE BESS Vilvoorde 880 MWh"
       },
       "description": {
-        "en": "Complete description with results: 2MWh installed, 30% peak cost reduction, 6-month installation",
-        "fr": "Description complète avec résultats : 2MWh installés, 30% de réduction des coûts de pointe, installation en 6 mois",
-        "nl": "Volledige beschrijving met resultaten: 2MWh geïnstalleerd, 30% piekkosten reductie, 6 maanden installatie"
+        "en": "RENOMAN SPRL provides commissioning support on the ENGIE project.",
+        "fr": "RENOMAN SPRL fournit le support au commissioning sur le projet ENGIE.",
+        "nl": "RENOMAN SPRL biedt ondersteuning bij de commissioning op het ENGIE-project.
+"
       }
     },
     "projet_2_go4zero": {
       "titre": {
-        "en": "GO4Zero – Holcim & CBMI",
-        "fr": "GO4Zero – Holcim & CBMI",
-        "nl": "GO4Zero – Holcim & CBMI"
+        "en": "GO4ZERO – Holcim’s Industrial Transformation and Decarbonization Project in Obourg",
+        "fr": "GO4ZERO – Projet de transformation industrielle et de décarbonation de Holcim à Obourg",
+        "nl": "GO4ZERO – Holcim’s industriële transformatie- en decarbonisatieproject in Obourg"
       },
       "description": {
-        "en": "Energy monitoring system, carbon footprint reduction, improved system efficiency",
-        "fr": "Système de surveillance énergétique, réduction empreinte carbone, efficacité système améliorée",
-        "nl": "Energiemonitoringsysteem, CO2-voetafdruk vermindering, verbeterde systeemefficiëntie"
+        "en": "GO4ZERO is Holcim’s flagship project to transform its cement plant in Obourg, Belgium into a net-zero facility by 2029, using a next-generation kiln combined with CO₂ capture and storage.",
+        "fr": "GO4ZERO est le projet phare de Holcim visant à transformer son usine de ciment d’Obourg (Belgique) en une installation zéro émission nette d’ici 2029, grâce à un nouveau four à haut rendement et à la capture et au stockage du CO₂.",
+        "nl": "GO4ZERO is het vlaggenschipproject van Holcim om de cementfabriek in Obourg (België) tegen 2029 om te vormen tot een net-nulinstallatie, met een geavanceerde nieuwe oven en CO₂-afvang en -opslag."
       }
     },
     "projet_3_climate": {
       "titre": {
-        "en": "ClimateSolution – HVAC",
-        "fr": "ClimateSolution – HVAC",
-        "nl": "ClimateSolution – HVAC"
+        "en": "HVAC Project – Heating, Ventilation and Air Conditioning Works",.
+        "fr": "Projet HVAC – Travaux de chauffage, ventilation et climatisation",
+        "nl": "HVAC-project – Werken rond verwarming, ventilatie en airconditioning"
       },
       "description": {
-        "en": "Smart HVAC electrical integration, automated climate control, consumption optimization",
-        "fr": "Intégration électrique HVAC intelligente, contrôle climatique automatisé, optimisation consommation",
-        "nl": "Slimme HVAC elektrische integratie, geautomatiseerde klimaatbeheersing, verbruiksoptimalisatie"
+        "en": "The project involves the deployment of HVAC systems, for which RENOMAN SPRL provided the electrical installation and on-site wiring works.",
+        "fr": "Le projet comprend le déploiement de systèmes HVAC, pour lequel RENOMAN SPRL a réalisé les installations électriques et le câblage sur site.",
+        "nl": "Het project omvat de uitrol van HVAC-systemen, waarbij RENOMAN SPRL instond voor de elektrische installatie en bekabeling op de site."
       }
     }
   },
@@ -357,19 +358,19 @@
     "informations": {
       "_description": "Labels des informations de contact",
       "adresse_label": {
-        "en": "📍 Address:",
-        "fr": "📍 Adresse :",
-        "nl": "📍 Adres:"
+        "en": "📍 Address: Wezembeek-Oppem Blgium",
+        "fr": "📍 Adresse :Wezembeek-Oppem Blgique",
+        "nl": "📍 Wezembeek-Oppem, België"
       },
       "telephone_label": {
-        "en": "📞 Phone:",
-        "fr": "📞 Téléphone :",
-        "nl": "📞 Telefoon:"
+        "en": "📞 Phone: +32 487 25 78 23",
+        "fr": "📞 Téléphone :+32 487 25 78 23",
+        "nl": "📞 Telefoon: +32 487 25 78 23"
       },
       "email_label": {
-        "en": "📧 Email:",
-        "fr": "📧 E-mail :",
-        "nl": "📧 E-mail:"
+        "en": "📧 Email: info@renomansprl.com",
+        "fr": "📧 E-mail : info@renomansprl.com",
+        "nl": "📧 E-mail: info@renomansprl.com"
       },
       "temps_reponse_label": {
         "en": "⏰ Response Time:",
@@ -387,9 +388,9 @@
   "pied_de_page": {
     "_section": "Footer - Liens et mentions légales",
     "description": {
-      "en": "Professional energy storage and electrical solutions since 2015",
-      "fr": "Solutions professionnelles de stockage d'énergie et d'électricité depuis 2015",
-      "nl": "Professionele energieopslag en elektrische oplossingen sinds 2015"
+      "en": "Professional energy storage and electrical solutions",
+      "fr": "Solutions professionnelles de stockage d'énergie et d'électricité",
+      "nl": "Professionele energieopslag en elektrische oplossingen"
     },
     "liens_rapides": {
       "en": "Quick Links",
