@@ -232,20 +232,31 @@
       "fr": "Découvrez nos derniers projets",
       "nl": "Ontdek onze nieuwste projecten"
     },
-    "projet_1_vilvoorde": {
+ "projet_1_Luminus: {
+      "titre": {
+        "en": "Luminus BESS Vilvoorde 660 MWh",
+        "fr": "Luminus BESS Vilvoorde 660 MWh",
+        "nl": "Luminus BESS Vilvoorde 660 MWh"
+      },
+      "description": {
+        "en": "The project provides full commissioning support for Luminus, including technical coordination, multi-party interface management and the mobilisation of external resources.",
+        "fr": "Le projet assure un support complet au commissioning pour Luminus, incluant la coordination technique, la gestion des interfaces multiparties et la mobilisation des ressources externes.",
+        "nl": "Het project biedt volledige commissioning-ondersteuning voor Luminus, inclusief technische coördinatie, multiparty-interfacebeheer en de inzet van externe resources.",
+      }
+    },
+"projet_2_Engie": {
       "titre": {
         "en": "ENGIE BESS Vilvoorde 880 MWh",
-        "fr": "NGIE BESS Vilvoorde 880 MWh",
-        "nl": "NGIE BESS Vilvoorde 880 MWh"
+        "fr": "ENGIE BESS Vilvoorde 880 MWh",
+        "nl": "ENGIE BESS Vilvoorde 880 MWh"
       },
       "description": {
         "en": "RENOMAN SPRL provides commissioning support on the ENGIE project.",
         "fr": "RENOMAN SPRL fournit le support au commissioning sur le projet ENGIE.",
-        "nl": "RENOMAN SPRL biedt ondersteuning bij de commissioning op het ENGIE-project.
-"
+        "nl": "RENOMAN SPRL biedt ondersteuning bij de commissioning op het ENGIE-project.",
       }
     },
-    "projet_2_go4zero": {
+    "projet_3_go4zero": {
       "titre": {
         "en": "GO4ZERO – Holcim’s Industrial Transformation and Decarbonization Project in Obourg",
         "fr": "GO4ZERO – Projet de transformation industrielle et de décarbonation de Holcim à Obourg",
@@ -257,7 +268,7 @@
         "nl": "GO4ZERO is het vlaggenschipproject van Holcim om de cementfabriek in Obourg (België) tegen 2029 om te vormen tot een net-nulinstallatie, met een geavanceerde nieuwe oven en CO₂-afvang en -opslag."
       }
     },
-    "projet_3_climate": {
+    "projet_4_climate": {
       "titre": {
         "en": "HVAC Project – Heating, Ventilation and Air Conditioning Works",.
         "fr": "Projet HVAC – Travaux de chauffage, ventilation et climatisation",
