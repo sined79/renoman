@@ -440,6 +440,7 @@ function initLanguagePicker() {
 // Theme toggle functionality
 function initThemeToggle() {
     const themeToggle = document.getElementById('themeToggle');
+     if (!themeToggle) return;      // 没有这个按钮就直接跳过
     const themeIcon = themeToggle.querySelector('.theme-icon');
     
     // Check for saved theme preference or default to 'light'
