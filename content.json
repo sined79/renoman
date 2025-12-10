@@ -177,24 +177,19 @@
       "nl": "OVER RENOMAN"
     },
     "paragraphe_1": {
-      "en": "RENOMAN SRL, based in Wezembeek-Oppem, Belgium, specialized in energy storage and electrical engineering since 2015. Our experienced team of 6 electrical engineers combines over 20 years of experience.",
-      "fr": "RENOMAN SRL, basée à Wezembeek-Oppem, Belgique, spécialisée dans le stockage d'énergie et l'ingénierie électrique depuis 2015. Notre équipe expérimentée de 6 ingénieurs électriciens combine plus de 20 ans d'expérience.",
-      "nl": "RENOMAN SRL, gevestigd in Wezembeek-Oppem, België, gespecialiseerd in energieopslag en elektrotechniek sinds 2015. Ons ervaren team van 6 elektrotechnische ingenieurs combineert meer dan 20 jaar ervaring."
+      "en": "RENOMAN SRL, based in Wezembeek-Oppem, Belgium, has specialized in energy storage and electrical engineering since 2015. Our experienced team of six electrical engineers brings together over 20 years of combined expertise.",
+      "fr": "RENOMAN SRL, basée à Wezembeek-Oppem en Belgique, est spécialisée dans le stockage d'énergie et l'ingénierie électrique depuis 2015. Notre équipe expérimentée de six ingénieurs électriciens rassemble plus de 20 ans d'expertise cumulée.",
+      "nl": "RENOMAN SRL, gevestigd in Wezembeek-Oppem (België), is sinds 2015 gespecialiseerd in energieopslag en elektrotechniek. Ons ervaren team van zes elektrotechnische ingenieurs bundelt meer dan 20 jaar expertise."
     },
     "paragraphe_2": {
-      "en": "RGIE certifications, collaboration with ENGIE, Sungrow, Holcim. Commitment: safety, transparency, customer satisfaction throughout Benelux.",
-      "fr": "Certifications RGIE, collaboration avec ENGIE, Sungrow, Holcim. Engagement : sécurité, transparence, satisfaction client dans tout le Benelux.",
-      "nl": "AREI-certificeringen, samenwerking met ENGIE, Sungrow, Holcim. Engagement: veiligheid, transparantie, klanttevredenheid in de hele Benelux."
+      "en": "We hold RGIE certifications and have collaborated with SUNGROW in Engie and Luminus projects, as well as with SINOMA CBMI on the Holcim GO4ZERO project.",
+      "fr": "Nous détenons les certifications RGIE et avons collaboré avec SUNGROW sur des projets Engie et Luminus, ainsi qu'avec SINOMA CBMI sur le projet Holcim GO4ZERO.",
+      "nl": "Wij beschikken over AREI-certificeringen en hebben samengewerkt met SUNGROW aan projecten voor Engie en Luminus, evenals met SINOMA CBMI aan het Holcim GO4ZERO-project."
     },
-    "mission_titre": {
-      "en": "Mission:",
-      "fr": "Mission :",
-      "nl": "Missie:"
-    },
-    "mission_texte": {
-      "en": "Accelerate energy transition with innovative, reliable, and cost-effective electrical solutions.",
-      "fr": "Accélérer la transition énergétique avec des solutions électriques innovantes, fiables et rentables.",
-      "nl": "De energietransitie versnellen met innovatieve, betrouwbare en kosteneffectieve elektrische oplossingen."
+    "paragraphe_3": {
+      "en": "We are committed to safety, transparency, and customer satisfaction across the Benelux region.",
+      "fr": "Nous nous engageons pour la sécurité, la transparence et la satisfaction client dans tout le Benelux.",
+      "nl": "Wij streven naar veiligheid, transparantie en klanttevredenheid in de hele Benelux."
     },
     "statistiques": {
       "clients": {
@@ -369,8 +364,8 @@
     "informations": {
       "_description": "Labels des informations de contact",
       "adresse_label": {
-        "en": "📍 Address: Wezembeek-Oppem Blgium",
-        "fr": "📍 Adresse :Wezembeek-Oppem Blgique",
+        "en": "📍 Address: Wezembeek-Oppem Belgium",
+        "fr": "📍 Adresse: Wezembeek-Oppem Belgique",
         "nl": "📍 Wezembeek-Oppem, België"
       },
       "telephone_label": {
