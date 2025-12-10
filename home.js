@@ -241,36 +241,70 @@ function updateThemeIcon(icon, theme) { icon.textContent = theme === 'light' ? '
 
 function initContactForm() {
     const form = document.getElementById('contactForm');
-    if (form) {
-        form.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData);
-            if (!validateForm(data)) return;
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = getText('messages.envoi_en_cours') || 'Sending...';
-            submitBtn.disabled = true;
-            try {
-                const response = await fetch('https://formsubmit.co/renomansprl@gmail.com', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                    body: JSON.stringify(data)
-                });
-                if (response.ok) {
-                    showMessage(getText('messages.succes_envoi') || 'Success', 'success');
-                    form.reset();
-                } else throw new Error('Failed');
-            } catch (error) {
-                console.error(error);
-                showMessage(getText('messages.erreur_envoi') || 'Error', 'error');
-            } finally {
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
+    if (!form) return;
+
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        // 1. Récupération des données
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+
+        // 2. Validation (avec sécurité si la fonction n'existe pas)
+        if (typeof validateForm === 'function' && !validateForm(data)) return;
+
+        // 3. Gestion de l'état "Chargement"
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        // Fallback sécurisé si getText n'est pas défini
+        const loadingText = (typeof getText === 'function' ? getText('messages.envoi_en_cours') : null) || 'Envoi en cours...';
+        
+        submitBtn.textContent = loadingText;
+        submitBtn.disabled = true;
+
+        try {
+            // 4. Envoi avec l'URL AJAX spécifique
+            const response = await fetch('https://formsubmit.co/ajax/info@renomansprl.com', {
+                method: 'POST',
+                headers: { 
+                    'Content-Type': 'application/json', 
+                    'Accept': 'application/json' 
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                // Succès
+                const successMsg = (typeof getText === 'function' ? getText('messages.succes_envoi') : null) || 'Message envoyé avec succès !';
+                if (typeof showMessage === 'function') {
+                    showMessage(successMsg, 'success');
+                } else {
+                    alert(successMsg); // Fallback simple
+                }
+                form.reset();
+            } else {
+                throw new Error(result.message || 'Erreur inconnue');
             }
-        });
-    }
+        } catch (error) {
+            // Erreur
+            console.error('Erreur FormSubmit:', error);
+            const errorMsg = (typeof getText === 'function' ? getText('messages.erreur_envoi') : null) || 'Une erreur est survenue.';
+            
+            if (typeof showMessage === 'function') {
+                showMessage(errorMsg, 'error');
+            } else {
+                alert(errorMsg);
+            }
+        } finally {
+            // 5. Rétablissement du bouton
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }
+    });
 }
+
 function validateForm(data) {
     if (!data.name || data.name.trim().length < 2) {
         showMessage(getText('messages.erreur_nom') || 'Invalid name', 'error');
