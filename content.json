@@ -364,19 +364,19 @@
     "informations": {
       "_description": "Labels des informations de contact",
       "adresse_label": {
-        "en": "📍 Address: Wezembeek-Oppem Belgium",
-        "fr": "📍 Adresse: Wezembeek-Oppem Belgique",
-        "nl": "📍 Wezembeek-Oppem, België"
+        "en": "📍 Address: ",
+        "fr": "📍 Adresse: ",
+        "nl": "📍 Adres: "
       },
       "telephone_label": {
-        "en": "📞 Phone: +32 487 25 78 23",
-        "fr": "📞 Téléphone :+32 487 25 78 23",
-        "nl": "📞 Telefoon: +32 487 25 78 23"
+        "en": "📞 Phone: ",
+        "fr": "📞 Téléphone :",
+        "nl": "📞 Telefoon: "
       },
       "email_label": {
-        "en": "📧 Email: info@renomansprl.com",
-        "fr": "📧 E-mail : info@renomansprl.com",
-        "nl": "📧 E-mail: info@renomansprl.com"
+        "en": "📧 Email: ",
+        "fr": "📧 E-mail : ",
+        "nl": "📧 E-mail: "
       },
       "temps_reponse_label": {
         "en": "⏰ Response Time:",
