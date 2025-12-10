@@ -264,7 +264,7 @@ function initContactForm() {
 
         try {
             // 4. Envoi avec l'URL AJAX spécifique
-            const response = await fetch('https://formsubmit.co/ajax/fouguemaurice@gmail.com', {
+            const response = await fetch('https://formsubmit.co/ajax/info@renomansprl.com', {
                 method: 'POST',
                 headers: { 
                     'Content-Type': 'application/json', 
