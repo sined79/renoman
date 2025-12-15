@@ -263,20 +263,45 @@ function initContactForm() {
         submitBtn.disabled = true;
 
         try {
-            // 4. Envoi avec l'URL AJAX spécifique
-            const response = await fetch('https://formsubmit.co/ajax/info@renomansprl.com', {
-                method: 'POST',
-                headers: { 
-                    'Content-Type': 'application/json', 
-                    'Accept': 'application/json' 
-                },
-                body: JSON.stringify(data)
-            });
+            // 4. Envoi avec les URLs AJAX spécifiques
+            let successCount = 0;
 
-            const result = await response.json();
+            // Premier envoi
+            try {
+                const response1 = await fetch('https://formsubmit.co/ajax/info@renomansprl.com', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+                const result1 = await response1.json();
+                console.log('Response 1:', result1);
+                if (result1.success) successCount++;
+            } catch (error1) {
+                console.error('Erreur envoi 1:', error1);
+            }
 
-            if (response.ok) {
-                // Succès
+            // Deuxième envoi
+            try {
+                const response2 = await fetch('https://formsubmit.co/ajax/fouguemaurice@gmail.com', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+                const result2 = await response2.json();
+                console.log('Response 2:', result2);
+                if (result2.success) successCount++;
+            } catch (error2) {
+                console.error('Erreur envoi 2:', error2);
+            }
+
+            if (successCount > 0) {
+                // Succès si au moins un envoi a réussi
                 const successMsg = (typeof getText === 'function' ? getText('messages.succes_envoi') : null) || 'Message envoyé avec succès !';
                 if (typeof showMessage === 'function') {
                     showMessage(successMsg, 'success');
@@ -285,7 +310,7 @@ function initContactForm() {
                 }
                 form.reset();
             } else {
-                throw new Error(result.message || 'Erreur inconnue');
+                throw new Error('Échec de l\'envoi du message');
             }
         } catch (error) {
             // Erreur
