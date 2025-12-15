@@ -270,7 +270,7 @@ function initContactForm() {
                     'Content-Type': 'application/json', 
                     'Accept': 'application/json' 
                 },
-                body: JSON.stringify(data)
+                body: JSON.stringify(data1)
             })
                 .then(response1 => response1.json())
                 .then(data1 => console.log(data1))
@@ -283,7 +283,7 @@ function initContactForm() {
                     'Content-Type': 'application/json', 
                     'Accept': 'application/json' 
                 },
-                body: JSON.stringify(data)
+                body: JSON.stringify(data2)
             })
                 .then(response2 => response2.json())
                 .then(data2 => console.log(data2))
