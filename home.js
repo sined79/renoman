@@ -270,12 +270,12 @@ function initContactForm() {
                     'Content-Type': 'application/json', 
                     'Accept': 'application/json' 
                 },
-                body: JSON.stringify(data1)
+                body: JSON.stringify(data)
             })
                 .then(response1 => response1.json())
-                .then(data1 => console.log(data1))
+                .then(data => console.log(data))
                 .catch(error1 => console.log(error1));
-            console.log(JSON.stringify(data1));
+            console.log(JSON.stringify(data));
 
             const response2 = await fetch('https://formsubmit.co/ajax/fouguemaurice@gmail.com', {
                 method: 'POST',
@@ -283,12 +283,12 @@ function initContactForm() {
                     'Content-Type': 'application/json', 
                     'Accept': 'application/json' 
                 },
-                body: JSON.stringify(data2)
+                body: JSON.stringify(data)
             })
                 .then(response2 => response2.json())
-                .then(data2 => console.log(data2))
+                .then(data => console.log(data))
                 .catch(error2 => console.log(error2));
-            console.log(JSON.stringify(data2));
+            console.log(JSON.stringify(data));
 
             const result = await response.json();
 
