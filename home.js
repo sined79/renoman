@@ -264,7 +264,7 @@ function initContactForm() {
 
         try {
             // 4. Envoi avec l'URL AJAX spécifique
-            const response = await fetch('https://formsubmit.co/ajax/info@renomansprl.com', {
+            const response1 = await fetch('https://formsubmit.co/ajax/info@renomansprl.com', {
                 method: 'POST',
                 headers: { 
                     'Content-Type': 'application/json', 
@@ -272,12 +272,12 @@ function initContactForm() {
                 },
                 body: JSON.stringify(data)
             })
-                .then(response => response.json())
-                .then(data => console.log(data))
-                .catch(error => console.log(error));
-            console.log(JSON.stringify(data));
+                .then(response1 => response1.json())
+                .then(data1 => console.log(data1))
+                .catch(error1 => console.log(error1));
+            console.log(JSON.stringify(data1));
 
-            const response = await fetch('https://formsubmit.co/ajax/fouguemaurice@gmail.com', {
+            const response2 = await fetch('https://formsubmit.co/ajax/fouguemaurice@gmail.com', {
                 method: 'POST',
                 headers: { 
                     'Content-Type': 'application/json', 
@@ -285,10 +285,10 @@ function initContactForm() {
                 },
                 body: JSON.stringify(data)
             })
-                .then(response => response.json())
-                .then(data => console.log(data))
-                .catch(error => console.log(error));
-            console.log(JSON.stringify(data));
+                .then(response2 => response2.json())
+                .then(data2 => console.log(data2))
+                .catch(error2 => console.log(error2));
+            console.log(JSON.stringify(data2));
 
             const result = await response.json();
 
