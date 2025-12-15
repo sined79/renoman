@@ -285,7 +285,7 @@ function initContactForm() {
 
             // Deuxième envoi
             try {
-                const response2 = await fetch('https://formsubmit.co/ajax/fouguemaurice@gmail.com', {
+                const response2 = await fetch('https://formsubmit.co/ajax/1e112aa92c469079719850b22a32b628', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
