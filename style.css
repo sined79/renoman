@@ -1556,17 +1556,141 @@ section {
   min-width: 0;
 }
 
+/* Slideshow responsive — tout en dessous de 900px */
 @media (max-width: 900px) {
   .slideshow-with-info {
     flex-direction: column;
     max-height: 90vh;
     overflow-y: auto;
+    width: 100vw;
+    padding: var(--space-16);
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
+
   .slideshow-info-panel {
     max-width: 100%;
     max-height: none;
   }
+
+  .slideshow-gallery-side {
+    width: 100%;
+  }
+
+  /* Flèches à l'intérieur de l'image, pas en dehors */
+  #slideshowPrev,
+  #slideshowNext {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    left: var(--space-8) !important;
+    right: auto !important;
+    background: rgba(0, 0, 0, 0.45) !important;
+    backdrop-filter: blur(4px);
+    z-index: 10;
+  }
+
+  #slideshowNext {
+    left: auto !important;
+    right: var(--space-8) !important;
+  }
+
+  #slideshowImage {
+    max-width: 100% !important;
+    max-height: 45vh !important;
+    width: 100% !important;
+    object-fit: contain;
+  }
 }
+
+
+/* Slideshow — flèches dans l'image sur mobile */
+@media (max-width: 768px) {
+  .slideshow-with-info {
+    width: 100vw;
+    padding: var(--space-16);
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .slideshow-gallery-side {
+    width: 100%;
+  }
+
+  /* Repositionne les flèches à l'intérieur de la zone image */
+  #slideshowPrev,
+  #slideshowNext {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    left: var(--space-8) !important;   /* ← dans l'image, pas en dehors */
+    right: auto !important;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.45) !important;
+    backdrop-filter: blur(4px);
+  }
+
+  #slideshowNext {
+    left: auto !important;
+    right: var(--space-8) !important;  /* ← symétrique à droite */
+  }
+
+  /* L'image prend toute la largeur disponible */
+  #slideshowImage {
+    max-width: 100% !important;
+    max-height: 45vh !important;
+    width: 100% !important;
+    object-fit: contain;
+  }
+}
+
+/* Remplace 900px par 1050px pour couvrir la zone problématique */
+@media (max-width: 1050px) {
+  .slideshow-with-info {
+    flex-direction: column;
+    max-height: 90vh;
+    overflow-y: auto;
+    width: 100vw;
+    padding: var(--space-16);
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .slideshow-info-panel {
+    max-width: 100%;
+    max-height: none;
+  }
+
+  .slideshow-gallery-side {
+    width: 100%;
+  }
+
+  #slideshowPrev,
+  #slideshowNext {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    left: var(--space-8) !important;
+    right: auto !important;
+    background: rgba(0, 0, 0, 0.45) !important;
+    backdrop-filter: blur(4px);
+    z-index: 10;
+  }
+
+  #slideshowNext {
+    left: auto !important;
+    right: var(--space-8) !important;
+  }
+
+  #slideshowImage {
+    max-width: 100% !important;
+    max-height: 45vh !important;
+    width: 100% !important;
+    object-fit: contain;
+  }
+}
+
+
 
 
 /* Clients Section */
