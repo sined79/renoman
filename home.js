@@ -4,13 +4,16 @@
 let contentData = {};
 let projectsData = null; // Nouveau : stockera le manifest des projets
 let currentLang = 'en';
+let careersData = null;   // ← ajouter cette ligne
+
 
 // Load content and initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
     // On charge les deux fichiers JSON en parallèle
     Promise.all([
         loadContent(),          // Charge content.json (votre fonction d'origine)
-        loadProjectsManifest()  // Charge projects-manifest.json (nouveau)
+        loadProjectsManifest(),  // Charge projects-manifest.json (nouveau)
+        loadCareersManifest()    // Charge careers-manifest.json (nouveau)
     ]).then(() => {
         const savedLang = localStorage.getItem('preferred-language') || 'EN';
         currentLang = savedLang.toLowerCase();
@@ -33,6 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
         initScrollEffects();
         initProjectSlideshow();
         initPolicyOffcanvas();
+        initCareers();
+        initServiceFlipCards();
         updatePageContent();
         
         console.log("Site initialisé avec succès");
@@ -87,6 +92,35 @@ function updatePageContent() {
             element.placeholder = translation;
         }
     });
+
+    // Bullets multilingues
+    document.querySelectorAll('[data-i18n-bullets]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n-bullets');
+        var parts = key.split('.');
+        var val = contentData;  // ✅ contentData, pas content
+        parts.forEach(function(p) { val = val && val[p]; });
+        if (val && typeof val === 'object' && !Array.isArray(val)) {
+            val = val[currentLang] || val['en'];  // ✅ currentLang, pas lang
+        }
+        if (Array.isArray(val)) {
+            el.innerHTML = val.map(function(b) {
+                return '<li>' + b + '</li>';
+            }).join('');
+        }
+    });
+
+    // Zones HTML multilingues (innerHTML)
+    document.querySelectorAll('[data-i18n-html]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n-html');
+        var parts = key.split('.');
+        var val = contentData;
+        parts.forEach(function(p) { val = val && val[p]; });
+        if (val && typeof val === 'object') {
+            val = val[currentLang] || val['en'];
+        }
+        if (val) el.innerHTML = val;
+    });
+
 
     updateSEOMetaTags();
     updateSelectOptions();
@@ -217,6 +251,9 @@ function initLanguagePicker() {
             currentLang = selectedLang.toLowerCase();
             localStorage.setItem('preferred-language', selectedLang);
             updatePageContent();
+            if (window.lucide) lucide.createIcons();
+            renderProjectCards();
+            renderCareerCards();
             document.documentElement.lang = currentLang;
         });
     });
@@ -353,13 +390,16 @@ function showMessage(message, type) {
 }
 
 function initSmoothScrolling() {
+    // Sélectionne uniquement les liens avec une ancre valide (#section)
     const links = document.querySelectorAll('a[href^="#"]');
     links.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href');
+            // Ignore les href vides, "#" seul, ou les liens data-policy
+            if (!targetId || targetId === '#' || this.hasAttribute('data-policy')) return;
             const targetSection = document.querySelector(targetId);
             if (targetSection) {
+                e.preventDefault();
                 const headerHeight = document.querySelector('.header').offsetHeight;
                 const targetPosition = targetSection.offsetTop - headerHeight;
                 window.scrollTo({ top: targetPosition, behavior: 'smooth' });
@@ -367,6 +407,7 @@ function initSmoothScrolling() {
         });
     });
 }
+
 
 function initScrollEffects() {
     const observer = new IntersectionObserver(function(entries) {
@@ -383,28 +424,30 @@ function initScrollEffects() {
 function initPolicyOffcanvas() {
     const offcanvas = document.getElementById('policyOffcanvas');
     if (!offcanvas) return;
-    const links = document.querySelectorAll('a[data-policy]');
-    const closeBtn = offcanvas.querySelector('.offcanvas__close');
-    const overlay = offcanvas.querySelector('.offcanvas__overlay');
-    const title = offcanvas.querySelector('.offcanvas__title');
-    const content = offcanvas.querySelector('.offcanvas__body');
+
+    const links = document.querySelectorAll('[data-policy]');
+    const closeBtn = offcanvas.querySelector('.offcanvas__close, #offcanvasClose, .offcanvasclose');
+    const overlay = offcanvas.querySelector('.offcanvas__overlay, .offcanvasoverlay');
+    const titleEl = document.getElementById('policyTitle');       // ← getElementById, plus robuste
+    const contentEl = document.getElementById('policyContent');   // ← idem
 
     links.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const type = this.dataset.policy;
             let titleText = '', contentText = '';
-            
+
             if (type === 'privacy') {
-                titleText = getText('politique_confidentialite.titre');
-                contentText = getText('politique_confidentialite.texte');
+                titleText = getText('politiqueconfidentialite.titre');
+                contentText = getText('politiqueconfidentialite.texte');
             } else if (type === 'terms') {
-                titleText = getText('conditions_generales.titre');
-                contentText = getText('conditions_generales.texte');
+                titleText = getText('conditionsgenerales.titre');
+                contentText = getText('conditionsgenerales.texte');
             }
-            
-            title.textContent = titleText || 'Policy';
-            content.innerHTML = contentText || 'Content not found';
+
+            if (titleEl) titleEl.textContent = titleText;
+            if (contentEl) contentEl.innerHTML = contentText || 'Content not found';
+
             offcanvas.classList.add('offcanvas--open');
             document.body.style.overflow = 'hidden';
         });
@@ -421,33 +464,183 @@ function initPolicyOffcanvas() {
         if (e.key === 'Escape') closePolicy();
     });
 }
-
-// --- NOUVELLE LOGIQUE DE GALERIE (PROJECTS SLIDESHOW) ---
-
 function initProjectSlideshow() {
-    const projectPhotos = document.querySelectorAll('.project-photo');
-    projectPhotos.forEach(photo => {
-        photo.addEventListener('click', function() {
-            const projectName = this.dataset.project;
-            if (projectName) {
-                openSlideshow(projectName);
-            }
-        });
-        photo.style.cursor = 'pointer';
-    });
+  renderProjectCards();
 }
 
-// Nouvelle fonction qui utilise projectsData
-function getProjectImages(projectName) {
-    // Si le manifest n'est pas chargé ou projet inconnu, fallback
-    if (!projectsData || !projectsData[projectName]) {
-        console.warn(`Projet "${projectName}" introuvable dans le manifest.`);
-        return ['assets/photo-placeholder.svg'];
-    }
+function renderProjectCards() {
+  var grid = document.getElementById('projectsGrid');
+  if (!grid || !projectsData) return;
 
-    const project = projectsData[projectName];
-    // Reconstruit le chemin complet: dossier + nom de fichier
-    return project.images.map(img => `${project.folder}/${img}`);
+  grid.innerHTML = '';
+
+  var sorted = Object.keys(projectsData).sort(function(a, b) {
+    return (projectsData[a].order || 999) - (projectsData[b].order || 999);
+  });
+
+  sorted.forEach(function(projectName) {
+    var p = projectsData[projectName];
+    if (!p) return;
+
+    var title   = getLocalizedValue(p.titre);
+    var teaser  = getLocalizedValue(p.teaser);
+    var coverSrc = p.folder + '/' + p.cover;
+
+    var card = document.createElement('div');
+    card.className = 'project-card';
+    card.innerHTML = [
+      '<div class="project-card__photo" data-project="' + projectName + '">',
+        '<img src="' + coverSrc + '" alt="' + title + '" class="project-photo" loading="lazy">',
+        '<div class="project-card__overlay">',
+          '<span class="project-card__view-btn">' + (getText('ui.viewGallery') || 'View gallery') + '</span>',
+        '</div>',
+      '</div>',
+      '<div class="project-card__info">',
+        '<h3 class="project-card__title">' + title + '</h3>',
+        '<p class="project-card__teaser">' + teaser + '</p>',
+        '<button class="btn btn--outline btn--sm project-card__details-btn">',
+          getText('ui.learnMore') || 'Learn more →',
+        '</button>',
+      '</div>'
+    ].join('');
+
+    ['project-card__photo', 'project-card__title', 'project-card__details-btn'].forEach(function(cls) {
+      var el = card.querySelector('.' + cls);
+      if (el) el.addEventListener('click', function() { openSlideshow(projectName); });
+    });
+
+    grid.appendChild(card);
+  });
+
+  document.querySelectorAll('.project-card').forEach(function(c) { c.classList.add('fade-in'); });
+}
+
+function buildProjectInfoPanel(projectName) {
+  var p = projectsData && projectsData[projectName];
+  if (!p) return '<p>No data</p>';
+
+  var lv = getLocalizedValue; // alias court
+
+  var badgesHTML = (lv(p.highlights) || []).map(function(h) {
+    return '<span class="highlight-badge">' + h + '</span>';
+  }).join('');
+
+  var stakeholdersHTML = (lv(p.stakeholders) || []).map(function(s) {
+    return '<li><strong>' + s.role + '</strong>' + s.name + '</li>';
+  }).join('');
+
+  var contribsHTML = (lv(p.contributions) || []).map(function(c) {
+    return '<li><strong>' + c.title + '</strong> — ' + c.text + '</li>';
+  }).join('');
+
+  return [
+    '<h2>' + lv(p.titre) + '</h2>',
+    '<div class="project-highlights">' + badgesHTML + '</div>',
+    '<h3>' + (getText('ui.projectOverview') || 'Overview') + '</h3>',
+    '<p>' + lv(p.overview) + '</p>',
+    '<h3>' + (getText('ui.stakeholders') || 'Stakeholders') + '</h3>',
+    '<ul class="stakeholder-list">' + stakeholdersHTML + '</ul>',
+    '<h3>' + (getText('ui.ourContributions') || 'Our Contributions') + '</h3>',
+    '<ul>' + contribsHTML + '</ul>'
+  ].join('');
+}
+
+function getLocalizedValue(obj) {
+  if (!obj) return '';
+  if (typeof obj === 'string') return obj;
+  return obj[currentLang] || obj['en'] || '';
+}
+
+function getProjectImages(projectName) {
+  var p = projectsData && projectsData[projectName];
+  if (!p || !p.images) return [];
+  return p.images.map(function(img) {
+    return p.folder + '/' + img;
+  });
+}
+
+function openSlideshow(projectName) {
+  var projectImages = getProjectImages(projectName);
+  var currentImageIndex = 0;
+
+  var modal = document.createElement('div');
+  modal.className = 'slideshow-modal';
+  modal.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;z-index:10000;display:flex;align-items:center;justify-content:center;';
+
+  modal.innerHTML = [
+    '<div id="slideshowOverlay" style="position:absolute;inset:0;background:rgba(0,0,0,0.92);"></div>',
+    '<div class="slideshow-with-info" style="position:relative;z-index:1;">',
+
+      // Galerie côté gauche
+      '<div class="slideshow-gallery-side">',
+        '<button id="slideshowClose" style="align-self:flex-end;background:rgba(255,255,255,0.15);border:none;color:white;font-size:28px;width:40px;height:40px;border-radius:50%;cursor:pointer;line-height:1;">&times;</button>',
+        '<div style="position:relative;display:flex;align-items:center;">',
+          projectImages.length > 1 ? '<button id="slideshowPrev" style="position:absolute;left:-48px;background:rgba(255,255,255,0.15);border:none;color:white;font-size:24px;width:40px;height:40px;border-radius:50%;cursor:pointer;">&#8249;</button>' : '',
+          '<img id="slideshowImage" src="" alt="" style="max-width:100%;max-height:65vh;object-fit:contain;border-radius:8px;display:block;transition:opacity 0.3s ease;">',
+          projectImages.length > 1 ? '<button id="slideshowNext" style="position:absolute;right:-48px;background:rgba(255,255,255,0.15);border:none;color:white;font-size:24px;width:40px;height:40px;border-radius:50%;cursor:pointer;">&#8250;</button>' : '',
+        '</div>',
+        projectImages.length > 1 ? '<p id="slideshowCounter" style="color:rgba(255,255,255,0.6);font-size:12px;margin:0;"></p>' : '',
+      '</div>',
+
+      // Panneau info côté droit
+      '<div class="slideshow-info-panel" id="slideshowInfoPanel">',
+        buildProjectInfoPanel(projectName),
+      '</div>',
+
+    '</div>'
+  ].join('');
+
+  document.body.appendChild(modal);
+  document.body.style.overflow = 'hidden';
+
+  var overlay = document.getElementById('slideshowOverlay');
+  var closeBtn = document.getElementById('slideshowClose');
+  var prevBtn = document.getElementById('slideshowPrev');
+  var nextBtn = document.getElementById('slideshowNext');
+  var imageEl = document.getElementById('slideshowImage');
+  var counter = document.getElementById('slideshowCounter');
+
+  function closeSlideshow() {
+    modal.remove();
+    document.body.style.overflow = '';
+    document.removeEventListener('keydown', handleKeydown);
+  }
+
+  function loadImage(index) {
+    imageEl.style.opacity = '0.3';
+    var tmp = new Image();
+    tmp.onload = function() {
+      imageEl.src = tmp.src;
+      imageEl.style.opacity = '1';
+      if (counter) counter.textContent = (index + 1) + ' / ' + projectImages.length;
+    };
+    tmp.onerror = function() { imageEl.style.opacity = '1'; };
+    tmp.src = projectImages[index];
+  }
+
+  function prevImage() {
+    currentImageIndex = (currentImageIndex - 1 + projectImages.length) % projectImages.length;
+    loadImage(currentImageIndex);
+  }
+
+  function nextImage() {
+    currentImageIndex = (currentImageIndex + 1) % projectImages.length;
+    loadImage(currentImageIndex);
+  }
+
+  function handleKeydown(e) {
+    if (e.key === 'Escape') closeSlideshow();
+    if (e.key === 'ArrowLeft') prevImage();
+    if (e.key === 'ArrowRight') nextImage();
+  }
+
+  overlay.addEventListener('click', function(e) { if (e.target === overlay) closeSlideshow(); });
+  closeBtn.addEventListener('click', closeSlideshow);
+  if (prevBtn) prevBtn.addEventListener('click', prevImage);
+  if (nextBtn) nextBtn.addEventListener('click', nextImage);
+  document.addEventListener('keydown', handleKeydown);
+
+  loadImage(0);
 }
 
 // Nouvelle fonction qui utilise getText pour le titre
@@ -470,111 +663,298 @@ function getProjectTitle(projectName) {
     return projectName.charAt(0).toUpperCase() + projectName.slice(1);
 }
 
-function openSlideshow(projectName) {
-    const projectImages = getProjectImages(projectName);
-    let currentImageIndex = 0;
 
-    const modal = document.createElement('div');
-    modal.className = 'slideshow-modal';
-    
-    // Structure avec le loader et styles inline pour le centrage
-    modal.innerHTML = `
-        <div class="slideshow-overlay" id="slideshowOverlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 10000; display: flex; align-items: center; justify-content: center;">
-            <div class="slideshow-container" style="position: relative; width: 90%; max-width: 800px;">
-                <button class="slideshow-close" id="slideshowClose" style="position: absolute; top: -40px; right: 0; color: white; background: none; border: none; font-size: 40px; cursor: pointer;">&times;</button>
-                
-                <div class="slideshow-content" style="position: relative; min-height: 200px; display: flex; flex-direction: column; align-items: center;">
-                    <div class="slideshow-loader" style="border: 4px solid #f3f3f3; border-top: 4px solid #3498db; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: none;"></div>
-                    
-                    <img src="" alt="${projectName}" class="slideshow-image" id="slideshowImage" style="max-width: 550px; max-height: 550px; width: auto; height: auto; object-fit: contain; display: block; margin: 0 auto; transition: opacity 0.3s ease;">
-                    
-                    
-                </div>
 
-                ${projectImages.length > 1 ? `
-                    <button class="slideshow-nav" id="slideshowPrev" style="position: absolute; top: 50%; left: -50px; transform: translateY(-50%); background: none; border: none; color: white; font-size: 30px; cursor: pointer; padding: 10px;">&#10094;</button>
-                    <button class="slideshow-nav" id="slideshowNext" style="position: absolute; top: 50%; right: -50px; transform: translateY(-50%); background: none; border: none; color: white; font-size: 30px; cursor: pointer; padding: 10px;">&#10095;</button>
-                ` : ''}
-            </div>
-            <style>@keyframes spin { 0% { transform: translate(-50%, -50%) rotate(0deg); } 100% { transform: translate(-50%, -50%) rotate(360deg); } }</style>
-        </div>
-    `;
+// Hero video crossfade loop
+(function () {
+  const vidA = document.getElementById('heroBgA');
+  const vidB = document.getElementById('heroBgB');
+  if (!vidA || !vidB) return;
 
-    document.body.appendChild(modal);
-    document.body.style.overflow = 'hidden';
+  const FADE_BEFORE = 1.5; // secondes avant la fin pour déclencher le fondu
 
-    // Elements
-    const overlay = modal.querySelector('#slideshowOverlay');
-    const closeBtn = modal.querySelector('#slideshowClose');
-    const prevBtn = modal.querySelector('#slideshowPrev');
-    const nextBtn = modal.querySelector('#slideshowNext');
-    const imageElement = modal.querySelector('#slideshowImage');
-    const counter = modal.querySelector('.slideshow-counter');
-    const loader = modal.querySelector('.slideshow-loader');
+  function crossfade(fromVid, toVid) {
+    toVid.currentTime = 0;
+    toVid.play();
+    toVid.classList.add('hero-video--active');
+    fromVid.classList.remove('hero-video--active');
 
-    // Close logic
-    function closeSlideshow() {
-        modal.remove();
-        document.body.style.overflow = '';
-        document.removeEventListener('keydown', handleKeydown);
-    }
+    // Nettoyage de l'écouteur sur fromVid pour éviter les doublons
+    fromVid._crossfadeListener && fromVid.removeEventListener('timeupdate', fromVid._crossfadeListener);
 
-    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeSlideshow(); });
-    closeBtn.addEventListener('click', closeSlideshow);
+    // Prépare le prochain crossfade sur toVid
+    setupCrossfade(toVid, fromVid);
+  }
 
-    // Image loading logic
-    function loadImage(index) {
-        loader.style.display = 'block';
-        imageElement.style.opacity = '0.3';
-        
-        const tempImg = new Image();
-        const url = projectImages[index];
-        
-        tempImg.onload = function() {
-            imageElement.src = url;
-            if (counter) counter.textContent = `${index + 1} / ${projectImages.length}`;
-            loader.style.display = 'none';
-            imageElement.style.opacity = '1';
-            preloadNextImage(index);
-        };
-        
-        tempImg.onerror = function() {
-            loader.style.display = 'none';
-            imageElement.alt = "Image not found";
-        };
-        
-        tempImg.src = url;
-    }
+  function setupCrossfade(activeVid, waitingVid) {
+    const listener = function () {
+      if (activeVid.duration && activeVid.currentTime >= activeVid.duration - FADE_BEFORE) {
+        activeVid.removeEventListener('timeupdate', listener);
+        crossfade(activeVid, waitingVid);
+      }
+    };
+    activeVid._crossfadeListener = listener;
+    activeVid.addEventListener('timeupdate', listener);
+  }
 
-    function preloadNextImage(idx) {
-        if (projectImages.length > 1) {
-            const nextIdx = (idx + 1) % projectImages.length;
-            const img = new Image();
-            img.src = projectImages[nextIdx];
-        }
-    }
+  vidA.addEventListener('loadedmetadata', function () {
+    setupCrossfade(vidA, vidB);
+  });
+})();
 
-    function prevImage() {
-        currentImageIndex = (currentImageIndex - 1 + projectImages.length) % projectImages.length;
-        loadImage(currentImageIndex);
-    }
 
-    function nextImage() {
-        currentImageIndex = (currentImageIndex + 1) % projectImages.length;
-        loadImage(currentImageIndex);
-    }
+// =============================================
+// FLIP CARDS — Services
+// =============================================
+function initServiceFlipCards() {
+  // 1. Flip au clic sur la carte (sauf si clic sur le bouton "details")
+  document.querySelectorAll('.flip-card').forEach(function(card) {
+    card.addEventListener('click', function(e) {
+      // Si le clic vient du bouton "Learn more", ne pas flipper
+      if (e.target.closest('[data-service-detail]')) return;
+      card.classList.toggle('is-flipped');
+    });
+    card.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        card.classList.toggle('is-flipped');
+      }
+    });
+  });
 
-    if (prevBtn) prevBtn.addEventListener('click', prevImage);
-    if (nextBtn) nextBtn.addEventListener('click', nextImage);
+  // 2. Bouton "Learn more" → ouvre l'offcanvas avec le contenu complet
+  document.querySelectorAll('[data-service-detail]').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation(); // empêche le flip de se redéclencher
+      var serviceKey = this.getAttribute('data-service-detail');
+      openServiceOffcanvas(serviceKey);
+    });
+  });
+}
 
-    // Keyboard navigation
-    function handleKeydown(e) {
-        if (e.key === 'Escape') closeSlideshow();
-        if (e.key === 'ArrowLeft') prevImage();
-        if (e.key === 'ArrowRight') nextImage();
-    }
-    document.addEventListener('keydown', handleKeydown);
+function openServiceOffcanvas(serviceKey) {
+  var offcanvas = document.getElementById('policyOffcanvas');
+  if (!offcanvas) return;
 
-    // Initial load
-    loadImage(0);
+  var titleEl = offcanvas.querySelector('#policyTitle');
+  var contentEl = offcanvas.querySelector('#policyContent');
+
+  // Récupère les données
+  var title = getText('sectionservices.' + serviceKey + '.titre');
+  var intro = getText('sectionservices.' + serviceKey + '.intro');
+
+  // Bullets complets
+  var bulletsPath = ('sectionservices.' + serviceKey + '.bullets').split('.');
+  var bulletsVal = contentData;
+  bulletsPath.forEach(function(p) { bulletsVal = bulletsVal && bulletsVal[p]; });
+  if (bulletsVal && typeof bulletsVal === 'object' && !Array.isArray(bulletsVal)) {
+    bulletsVal = bulletsVal[currentLang] || bulletsVal['en'];
+  }
+
+  var bulletsHTML = '';
+  if (Array.isArray(bulletsVal)) {
+    bulletsHTML = '<ul class="offcanvas-service-bullets">' +
+      bulletsVal.map(function(b) { return '<li>' + b + '</li>'; }).join('') +
+      '</ul>';
+  }
+
+  if (titleEl) titleEl.textContent = title || serviceKey;
+  if (contentEl) {
+    contentEl.innerHTML =
+      '<p class="offcanvas-service-intro">' + (intro || '') + '</p>' +
+      bulletsHTML;
+  }
+
+  offcanvas.classList.add('offcanvas--open');
+  document.body.style.overflow = 'hidden';
+}
+
+// Appel à l'init (ajoute dans le bloc DOMContentLoaded existant)
+// initServiceFlipCards();
+
+// =============================================
+// CAREERS — Chargement & Rendu
+// =============================================
+
+async function loadCareersManifest() {
+  try {
+    const response = await fetch('careers-manifest.json');
+    if (!response.ok) throw new Error('HTTP error! status: ' + response.status);
+    careersData = await response.json();
+    console.log('Careers manifest loaded successfully');
+  } catch (error) {
+    console.warn('Could not load careers-manifest.json — careers section hidden.');
+    careersData = {};
+  }
+}
+
+function initCareers() {
+  renderCareerCards();
+}
+
+function renderCareerCards() {
+  const section = document.getElementById('careers');
+  const grid = document.getElementById('careersGrid');
+  if (!section || !grid || !careersData) return;
+
+  // Filtre les postes ouverts uniquement
+  const openJobs = Object.keys(careersData).filter(function(key) {
+    return careersData[key].open === true;
+  });
+
+  // Aucun poste → section et nav masquées
+  if (openJobs.length === 0) {
+    section.style.display = 'none';
+    removeCareersNavLink();
+    return;
+  }
+
+  // Affiche la section et le lien nav
+  section.style.display = 'block';
+  // Force un reflow avant que le scroll soit calculé
+  requestAnimationFrame(function() {
+    requestAnimationFrame(function() {
+      // Le double rAF garantit que le layout est stable
+      section.style.scrollMarginTop = 'var(--header-height)';
+    });
+  });
+  addCareersNavLink();
+
+  // Trie par order
+  openJobs.sort(function(a, b) {
+    return (careersData[a].order || 999) - (careersData[b].order || 999);
+  });
+
+  grid.innerHTML = '';
+
+  openJobs.forEach(function(jobKey) {
+    var job = careersData[jobKey];
+    var title    = getLocalizedValue(job.titre);
+    var location = getLocalizedValue(job.location);
+    var type     = getLocalizedValue(job.type);
+    var teaser   = getLocalizedValue(job.teaser);
+
+    var card = document.createElement('div');
+    card.className = 'career-card';
+    card.innerHTML = [
+      '<div class="career-card__header">',
+        '<h3 class="career-card__title">' + title + '</h3>',
+        '<div class="career-card__meta">',
+          '<span class="career-meta-badge">',
+            '<i data-lucide="map-pin"></i>',
+            location,
+          '</span>',
+          '<span class="career-meta-badge">',
+            '<i data-lucide="briefcase"></i>',
+            type,
+          '</span>',
+        '</div>',
+      '</div>',
+      '<p class="career-card__teaser">' + teaser + '</p>',
+      '<div class="career-card__actions">',
+        '<button class="btn btn--primary btn--sm career-details-btn" data-job-key="' + jobKey + '">',
+          getText('ui.learnMore') || 'Learn more →',
+        '</button>',
+      '</div>'
+    ].join('');
+
+    card.querySelector('.career-details-btn').addEventListener('click', function() {
+      openJobOffcanvas(jobKey);
+    });
+
+    grid.appendChild(card);
+  });
+
+  // Réinitialise les icônes Lucide sur les nouveaux éléments
+  if (window.lucide) lucide.createIcons();
+}
+
+function openJobOffcanvas(jobKey) {
+  var job = careersData && careersData[jobKey];
+  if (!job) return;
+
+  var offcanvas = document.getElementById('policyOffcanvas');
+  if (!offcanvas) return;
+
+  var titleEl   = document.getElementById('policyTitle');
+  var contentEl = document.getElementById('policyContent');
+
+  var title         = getLocalizedValue(job.titre);
+  var location      = getLocalizedValue(job.location);
+  var type          = getLocalizedValue(job.type);
+  var overview      = getLocalizedValue(job.overview);
+  var responsibilities = getLocalizedValue(job.responsibilities) || [];
+  var profile          = getLocalizedValue(job.profile) || [];
+
+  var respHTML = responsibilities.map(function(r) {
+    return '<li>' + r + '</li>';
+  }).join('');
+
+  var profileHTML = profile.map(function(p) {
+    return '<li>' + p + '</li>';
+  }).join('');
+
+  var applyEmail = 'jobs@renomansprl.com';
+
+  var html = [
+    '<div class="offcanvas-job-meta">',
+      '<span class="career-meta-badge"><i data-lucide="map-pin"></i> ' + location + '</span>',
+      '<span class="career-meta-badge"><i data-lucide="briefcase"></i> ' + type + '</span>',
+    '</div>',
+    '<h3>' + (getText('ui.jobOverview') || 'About the Role') + '</h3>',
+    '<p class="offcanvas-job-overview">' + overview + '</p>',
+    '<h3>' + (getText('ui.jobResponsibilities') || 'Responsibilities') + '</h3>',
+    '<ul class="offcanvas-job-list">' + respHTML + '</ul>',
+    '<h3>' + (getText('ui.jobProfile') || 'Your Profile') + '</h3>',
+    '<ul class="offcanvas-job-list">' + profileHTML + '</ul>',
+    '<div class="offcanvas-job-apply">',
+      '<a href="mailto:' + applyEmail + '?subject=Application — ' + title + '" class="btn btn--primary">',
+        getText('ui.applyNow') || 'Apply now →',
+      '</a>',
+    '</div>'
+  ].join('');
+
+  if (titleEl) titleEl.textContent = title;
+  if (contentEl) contentEl.innerHTML = html;
+
+  offcanvas.classList.add('offcanvas--open');
+  document.body.style.overflow = 'hidden';
+
+  if (window.lucide) lucide.createIcons();
+}
+
+// Gestion du lien nav Carrières
+function addCareersNavLink() {
+  if (document.getElementById('nav-link-careers')) return;
+  var nav = document.querySelector('.nav__links, .navmenu, nav ul');
+  if (!nav) return;
+
+  var contactLink = nav.querySelector('a[href="#contact"]');
+  var label = getText('sectioncarrieres.titre') || 'CAREERS';
+
+  var li = document.createElement('li');
+  li.id = 'nav-link-careers';
+  li.innerHTML = '<a href="#careers" class="nav__link navlink">' + label + '</a>';
+
+  // Scroll manuel avec offset header garanti
+  li.querySelector('a').addEventListener('click', function(e) {
+    e.preventDefault();
+    var target = document.getElementById('careers');
+    if (!target) return;
+    var headerHeight = document.querySelector('.header').offsetHeight;
+    var top = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+    window.scrollTo({ top: top, behavior: 'smooth' });
+  });
+
+  if (contactLink && contactLink.closest('li')) {
+    nav.insertBefore(li, contactLink.closest('li'));
+  } else {
+    nav.appendChild(li);
+  }
+}
+
+
+function removeCareersNavLink() {
+  var existing = document.getElementById('nav-link-careers');
+  if (existing) existing.remove();
 }

@@ -75,9 +75,9 @@
       "nl": "Bedrijven helpen bij energietransitie en kostenoptimalisatie"
     },
     "bouton_audit": {
-      "en": "Free Energy Audit",
-      "fr": "Audit Énergétique Gratuit",
-      "nl": "Gratis Energie-Audit"
+      "en": "Our Services",
+      "fr": "Nos services",
+      "nl": "Onze diensten"
     },
     "bouton_projets": {
       "en": "View Our Projects",
@@ -86,110 +86,269 @@
     }
   },
 
-  "section_services": {
-    "_section": "Section des 3 services principaux",
+  "ui": {
+    "flipHint": {
+      "en": "tap to discover",
+      "fr": "cliquez pour découvrir",
+      "nl": "tik om te ontdekken"
+    },
+    "learnMore": {
+      "en": "Full details →",
+      "fr": "Détails complets →",
+      "nl": "Volledige details →"
+    },
+    "contactUs": {
+      "en": "Contact us",
+      "fr": "Nous contacter",
+      "nl": "Contacteer ons"
+    },
+    "viewGallery": {
+      "en": "View gallery",
+      "fr": "Voir la galerie",
+      "nl": "Bekijk galerij"
+    },
+    "stakeholders": {
+      "en": "Stakeholders",
+      "fr": "Parties prenantes",
+      "nl": "Belanghebbenden"
+    },
+    "ourContributions": {
+      "en": "Our Contributions",
+      "fr": "Nos Contributions",
+      "nl": "Onze Bijdragen"
+    },
+    "projectOverview": {
+      "en": "Project Overview",
+      "fr": "Présentation du projet",
+      "nl": "Projectoverzicht"
+    },
+    "applyNow": {
+      "en": "Apply now →",
+      "fr": "Postuler →",
+      "nl": "Solliciteer →"
+    },
+    "jobLocation": {
+      "en": "Location",
+      "fr": "Lieu",
+      "nl": "Locatie"
+    },
+    "jobType": {
+      "en": "Contract",
+      "fr": "Contrat",
+      "nl": "Contract"
+    },
+    "jobResponsibilities": {
+      "en": "Responsibilities",
+      "fr": "Responsabilités",
+      "nl": "Verantwoordelijkheden"
+    },
+    "jobProfile": {
+      "en": "Your Profile",
+      "fr": "Votre Profil",
+      "nl": "Uw Profiel"
+    },
+    "jobOverview": {
+      "en": "About the Role",
+      "fr": "À propos du poste",
+      "nl": "Over de functie"
+    }
+  },
+
+  "sectionservices": {
     "titre": {
       "en": "OUR SERVICES",
       "fr": "NOS SERVICES",
       "nl": "ONZE DIENSTEN"
     },
-    "sous_titre": {
-      "en": "Diverse solutions tailored to your every need",
-      "fr": "Solutions diversifiées adaptées à tous vos besoins",
-      "nl": "Diverse oplossingen op maat van uw behoeften"
+    "soustitre": {
+      "en": "Flexible, End-to-End BESS Integration: From Grid Compliance to Strategic O&M.",
+      "fr": "Intégration BESS flexible et complète : de la conformité réseau à la gestion O&M stratégique.",
+      "nl": "Flexibele, end-to-end BESS-integratie: van netconformiteit tot strategisch O&M-beheer."
     },
-    "service_1_stockage": {
-      "_description": "Premier service - Stockage d'énergie",
+    "service1": {
       "titre": {
-        "en": "Energy Storage Systems",
-        "fr": "Systèmes de Stockage d'Énergie",
-        "nl": "Energieopslagsystemen"
+        "en": "Regulatory Compliance & Technical Engineering",
+        "fr": "Conformité Réglementaire & Ingénierie Technique",
+        "nl": "Regelgevingsconformiteit & Technische Engineering"
       },
-      "description": {
-        "en": "Installation of industrial and commercial battery systems for cost reduction and energy independence",
-        "fr": "Installation de systèmes de batteries industriels et commerciaux pour la réduction des coûts et l'indépendance énergétique",
-        "nl": "Installatie van industriële en commerciële batterijsystemen voor kostenreductie en energie-onafhankelijkheid"
+      "intro": {
+        "en": "Building a robust foundation for grid-ready energy assets.",
+        "fr": "Construire une base solide pour des actifs énergétiques prêts pour le réseau.",
+        "nl": "Een robuuste basis leggen voor netklare energieactiva."
       },
-      "details": {
-        "en": ["System sizing", "BESS installation", "Grid integration", "Maintenance"],
-        "fr": ["Dimensionnement système", "Installation BESS", "Intégration réseau", "Maintenance"],
-        "nl": ["Systeemdimensionering", "BESS-installatie", "Netintegratie", "Onderhoud"]
+      "bulletsShort": {
+        "en": ["SLD & Battery Passport engineering", "Elia / Fluvius / Synergrid liaison", "Belgian & EU regulatory advisory"],
+        "fr": ["Ingénierie SLD & Battery Passport", "Interface Elia / Fluvius / Synergrid", "Conseil réglementaire belge & européen"],
+        "nl": ["SLD- & Battery Passport-engineering", "Elia / Fluvius / Synergrid-liaison", "Belgisch & EU-regelgevingsadvies"]
       },
-      "bouton_action": {
-        "en": "Request Quote",
-        "fr": "Demander un Devis",
-        "nl": "Offerte Aanvragen"
+      "bullets": {
+        "en": [
+          "<strong>Engineering Excellence:</strong> Development of professional SLDs, EI assessments, and Battery Passport ID management for 100% lifecycle traceability.",
+          "<strong>Grid Interconnection Management:</strong> Expert liaison with Elia, Fluvius, ORES & Synergrid — full alignment with EU Grid Codes (NC RfG) and C10/11 standards.",
+          "<strong>Strategic Advisory:</strong> Localized technical-legal consultancy ensuring project contracts and safety protocols adhere to Belgian federal laws and EU directives."
+        ],
+        "fr": [
+          "<strong>Excellence en ingénierie :</strong> Développement de schémas unifilaires (SLD), évaluations des influences externes (EI) et gestion du Battery Passport ID pour une traçabilité complète du cycle de vie.",
+          "<strong>Gestion des interconnexions réseau :</strong> Interface experte avec Elia, Fluvius, ORES & Synergrid — alignement complet avec les codes réseau UE (NC RfG) et les normes C10/11.",
+          "<strong>Conseil stratégique :</strong> Consultance technico-juridique localisée garantissant la conformité des contrats et protocoles de sécurité aux lois belges et directives européennes."
+        ],
+        "nl": [
+          "<strong>Technische uitmuntendheid:</strong> Ontwikkeling van professionele SLD's, EI-beoordelingen en Battery Passport ID-beheer voor 100% traceerbaarheid over de levenscyclus.",
+          "<strong>Netaansluitingsbeheer:</strong> Deskundige liaison met Elia, Fluvius, ORES & Synergrid — volledige afstemming op EU-netcodes (NC RfG) en C10/11-normen.",
+          "<strong>Strategisch advies:</strong> Gelokaliseerd technisch-juridisch advies dat contracten en veiligheidsprotocollen in lijn houdt met Belgische federale wetgeving en EU-richtlijnen."
+        ]
       }
     },
-    "service_2_installation": {
-      "_description": "Deuxième service - Installation électrique",
+    "service2": {
       "titre": {
-        "en": "Industrial Electrical Installation",
-        "fr": "Installation Électrique Industrielle",
-        "nl": "Industriële Elektrische Installatie"
+        "en": "Localization & Resource Integration",
+        "fr": "Localisation & Intégration des Ressources",
+        "nl": "Lokalisatie & Resource-integratie"
       },
-      "description": {
-        "en": "Complete electrical solutions for industrial and commercial facilities, RGIE compliance",
-        "fr": "Solutions électriques complètes pour installations industrielles et commerciales, conformité RGIE",
-        "nl": "Complete elektrische oplossingen voor industriële en commerciële faciliteiten, AREI-conform"
+      "intro": {
+        "en": "Your \"European Technical Office\" for global innovation.",
+        "fr": "Votre \"Bureau Technique Européen\" pour l'innovation mondiale.",
+        "nl": "Uw \"Europees Technisch Bureau\" voor wereldwijde innovatie."
       },
-      "details": {
-        "en": ["High voltage cabling", "Electrical panels", "Certification", "Inspections"],
-        "fr": ["Câblage haute tension", "Tableaux électriques", "Certification", "Inspections"],
-        "nl": ["Hoogspanningsbekabeling", "Elektrische panelen", "Certificering", "Inspecties"]
+      "bulletsShort": {
+        "en": ["European Technical Office", "Heavy logistics & warehousing", "Global-to-local standard harmonization"],
+        "fr": ["Bureau Technique Européen", "Logistique lourde & entreposage", "Harmonisation des normes mondiales"],
+        "nl": ["Europees Technisch Bureau", "Zware logistiek & opslag", "Globale-naar-lokale normharmonisatie"]
       },
-      "bouton_action": {
-        "en": "Consult Expert",
-        "fr": "Consulter un Expert",
-        "nl": "Expert Raadplegen"
+      "bullets": {
+        "en": [
+          "<strong>Technical Extension:</strong> Acting as a strategic European Technical Office, offering global partners local presence, rapid technical response, and on-ground representation.",
+          "<strong>Supply Chain & Logistics Orchestration:</strong> Managing specialized logistics for heavy-duty energy assets, including heavy lifting, compliant warehousing, and localized supply chain integration.",
+          "<strong>Standard Harmonization:</strong> Adapting global manufacturing specifications to Belgian & EU industrial requirements, ensuring seamless market entry."
+        ],
+        "fr": [
+          "<strong>Extension technique :</strong> Bureau Technique Européen stratégique offrant aux partenaires mondiaux une présence locale, une réponse technique rapide et une représentation sur le terrain.",
+          "<strong>Orchestration de la chaîne logistique :</strong> Gestion de la logistique spécialisée pour les actifs énergétiques lourds, incluant levage, entreposage conforme et intégration locale.",
+          "<strong>Harmonisation des normes :</strong> Adaptation des spécifications de fabrication mondiales aux exigences industrielles belges et européennes pour une entrée sur le marché sans friction."
+        ],
+        "nl": [
+          "<strong>Technische extensie:</strong> Strategisch Europees Technisch Bureau dat mondiale partners een lokale aanwezigheid, snelle technische respons en vertegenwoordiging ter plaatse biedt.",
+          "<strong>Supply chain & logistiek:</strong> Beheer van gespecialiseerde logistiek voor zware energieactiva, inclusief zwaar hijswerk, conforme opslag en gelokaliseerde supply chain-integratie.",
+          "<strong>Normharmonisatie:</strong> Aanpassing van mondiale fabricagespecificaties aan Belgische en EU-industriële vereisten voor een naadloze marktintroductie."
+        ]
       }
     },
-    "service_3_optimisation": {
-      "_description": "Troisième service - Optimisation énergétique",
+    "service3": {
       "titre": {
-        "en": "Energy Optimization",
-        "fr": "Optimisation Énergétique",
-        "nl": "Energie-optimalisatie"
+        "en": "Industrial Electrical Infrastructure",
+        "fr": "Infrastructure Électrique Industrielle",
+        "nl": "Industriële Elektrische Infrastructuur"
       },
-      "description": {
-        "en": "Technical support and optimization solutions to maximize energy efficiency",
-        "fr": "Support technique et solutions d'optimisation pour maximiser l'efficacité énergétique",
-        "nl": "Technische ondersteuning en optimalisatieoplossingen om energie-efficiëntie te maximaliseren"
+      "intro": {
+        "en": "Precision execution meeting the highest safety standards.",
+        "fr": "Exécution de précision répondant aux normes de sécurité les plus élevées.",
+        "nl": "Nauwkeurige uitvoering die voldoet aan de hoogste veiligheidsnormen."
       },
-      "details": {
-        "en": ["Energy audits", "Optimization strategies", "Monitoring", "Cost-benefit analysis"],
-        "fr": ["Audits énergétiques", "Stratégies d'optimisation", "Surveillance", "Analyse coût-bénéfice"],
-        "nl": ["Energie-audits", "Optimalisatiestrategieën", "Monitoring", "Kosten-batenanalyse"]
+      "bulletsShort": {
+        "en": ["Industrial distribution & cabling", "HV/LV protection — RGIE/Synergrid", "Turnkey energized delivery"],
+        "fr": ["Distribution industrielle & câblage", "Protection HT/BT — RGIE/Synergrid", "Livraison clé en main sous tension"],
+        "nl": ["Industriële distributie & bekabeling", "HV/LV-beveiliging — RGIE/Synergrid", "Turnkey opgeleverd onder spanning"]
       },
-      "bouton_action": {
-        "en": "Schedule Audit",
-        "fr": "Planifier un Audit",
-        "nl": "Audit Inplannen"
+      "bullets": {
+        "en": [
+          "<strong>Infrastructure Execution:</strong> Professional deployment of industrial-grade distribution systems and high-precision power cabling architectures designed for long-term stability.",
+          "<strong>HV/LV Protection Schemes:</strong> Engineered implementation of sophisticated protection logic, strictly aligned with RGIE/AREI and Synergrid safety prescriptions.",
+          "<strong>Turnkey Build:</strong> Comprehensive on-site infrastructure development, from static design to fully energized, high-voltage systems."
+        ],
+        "fr": [
+          "<strong>Exécution d'infrastructure :</strong> Déploiement professionnel de systèmes de distribution industriels et d'architectures de câblage haute précision conçus pour une stabilité à long terme.",
+          "<strong>Schémas de protection HT/BT :</strong> Mise en œuvre de logiques de protection sophistiquées, strictement conformes aux prescriptions RGIE/AREI et Synergrid.",
+          "<strong>Livraison clé en main :</strong> Développement complet de l'infrastructure sur site, de la conception statique aux systèmes haute tension entièrement sous tension."
+        ],
+        "nl": [
+          "<strong>Infrastructuuruitvoering:</strong> Professionele inzet van industriële distributiesystemen en hoogprecieze bekabelingsarchitecturen ontworpen voor langdurige stabiliteit.",
+          "<strong>HV/LV-beveiligingsschema's:</strong> Technische implementatie van geavanceerde beveiligingslogica, strikt in lijn met RGIE/AREI en Synergrid-veiligheidsvoorschriften.",
+          "<strong>Turnkey oplevering:</strong> Volledige infrastructuurontwikkeling op locatie, van statisch ontwerp tot volledig geëlektrificeerde hoogspanningssystemen."
+        ]
+      }
+    },
+    "service4": {
+      "titre": {
+        "en": "BESS Implementation, Integration & Commissioning",
+        "fr": "Implémentation, Intégration & Mise en Service BESS",
+        "nl": "BESS Implementatie, Integratie & Inbedrijfstelling"
+      },
+      "intro": {
+        "en": "Optimizing the \"intelligence\" of your energy storage.",
+        "fr": "Optimiser l'\"intelligence\" de votre stockage d'énergie.",
+        "nl": "De \"intelligentie\" van uw energieopslag optimaliseren."
+      },
+      "bulletsShort": {
+        "en": ["PCS / BMS / EMS commissioning", "Modbus/TCP & CANbus validation", "SCADA & Elia grid-access testing"],
+        "fr": ["Mise en service PCS / BMS / EMS", "Validation Modbus/TCP & CANbus", "Tests SCADA & accès réseau Elia"],
+        "nl": ["PCS / BMS / EMS inbedrijfstelling", "Modbus/TCP & CANbus-validatie", "SCADA & Elia-nettoegangstest"]
+      },
+      "bullets": {
+        "en": [
+          "<strong>Multi-Layer Integration:</strong> Precision commissioning of PCS, BMS, and EMS for synchronized performance across all system layers.",
+          "<strong>Logic & Data Validation:</strong> Rigorous on-site testing focusing on data integrity, communication stability (Modbus/TCP, CANbus), and real-time signal synchronization.",
+          "<strong>Grid Readiness:</strong> Exhaustive SCADA integration and safety interlock testing to meet the stringent grid-access mandates of Elia and Synergrid."
+        ],
+        "fr": [
+          "<strong>Intégration multi-couches :</strong> Mise en service de précision des PCS, BMS et EMS pour des performances synchronisées sur toutes les couches du système.",
+          "<strong>Validation logique & données :</strong> Tests rigoureux sur site axés sur l'intégrité des données, la stabilité des communications (Modbus/TCP, CANbus) et la synchronisation des signaux en temps réel.",
+          "<strong>Préparation réseau :</strong> Intégration SCADA exhaustive et tests des verrouillages de sécurité pour satisfaire aux exigences d'accès réseau d'Elia et Synergrid."
+        ],
+        "nl": [
+          "<strong>Multi-laags integratie:</strong> Nauwkeurige inbedrijfstelling van PCS, BMS en EMS voor gesynchroniseerde prestaties op alle systeemlagen.",
+          "<strong>Logica- & datavalidatie:</strong> Rigoureuze on-site tests gericht op gegevensintegriteit, communicatiestabiliteit (Modbus/TCP, CANbus) en realtime signaalsynchronisatie.",
+          "<strong>Netgereedheid:</strong> Uitgebreide SCADA-integratie en veiligheidsinterlockstests om te voldoen aan de strenge nettoegangseisen van Elia en Synergrid."
+        ]
+      }
+    },
+    "service5": {
+      "titre": {
+        "en": "Long-term Operations & Maintenance",
+        "fr": "Opérations & Maintenance à Long Terme",
+        "nl": "Langdurige Operaties & Onderhoud"
+      },
+      "intro": {
+        "en": "Maximizing ROI through data-driven performance.",
+        "fr": "Maximiser le ROI grâce à une performance pilotée par les données.",
+        "nl": "ROI maximaliseren door datagestuurde prestaties."
+      },
+      "bulletsShort": {
+        "en": ["24/7 remote monitoring & alerts", "Rapid-response defect management", "PhD-led data intelligence & optimization"],
+        "fr": ["Monitoring 24/7 & alertes précoces", "Gestion rapide des défauts", "Intelligence des données pilotée par des docteurs"],
+        "nl": ["24/7 remote monitoring & alerts", "Snelle defectafhandeling", "PhD-geleide data-intelligentie"]
+      },
+      "bullets": {
+        "en": [
+          "<strong>Predictive Maintenance:</strong> 24/7 remote performance monitoring and data-integrated early warning systems to prevent downtime before it occurs.",
+          "<strong>Technical Asset Optimization:</strong> Rapid-response troubleshooting and expert defect management to maximize system uptime and protect your Return on Investment.",
+          "<strong>PhD-Led Data Intelligence:</strong> Advanced post-commissioning performance profiling and algorithmic logic validation, led by our internal experts to continuously enhance system efficiency."
+        ],
+        "fr": [
+          "<strong>Maintenance prédictive :</strong> Surveillance à distance 24h/24, 7j/7 et systèmes d'alerte précoce intégrés aux données pour prévenir les pannes avant qu'elles ne surviennent.",
+          "<strong>Optimisation des actifs techniques :</strong> Dépannage à réponse rapide et gestion experte des défauts pour maximiser la disponibilité et protéger votre retour sur investissement.",
+          "<strong>Intelligence des données pilotée par des docteurs :</strong> Profilage avancé des performances post-mise en service et validation logique algorithmique, conduits par nos experts internes pour améliorer continuellement l'efficacité du système."
+        ],
+        "nl": [
+          "<strong>Voorspellend onderhoud:</strong> 24/7 remote prestatiemonitoring en data-geïntegreerde vroegwaarschuwingssystemen om downtime te voorkomen voordat het optreedt.",
+          "<strong>Technische activaoptimalisatie:</strong> Snelle probleemoplossing en deskundig defectbeheer om de systeembeschikbaarheid te maximaliseren en uw ROI te beschermen.",
+          "<strong>PhD-geleide data-intelligentie:</strong> Geavanceerde prestatieprofilering na inbedrijfstelling en algoritmische logicavalidatie, geleid door onze interne experts om de systeemefficiëntie continu te verbeteren."
+        ]
       }
     }
   },
 
+
   "section_a_propos": {
-    "_section": "Section À propos de l'entreprise",
+    "_section": "Section À propos de l'entreprise",    
     "titre": {
       "en": "ABOUT RENOMAN",
       "fr": "À PROPOS DE RENOMAN",
       "nl": "OVER RENOMAN"
     },
-    "paragraphe_1": {
-      "en": "RENOMAN SRL, based in Wezembeek-Oppem, Belgium, has specialized in energy storage and electrical engineering since 2015. Our experienced team of six electrical engineers brings together over 20 years of combined expertise.",
-      "fr": "RENOMAN SRL, basée à Wezembeek-Oppem en Belgique, est spécialisée dans le stockage d'énergie et l'ingénierie électrique depuis 2015. Notre équipe expérimentée de six ingénieurs électriciens rassemble plus de 20 ans d'expertise cumulée.",
-      "nl": "RENOMAN SRL, gevestigd in Wezembeek-Oppem (België), is sinds 2015 gespecialiseerd in energieopslag en elektrotechniek. Ons ervaren team van zes elektrotechnische ingenieurs bundelt meer dan 20 jaar expertise."
-    },
-    "paragraphe_2": {
-      "en": "We hold RGIE certifications and have collaborated with SUNGROW in Engie and Luminus projects, as well as with SINOMA CBMI on the Holcim GO4ZERO project.",
-      "fr": "Nous détenons les certifications RGIE et avons collaboré avec SUNGROW sur des projets Engie et Luminus, ainsi qu'avec SINOMA CBMI sur le projet Holcim GO4ZERO.",
-      "nl": "Wij beschikken over AREI-certificeringen en hebben samengewerkt met SUNGROW aan projecten voor Engie en Luminus, evenals met SINOMA CBMI aan het Holcim GO4ZERO-project."
-    },
-    "paragraphe_3": {
-      "en": "We are committed to safety, transparency, and customer satisfaction across the Benelux region.",
-      "fr": "Nous nous engageons pour la sécurité, la transparence et la satisfaction client dans tout le Benelux.",
-      "nl": "Wij streven naar veiligheid, transparantie en klanttevredenheid in de hele Benelux."
+    "contenu": {
+      "en": "<p>Established in 2015 and headquartered in Wezembeek-Oppem, Belgium, <strong>RENOMAN</strong> has emerged as a premier specialist in Battery Energy Storage Systems (BESS) and high-level industrial electrical engineering.</p><p>Our multidisciplinary team comprises <strong>six senior electrical engineers</strong> supported by a <strong>three-person administrative and project coordination hub</strong>, bringing together over <strong>20 years of combined technical expertise</strong>. As an <strong>RGIE/AREI-certified</strong> organization, we pride ourselves on bridging the gap between global innovation and local regulatory excellence.</p><p>Our track record of excellence includes strategic collaborations with industry giants such as <strong>SUNGROW</strong> on large-scale <strong>Engie</strong> and <strong>Luminus</strong> utility projects, as well as providing critical engineering support for <strong>SINOMA CBMI</strong> on the landmark <strong>Holcim GO4ZERO</strong> carbon-neutral initiative. Operating across the <strong>Benelux</strong> region, we remain steadfast in our commitment to safety, transparency, and delivering future-proof energy solutions.</p>",
+      "fr": "<p>Fondée en 2015 et dont le siège est établi à Wezembeek-Oppem, en Belgique, <strong>RENOMAN</strong> s'est imposée comme un spécialiste de premier plan des systèmes de stockage d'énergie par batterie (BESS) et de l'ingénierie électrique industrielle de haut niveau.</p><p>Notre équipe multidisciplinaire est composée de <strong>six ingénieurs électriciens seniors</strong> soutenus par un <strong>pôle administratif et de coordination de projet de trois personnes</strong>, réunissant plus de <strong>20 ans d'expertise technique combinée</strong>. En tant qu'organisation certifiée <strong>RGIE/AREI</strong>, nous sommes fiers de combler le fossé entre l'innovation mondiale et l'excellence réglementaire locale.</p><p>Notre palmarès comprend des collaborations stratégiques avec des géants du secteur tels que <strong>SUNGROW</strong> sur des projets d'utilité à grande échelle pour <strong>Engie</strong> et <strong>Luminus</strong>, ainsi que la fourniture d'un soutien technique critique à <strong>SINOMA CBMI</strong> pour l'initiative emblématique de neutralité carbone <strong>Holcim GO4ZERO</strong>. Opérant dans toute la région <strong>Benelux</strong>, nous restons fermement engagés envers la sécurité, la transparence et la fourniture de solutions énergétiques pérennes.</p>",
+      "nl": "<p>Opgericht in 2015 en gevestigd in Wezembeek-Oppem, België, heeft <strong>RENOMAN</strong> zich ontwikkeld tot een toonaangevend specialist in Battery Energy Storage Systems (BESS) en hoogwaardige industriële elektrotechniek.</p><p>Ons multidisciplinair team bestaat uit <strong>zes senior elektrotechnische ingenieurs</strong> ondersteund door een <strong>driekoppig administratief en projectcoördinatieteam</strong>, met gezamenlijk meer dan <strong>20 jaar technische expertise</strong>. Als <strong>RGIE/AREI-gecertificeerde</strong> organisatie zijn wij er trots op de kloof te overbruggen tussen wereldwijde innovatie en lokale regelgevingsexcellentie.</p><p>Onze staat van dienst omvat strategische samenwerkingen met industriereuzen zoals <strong>SUNGROW</strong> op grootschalige nutsbedrijfsprojecten voor <strong>Engie</strong> en <strong>Luminus</strong>, evenals het leveren van kritieke technische ondersteuning aan <strong>SINOMA CBMI</strong> voor het baanbrekende koolstofneutrale initiatief <strong>Holcim GO4ZERO</strong>. Actief in de gehele <strong>Benelux</strong>-regio blijven wij standvastig inzetten op veiligheid, transparantie en toekomstbestendige energieoplossingen.</p>"
     },
     "statistiques": {
       "clients": {
@@ -215,65 +374,25 @@
     }
   },
 
-  "section_projets": {
-    "_section": "Section présentant les projets récents",
+  "sectionprojets": {
+    "titre": { "en": "RECENT PROJECTS", "fr": "PROJETS RÉCENTS", "nl": "RECENTE PROJECTEN" },
+    "soustitre": {
+      "en": "Landmark energy infrastructure projects across Belgium",
+      "fr": "Projets d'infrastructure énergétique de référence en Belgique",
+      "nl": "Toonaangevende energie-infrastructuurprojecten in België"
+    }
+  },
+
+  "sectioncarrieres": {
     "titre": {
-      "en": "RECENT PROJECTS",
-      "fr": "PROJETS RÉCENTS",
-      "nl": "RECENTE PROJECTEN"
+      "en": "Careers",
+      "fr": "Carrières",
+      "nl": "Carrières"
     },
-    "sous_titre": {
-      "en": "Discover our latest projects",
-      "fr": "Découvrez nos derniers projets",
-      "nl": "Ontdek onze nieuwste projecten"
-    },
- "projet_1_Luminus": {
-      "titre": {
-        "en": "Luminus BESS Vilvoorde 660 MWh",
-        "fr": "Luminus BESS Vilvoorde 660 MWh",
-        "nl": "Luminus BESS Vilvoorde 660 MWh"
-      },
-      "description": {
-        "en": "The project provides full commissioning support for Luminus, including technical coordination, multi-party interface management and the mobilisation of external resources.",
-        "fr": "Le projet assure un support complet au commissioning pour Luminus, incluant la coordination technique, la gestion des interfaces multiparties et la mobilisation des ressources externes.",
-        "nl": "Het project biedt volledige commissioning-ondersteuning voor Luminus, inclusief technische coördinatie, multiparty-interfacebeheer en de inzet van externe resources."
-      }
-    },
-"projet_2_Engie": {
-      "titre": {
-        "en": "ENGIE BESS Vilvoorde 880 MWh",
-        "fr": "ENGIE BESS Vilvoorde 880 MWh",
-        "nl": "ENGIE BESS Vilvoorde 880 MWh"
-      },
-      "description": {
-        "en": "RENOMAN SPRL provides commissioning support on the ENGIE project.",
-        "fr": "RENOMAN SPRL fournit le support au commissioning sur le projet ENGIE.",
-        "nl": "RENOMAN SPRL biedt ondersteuning bij de commissioning op het ENGIE-project."
-      }
-    },
-    "projet_3_go4zero": {
-      "titre": {
-        "en": "GO4ZERO – Holcim’s Industrial Transformation and Decarbonization Project in Obourg",
-        "fr": "GO4ZERO – Projet de transformation industrielle et de décarbonation de Holcim à Obourg",
-        "nl": "GO4ZERO – Holcim’s industriële transformatie- en decarbonisatieproject in Obourg"
-      },
-      "description": {
-        "en": "GO4ZERO is Holcim’s flagship project to transform its cement plant in Obourg, Belgium into a net-zero facility by 2029, using a next-generation kiln combined with CO₂ capture and storage.",
-        "fr": "GO4ZERO est le projet phare de Holcim visant à transformer son usine de ciment d’Obourg (Belgique) en une installation zéro émission nette d’ici 2029, grâce à un nouveau four à haut rendement et à la capture et au stockage du CO₂.",
-        "nl": "GO4ZERO is het vlaggenschipproject van Holcim om de cementfabriek in Obourg (België) tegen 2029 om te vormen tot een net-nulinstallatie, met een geavanceerde nieuwe oven en CO₂-afvang en -opslag."
-      }
-    },
-    "projet_4_climate": {
-      "titre": {
-        "en": "HVAC Project – Heating, Ventilation and Air Conditioning Works",
-        "fr": "Projet HVAC – Travaux de chauffage, ventilation et climatisation",
-        "nl": "HVAC-project – Werken rond verwarming, ventilatie en airconditioning"
-      },
-      "description": {
-        "en": "The project involves the deployment of HVAC systems, for which RENOMAN SPRL provided the electrical installation and on-site wiring works.",
-        "fr": "Le projet comprend le déploiement de systèmes HVAC, pour lequel RENOMAN SPRL a réalisé les installations électriques et le câblage sur site.",
-        "nl": "Het project omvat de uitrol van HVAC-systemen, waarbij RENOMAN SPRL instond voor de elektrische installatie en bekabeling op de site."
-      }
+    "soustitre": {
+      "en": "Join a pioneering team at the forefront of Belgium's energy transition.",
+      "fr": "Rejoignez une équipe pionnière au cœur de la transition énergétique belge.",
+      "nl": "Sluit u aan bij een pioniersteam aan de voorhoede van de Belgische energietransitie."
     }
   },
 

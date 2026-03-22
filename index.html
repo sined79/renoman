@@ -37,7 +37,15 @@
     <!-- Canonical -->
     <link rel="canonical" id="canonicalUrl" href="https://www.renomansprl.com/">
     
+    <!-- styles et icones -->
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     
     <!-- Cookie banner scripts -->
     <link rel="stylesheet" id="silktide-consent-manager-css" href="cookie-banner/silktide-consent-manager.css">
@@ -57,7 +65,8 @@
         }],
         position: { banner: "bottomCenter" }
     });
-    </script>
+    </script>    
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -73,10 +82,10 @@
         </div>
         <nav class="nav container">
             <div class="nav__brand">
-                <div class="logo">
-                    <span class="logo__icon">⚡</span>
-                    <span class="logo__text">RENOMAN SRL</span>
-                </div>
+                <a href="#home" class="logo">
+                    <img src="logo_detoured.png" alt="RENOMAN SRL" class="logo__image"> 
+                    <span class="logo__text">RENOMAN</span>
+                </a>
             </div>
 
             <ul class="nav__menu">
@@ -109,12 +118,29 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero__content container">
+
+        <!-- VERSION A : vidéo qui s'arrête sur la dernière image -->
+        <!-- <video id="heroBg" class="hero-video" autoplay muted playsinline preload="auto">
+            <source src="background.mp4" type="video/mp4">
+        </video> -->
+
+        <!-- VERSION B : vidéo en boucle avec fondu enchaîné (décommente celle-ci) -->
+        <video id="heroBgA" class="hero-video hero-video--active" autoplay muted playsinline preload="auto">
+            <source src="background.mp4" type="video/mp4">
+        </video>
+        <video id="heroBgB" class="hero-video" muted playsinline preload="auto">
+            <source src="background.mp4" type="video/mp4">
+        </video>
+
+        <!-- Fallback overlay (conserve le fond sombre) -->
+        <div class="hero-video-overlay"></div>
+
+        <div class="hero-content container">
             <div class="hero__text">
                 <h1 class="hero__title" data-i18n="section_hero.titre_principal"></h1>
                 <p class="hero__subtitle" data-i18n="section_hero.sous_titre"></p>
                 <div class="hero__cta">
-                    <a href="#contact" class="btn btn--primary btn--lg" data-i18n="section_hero.bouton_audit"></a>
+                    <a href="#services" class="btn btn--primary btn--lg" data-i18n="section_hero.bouton_audit"></a>
                     <a href="#projects" class="btn btn--primary btn--lg" data-i18n="section_hero.bouton_projets"></a>
                 </div>
             </div>
@@ -123,41 +149,98 @@
 
     <!-- Services Section -->
     <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="section_services.titre"></h2>
-                <p class="section-subtitle" data-i18n="section_services.sous_titre"></p>
-            </div>
-            
-            <div class="services__grid">
-                <!-- Service Card 1: Energy Storage -->
-                <div class="service-card">
-                    <div class="service-card__icon">🔋</div>
-                    <h3 class="service-card__title" data-i18n="section_services.service_1_stockage.titre"></h3>
-                    <p class="service-card__description" data-i18n="section_services.service_1_stockage.description"></p>
-                    
-                    <a href="#contact" class="btn btn--primary" data-i18n="section_services.service_1_stockage.bouton_action"></a>
-                </div>
-                <!-- Service Card 2: Industrial Electrical -->
-                <div class="service-card">
-                    <div class="service-card__icon">⚙️</div>
-                    <h3 class="service-card__title" data-i18n="section_services.service_2_installation.titre"></h3>
-                    <p class="service-card__description" data-i18n="section_services.service_2_installation.description"></p>
-                    
-                    <a href="#contact" class="btn btn--primary" data-i18n="section_services.service_2_installation.bouton_action"></a>
-                </div>
+    <div class="container">
+        <div class="section-header">
+        <h2 class="section-title" data-i18n="sectionservices.titre">OUR SERVICES</h2>
+        <p class="section-subtitle" data-i18n="sectionservices.soustitre"></p>
+        </div>
+        <div class="services-flip-grid">
 
-                <!-- Service Card 3: Energy Optimization -->
-                <div class="service-card">
-                    <div class="service-card__icon">📊</div>
-                    <h3 class="service-card__title" data-i18n="section_services.service_3_optimisation.titre"></h3>
-                    <p class="service-card__description" data-i18n="section_services.service_3_optimisation.description"></p>
-                    
-                    <a href="#contact" class="btn btn--primary" data-i18n="section_services.service_3_optimisation.bouton_action"></a>
-                </div>
+        <!-- Service 1 -->
+        <div class="flip-card" data-service="service1" role="button" tabindex="0">
+            <div class="flip-card__inner">
+            <div class="flip-card__front">
+                <i data-lucide="shield-check" class="flip-card__icon"></i>
+                <h3 class="flip-card__title" data-i18n="sectionservices.service1.titre"></h3>
+                <span class="flip-card__hint" data-i18n="ui.flipHint">tap to discover</span>
+            </div>
+            <div class="flip-card__back">
+                <p class="flip-card__intro" data-i18n="sectionservices.service1.intro"></p>
+                <ul class="flip-card__bullets" data-i18n-bullets="sectionservices.service1.bulletsShort"></ul>
+                <button class="btn btn--outline-white flip-card__cta" data-service-detail="service1" data-i18n="ui.learnMore">Learn more</button>
+            </div>
             </div>
         </div>
+
+        <!-- Service 2 -->
+        <div class="flip-card" data-service="service2" role="button" tabindex="0">
+            <div class="flip-card__inner">
+            <div class="flip-card__front">
+                <i data-lucide="globe" class="flip-card__icon"></i>
+                <h3 class="flip-card__title" data-i18n="sectionservices.service2.titre"></h3>
+                <span class="flip-card__hint" data-i18n="ui.flipHint">tap to discover</span>
+            </div>
+            <div class="flip-card__back">
+                <p class="flip-card__intro" data-i18n="sectionservices.service2.intro"></p>
+                <ul class="flip-card__bullets" data-i18n-bullets="sectionservices.service2.bulletsShort"></ul>
+                <button class="btn btn--outline-white flip-card__cta" data-service-detail="service2" data-i18n="ui.learnMore">Learn more</button>
+            </div>
+            </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="flip-card" data-service="service3" role="button" tabindex="0">
+            <div class="flip-card__inner">
+            <div class="flip-card__front">
+                <i data-lucide="zap" class="flip-card__icon"></i>
+                <h3 class="flip-card__title" data-i18n="sectionservices.service3.titre"></h3>
+                <span class="flip-card__hint" data-i18n="ui.flipHint">tap to discover</span>
+            </div>
+            <div class="flip-card__back">
+                <p class="flip-card__intro" data-i18n="sectionservices.service3.intro"></p>
+                <ul class="flip-card__bullets" data-i18n-bullets="sectionservices.service3.bulletsShort"></ul>
+                <button class="btn btn--outline-white flip-card__cta" data-service-detail="service3" data-i18n="ui.learnMore">Learn more</button>
+            </div>
+            </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="flip-card" data-service="service4" role="button" tabindex="0">
+            <div class="flip-card__inner">
+            <div class="flip-card__front">
+                <i data-lucide="battery-charging" class="flip-card__icon"></i>
+                <h3 class="flip-card__title" data-i18n="sectionservices.service4.titre"></h3>
+                <span class="flip-card__hint" data-i18n="ui.flipHint">tap to discover</span>
+            </div>
+            <div class="flip-card__back">
+                <p class="flip-card__intro" data-i18n="sectionservices.service4.intro"></p>
+                <ul class="flip-card__bullets" data-i18n-bullets="sectionservices.service4.bulletsShort"></ul>
+                <button class="btn btn--outline-white flip-card__cta" data-service-detail="service4" data-i18n="ui.learnMore">Learn more</button>
+            </div>
+            </div>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="flip-card" data-service="service5" role="button" tabindex="0">
+            <div class="flip-card__inner">
+            <div class="flip-card__front">
+                <i data-lucide="chart-line" class="flip-card__icon"></i>
+                <h3 class="flip-card__title" data-i18n="sectionservices.service5.titre"></h3>
+                <span class="flip-card__hint" data-i18n="ui.flipHint">tap to discover</span>
+            </div>
+            <div class="flip-card__back">
+                <p class="flip-card__intro" data-i18n="sectionservices.service5.intro"></p>
+                <ul class="flip-card__bullets" data-i18n-bullets="sectionservices.service5.bulletsShort"></ul>
+                <button class="btn btn--outline-white flip-card__cta" data-service-detail="service5" data-i18n="ui.learnMore">Learn more</button>
+            </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
     </section>
+
+
 
     <!-- About Section -->
     <section id="about" class="about">
@@ -166,13 +249,11 @@
                 <div class="about__text">
                     <h2 class="section-title" data-i18n="section_a_propos.titre"></h2>
                     <div class="about__description">
-                        <p data-i18n="section_a_propos.paragraphe_1"></p>
-                        <p data-i18n="section_a_propos.paragraphe_2"></p>
-                        <p data-i18n="section_a_propos.paragraphe_3"></p>
+                        <div class="about__description" data-i18n-html="section_a_propos.contenu"></div>
                     </div>
                 </div>
                 
-                <div class="stats">
+                <!---<div class="stats">
                     <div class="stat-card">
                         <div class="stat-card__number">50+</div>
                         <div class="stat-card__label" data-i18n="section_a_propos.statistiques.clients"></div>
@@ -189,7 +270,7 @@
                         <div class="stat-card__number">24h</div>
                         <div class="stat-card__label" data-i18n="section_a_propos.statistiques.reponse"></div>
                     </div>
-                </div>
+                </div>--->
             </div>
         </div>
     </section>
@@ -198,46 +279,11 @@
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="section_projets.titre"></h2>
-                <p class="section-subtitle" data-i18n="section_projets.sous_titre"></p>
+            <h2 class="section-title" data-i18n="sectionprojets.titre">RECENT PROJECTS</h2>
+            <p class="section-subtitle" data-i18n="sectionprojets.soustitre"></p>
             </div>
-            
-            <div class="projects__grid">
-                <!-- Project 1: Vilvoorde -->
-                <div class="project-card">
-                    <div class="project-card__photo">
-                        <img src="projects/sungrow/Engie 1.jpg" alt="Vilvoorde BESS Project" class="project-photo" data-project="sungrow">
-                    </div>
-                    <div class="project-card__header">
-                        <h3 class="project-card__title" data-i18n="section_projets.projet_1_vilvoorde.titre"></h3>
-                    </div>
-                    <p class="project-card__description" data-i18n="section_projets.projet_1_vilvoorde.description"></p>
-                   
-                </div>
-
-                <!-- Project 2: GO4Zero -->
-                <div class="project-card">
-                    <div class="project-card__photo">
-                        <img src="projects/go4zero/go4zero-1.jpg" alt="GO4Zero Project" class="project-photo" data-project="go4zero">
-                    </div>
-                    <div class="project-card__header">
-                        <h3 class="project-card__title" data-i18n="section_projets.projet_2_go4zero.titre"></h3>
-                    </div>
-                    <p class="project-card__description" data-i18n="section_projets.projet_2_go4zero.description"></p>
-                   
-                </div>
-
-                <!-- Project 3: ClimateSolution -->
-                <div class="project-card">
-                    <div class="project-card__photo">
-                        <img src="projects/climatesolutions/climate-solutions-1.jpg" alt="ClimateSolution Project" class="project-photo" data-project="climatesolutions">
-                    </div>
-                    <div class="project-card__header">
-                        <h3 class="project-card__title" data-i18n="section_projets.projet_3_climate.titre"></h3>
-                    </div>
-                    <p class="project-card__description" data-i18n="section_projets.projet_3_climate.description"></p>
-                  
-                </div>
+            <div class="projects__grid" id="projectsGrid">
+            <!-- Cartes injectées dynamiquement par home.js -->
             </div>
         </div>
     </section>
@@ -272,6 +318,17 @@
                     <span class="client-logo__name">Ocean</span>
                 </a>
             </div>
+        </div>
+    </section>
+
+    <!-- Careers Section — injectée dynamiquement, masquée si aucun poste -->
+    <section id="careers" class="careers" style="display:none;">
+        <div class="container">
+            <div class="section-header">
+            <h2 class="section-title" data-i18n="sectioncarrieres.titre">CAREERS</h2>
+            <p class="section-subtitle" data-i18n="sectioncarrieres.soustitre"></p>
+            </div>
+            <div class="careers__grid" id="careersGrid"></div>
         </div>
     </section>
 
@@ -401,5 +458,8 @@
     </div>
 
     <script src="home.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>

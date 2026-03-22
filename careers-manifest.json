@@ -1,0 +1,146 @@
+{
+  "bess-engineer": {
+    "order": 1,
+    "open": true,
+    "titre": {
+      "en": "BESS Commissioning Engineer",
+      "fr": "Ingénieur Mise en Service BESS",
+      "nl": "BESS Inbedrijfstellingsingenieur"
+    },
+    "location": {
+      "en": "Belgium (Benelux)",
+      "fr": "Belgique (Benelux)",
+      "nl": "België (Benelux)"
+    },
+    "type": {
+      "en": "Full-time / Field",
+      "fr": "Temps plein / Terrain",
+      "nl": "Voltijds / Veld"
+    },
+    "teaser": {
+      "en": "Join our BESS integration team on landmark utility-scale projects across Belgium.",
+      "fr": "Rejoignez notre équipe d'intégration BESS sur des projets de référence à l'échelle nationale.",
+      "nl": "Sluit u aan bij ons BESS-integratieteam op toonaangevende utility-scale projecten in België."
+    },
+    "overview": {
+      "en": "As a BESS Commissioning Engineer at RENOMAN, you will be at the forefront of Belgium's energy transition, working on some of the largest battery storage installations in Europe. You will lead on-site commissioning of PCS, BMS, and EMS systems, ensuring full compliance with Elia and Synergrid grid-access requirements.",
+      "fr": "En tant qu'ingénieur mise en service BESS chez RENOMAN, vous serez au cœur de la transition énergétique belge, travaillant sur certaines des plus grandes installations de stockage par batterie d'Europe. Vous dirigerez la mise en service sur site des systèmes PCS, BMS et EMS.",
+      "nl": "Als BESS Inbedrijfstellingsingenieur bij RENOMAN staat u aan de voorhoede van de Belgische energietransitie, werkend aan enkele van de grootste batterijopslaginstallaties in Europa."
+    },
+    "responsibilities": {
+      "en": [
+        "On-site commissioning of PCS, BMS and EMS systems",
+        "SCADA integration, data validation and safety interlock testing",
+        "Technical liaison with Elia, Fluvius and Synergrid",
+        "Documentation of commissioning reports and compliance records"
+      ],
+      "fr": [
+        "Mise en service sur site des systèmes PCS, BMS et EMS",
+        "Intégration SCADA, validation des données et tests des verrouillages de sécurité",
+        "Interface technique avec Elia, Fluvius et Synergrid",
+        "Documentation des rapports de mise en service et des enregistrements de conformité"
+      ],
+      "nl": [
+        "On-site inbedrijfstelling van PCS, BMS en EMS-systemen",
+        "SCADA-integratie, datavalidatie en veiligheidsinterlockstests",
+        "Technische liaison met Elia, Fluvius en Synergrid",
+        "Documentatie van inbedrijfstellingsrapporten en complianceregisters"
+      ]
+    },
+    "profile": {
+      "en": [
+        "Degree in Electrical Engineering or equivalent",
+        "Experience with BESS, PV or industrial electrical systems",
+        "VCA and BA5 certifications (or willingness to obtain)",
+        "Fluent in English; French or Dutch is an asset",
+        "Autonomous, rigorous, with strong field presence"
+      ],
+      "fr": [
+        "Diplôme en génie électrique ou équivalent",
+        "Expérience avec les systèmes BESS, PV ou électriques industriels",
+        "Certifications VCA et BA5 (ou volonté de les obtenir)",
+        "Anglais courant ; le français ou le néerlandais est un atout",
+        "Autonome, rigoureux, avec une forte présence terrain"
+      ],
+      "nl": [
+        "Diploma in elektrotechniek of gelijkwaardig",
+        "Ervaring met BESS-, PV- of industriële elektrische systemen",
+        "VCA- en BA5-certificeringen (of bereidheid om te behalen)",
+        "Vloeiend Engels; Frans of Nederlands is een troef",
+        "Autonoom, nauwgezet, met sterke aanwezigheid in het veld"
+      ]
+    }
+  },
+  "regulatory-advisor": {
+    "order": 2,
+    "open": true,
+    "titre": {
+      "en": "Regulatory & Grid Compliance Advisor",
+      "fr": "Conseiller Réglementaire & Conformité Réseau",
+      "nl": "Regelgevings- & Netconformiteitsadviseur"
+    },
+    "location": {
+      "en": "Wezembeek-Oppem, Belgium",
+      "fr": "Wezembeek-Oppem, Belgique",
+      "nl": "Wezembeek-Oppem, België"
+    },
+    "type": {
+      "en": "Full-time / Hybrid",
+      "fr": "Temps plein / Hybride",
+      "nl": "Voltijds / Hybride"
+    },
+    "teaser": {
+      "en": "Shape Belgium's regulatory landscape for large-scale energy storage projects.",
+      "fr": "Façonnez le cadre réglementaire belge pour les projets de stockage d'énergie à grande échelle.",
+      "nl": "Vorm het Belgische regelgevingskader voor grootschalige energieopslagprojecten."
+    },
+    "overview": {
+      "en": "In this role, you will serve as RENOMAN's expert interface with Belgian grid operators and regulatory bodies. You will manage grid interconnection applications, ensure compliance with EU Grid Codes, and provide strategic advisory to international clients navigating the Belgian regulatory environment.",
+      "fr": "Dans ce rôle, vous serez l'interface experte de RENOMAN avec les gestionnaires de réseau et les organismes de réglementation belges. Vous gérerez les demandes de raccordement au réseau et fournirez des conseils stratégiques aux clients internationaux.",
+      "nl": "In deze rol bent u de deskundige interface van RENOMAN met Belgische netbeheerders en regelgevende instanties. U beheert netaansluitingsaanvragen en verleent strategisch advies aan internationale klanten."
+    },
+    "responsibilities": {
+      "en": [
+        "Manage grid interconnection dossiers with Elia, Fluvius, ORES and Synergrid",
+        "Develop and review SLDs, EI assessments and Battery Passport documentation",
+        "Advise clients on Belgian federal laws, EU Grid Codes (NC RfG) and C10/11",
+        "Support contract review for regulatory and technical compliance"
+      ],
+      "fr": [
+        "Gérer les dossiers de raccordement réseau avec Elia, Fluvius, ORES et Synergrid",
+        "Développer et réviser les schémas unifilaires, évaluations EI et documentation Battery Passport",
+        "Conseiller les clients sur les lois fédérales belges, les codes réseau UE (NC RfG) et C10/11",
+        "Soutenir la révision des contrats pour la conformité réglementaire et technique"
+      ],
+      "nl": [
+        "Beheer netaansluitingsdossiers bij Elia, Fluvius, ORES en Synergrid",
+        "Ontwikkel en beoordeel SLD's, EI-beoordelingen en Battery Passport-documentatie",
+        "Adviseer klanten over Belgische federale wetgeving, EU-netcodes (NC RfG) en C10/11",
+        "Ondersteuning bij contractbeoordeling voor regelgevende en technische compliance"
+      ]
+    },
+    "profile": {
+      "en": [
+        "Master's degree in Electrical Engineering, Energy Law or equivalent",
+        "Strong knowledge of Belgian grid regulations and EU energy directives",
+        "Experience with Elia/Synergrid interconnection processes",
+        "Excellent written and verbal communication in English and French or Dutch",
+        "Structured, detail-oriented with strong analytical mindset"
+      ],
+      "fr": [
+        "Master en génie électrique, droit de l'énergie ou équivalent",
+        "Solide connaissance des réglementations du réseau belge et des directives énergétiques de l'UE",
+        "Expérience avec les processus de raccordement Elia/Synergrid",
+        "Excellente communication écrite et verbale en anglais et en français ou néerlandais",
+        "Structuré, orienté détail avec un esprit analytique fort"
+      ],
+      "nl": [
+        "Master in elektrotechniek, energierecht of gelijkwaardig",
+        "Sterke kennis van Belgische netregelgeving en EU-energierichtlijnen",
+        "Ervaring met Elia/Synergrid-aansluitingsprocessen",
+        "Uitstekende schriftelijke en mondelinge communicatie in het Engels en Frans of Nederlands",
+        "Gestructureerd, detailgericht met een sterk analytisch denkvermogen"
+      ]
+    }
+  }
+}

@@ -1,23 +1,184 @@
 {
-  "sungrow": {
-    "folder": "projects/sungrow",
-    "images": [
-      "Engie 1.jpg",
-      "Engie 2.JPG",
-      "ENGIE 3 .JPG",
-      "IMG_6968.jpg"
-    ]
+  "engie": {
+    "order": 1,
+    "folder": "projects/engie",
+    "cover": "engie-1.jpg",
+    "images": ["engie-1.jpg", "engie-2.jpg", "engie-3.jpg", "engie-4.jpg"],
+    "titre": {
+      "en": "ENGIE Vilvoorde BESS — 880 MWh",
+      "fr": "ENGIE Vilvoorde BESS — 880 MWh",
+      "nl": "ENGIE Vilvoorde BESS — 880 MWh"
+    },
+    "teaser": {
+      "en": "One of Europe's largest BESS installations — core system integration & commissioning.",
+      "fr": "L'une des plus grandes installations BESS d'Europe — intégration système et mise en service.",
+      "nl": "Een van Europa's grootste BESS-installaties — systeemintegratie en inbedrijfstelling."
+    },
+    "highlights": {
+      "en": ["880 MWh", "Authorized Service Partner", "Core System Integration"],
+      "fr": ["880 MWh", "Partenaire Agréé", "Intégration Système"],
+      "nl": ["880 MWh", "Erkend Servicepartner", "Systeemintegratie"]
+    },
+    "overview": {
+      "en": "The ENGIE Vilvoorde project stands as one of the largest Battery Energy Storage Systems (BESS) in Europe, with a massive installed capacity of 880 MWh. This utility-scale installation is a strategic cornerstone for the Belgian power grid, providing essential frequency regulation and long-term energy security.",
+      "fr": "Le projet ENGIE Vilvoorde est l'une des plus grandes installations de stockage d'énergie par batterie (BESS) en Europe, avec une capacité installée de 880 MWh. Cette installation à l'échelle des services publics est un pilier stratégique pour le réseau électrique belge.",
+      "nl": "Het ENGIE Vilvoorde-project is een van de grootste Battery Energy Storage Systems (BESS) in Europa, met een geïnstalleerde capaciteit van 880 MWh. Deze utility-scale installatie is een strategische hoeksteen voor het Belgische elektriciteitsnet."
+    },
+    "stakeholders": {
+      "en": [
+        { "role": "Asset Owner", "name": "ENGIE — European Energy Leader" },
+        { "role": "Technology Provider", "name": "Sungrow — Global Leader in Inverters & Storage" },
+        { "role": "Integration & Commissioning", "name": "RENOMAN / RM ENERGY" }
+      ],
+      "fr": [
+        { "role": "Propriétaire de l'actif", "name": "ENGIE — Leader Énergétique Européen" },
+        { "role": "Fournisseur technologique", "name": "Sungrow — Leader mondial en onduleurs & stockage" },
+        { "role": "Intégration & Mise en service", "name": "RENOMAN / RM ENERGY" }
+      ],
+      "nl": [
+        { "role": "Activa-eigenaar", "name": "ENGIE — Europese Energieleider" },
+        { "role": "Technologieleverancier", "name": "Sungrow — Wereldleider in omvormers & opslag" },
+        { "role": "Integratie & Inbedrijfstelling", "name": "RENOMAN / RM ENERGY" }
+      ]
+    },
+    "contributions": {
+      "en": [
+        { "title": "Expert System Integration", "text": "Lead responsibility for on-site commissioning of PCS, BMS, and EMS, ensuring seamless logic communication across all architecture layers." },
+        { "title": "Advanced SCADA Interfacing", "text": "Executed complex SCADA integration, rigorous data validation, and exhaustive Safety Interlock testing to meet Elia's grid-access standards." },
+        { "title": "High-Standard Compliance & Safety", "text": "Fully certified VCA and BA5 team operated in high-voltage environments with 100% adherence to safety protocols." }
+      ],
+      "fr": [
+        { "title": "Intégration système experte", "text": "Responsabilité principale de la mise en service sur site des PCS, BMS et EMS, assurant une communication logique fluide sur toutes les couches d'architecture." },
+        { "title": "Interfaçage SCADA avancé", "text": "Intégration SCADA complexe, validation rigoureuse des données et tests exhaustifs des verrouillages de sécurité selon les normes d'accès réseau d'Elia." },
+        { "title": "Conformité & Sécurité", "text": "Équipe certifiée VCA et BA5 opérant en haute tension avec 100% de respect des protocoles de sécurité." }
+      ],
+      "nl": [
+        { "title": "Deskundige systeemintegratie", "text": "Hoofdverantwoordelijkheid voor on-site inbedrijfstelling van PCS, BMS en EMS, met naadloze logische communicatie over alle architectuurlagen." },
+        { "title": "Geavanceerde SCADA-interfacing", "text": "Complexe SCADA-integratie, rigoureuze datavalidatie en uitgebreide veiligheidsinterlockstests conform Elia's nettoegangsnormen." },
+        { "title": "Hoge compliance & veiligheid", "text": "Volledig VCA- en BA5-gecertificeerd team actief in hoogspanningsomgevingen met 100% naleving van veiligheidsprotocollen." }
+      ]
+    }
   },
+
+  "luminus": {
+    "order": 2,
+    "folder": "projects/luminus",
+    "cover": "luminus-1.jpg",
+    "images": ["luminus-1.jpg"],
+    "titre": {
+      "en": "Luminus Navagne BESS — 660 MWh",
+      "fr": "Luminus Navagne BESS — 660 MWh",
+      "nl": "Luminus Navagne BESS — 660 MWh"
+    },
+    "teaser": {
+      "en": "Full technical lifecycle management from installation to energized handover.",
+      "fr": "Gestion complète du cycle de vie technique, de l'installation à la mise sous tension.",
+      "nl": "Volledige technische levenscyclusbeheer van installatie tot energize-oplevering."
+    },
+    "highlights": {
+      "en": ["660 MWh", "Lifecycle Management", "PhD-Led Engineering"],
+      "fr": ["660 MWh", "Gestion Cycle de Vie", "Ingénierie PhD"],
+      "nl": ["660 MWh", "Levenscyclusbeheer", "PhD-engineering"]
+    },
+    "overview": {
+      "en": "The Luminus Navagne project (660 MWh) represents a critical pillar of the Belgian energy transition. This high-capacity installation demands exceptional construction precision, rigorous safety compliance, and flawless grid-synchronization performance.",
+      "fr": "Le projet Luminus Navagne (660 MWh) représente un pilier essentiel de la transition énergétique belge. Cette installation haute capacité exige une précision de construction exceptionnelle et une performance de synchronisation réseau irréprochable.",
+      "nl": "Het Luminus Navagne-project (660 MWh) is een cruciale pijler van de Belgische energietransitie, met een hoge capaciteitsinstallatie die uitzonderlijke bouwprecisie en vlekkeloze netsynchronisatieprestaties vereist."
+    },
+    "stakeholders": {
+      "en": [
+        { "role": "Asset Owner", "name": "Luminus — Belgium's 2nd Largest Energy Supplier" },
+        { "role": "Technology Provider", "name": "Sungrow — Global BESS Leader" },
+        { "role": "Local Technical Service Partner", "name": "RENOMAN / RM ENERGY" }
+      ],
+      "fr": [
+        { "role": "Propriétaire de l'actif", "name": "Luminus — 2e fournisseur d'énergie belge" },
+        { "role": "Fournisseur technologique", "name": "Sungrow — Leader mondial BESS" },
+        { "role": "Partenaire technique local", "name": "RENOMAN / RM ENERGY" }
+      ],
+      "nl": [
+        { "role": "Activa-eigenaar", "name": "Luminus — Belgisch 2e grootste energieleverancier" },
+        { "role": "Technologieleverancier", "name": "Sungrow — Mondiale BESS-leider" },
+        { "role": "Lokale technische servicepartner", "name": "RENOMAN / RM ENERGY" }
+      ]
+    },
+    "contributions": {
+      "en": [
+        { "title": "Multilateral Technical Interface", "text": "Pivotal technical bridge between Luminus, the EPC, and Sungrow — resolving cross-border discrepancies and managing on-site regulatory challenges." },
+        { "title": "Compliance Managed Services", "text": "European Technical Office model overseeing local supply chain logistics and ensuring all documentation met Belgian and EU industrial standards." },
+        { "title": "PhD-Led Technical Intelligence", "text": "Expert team led by PhD-level engineers managing complex data analytics and logical validation during the critical hot-commissioning phase." }
+      ],
+      "fr": [
+        { "title": "Interface technique multilatérale", "text": "Pont technique entre Luminus, l'EPC et Sungrow — résolution des écarts transfrontaliers et gestion des défis réglementaires sur site." },
+        { "title": "Services gérés de conformité", "text": "Modèle de Bureau Technique Européen supervisant la logistique locale et s'assurant que toute la documentation respecte les normes belges et UE." },
+        { "title": "Intelligence technique PhD", "text": "Équipe d'ingénieurs de niveau doctoral gérant l'analytique de données complexes lors de la phase critique de mise en service à chaud." }
+      ],
+      "nl": [
+        { "title": "Multilaterale technische interface", "text": "Technische brug tussen Luminus, de EPC en Sungrow — oplossing van grensoverschrijdende discrepanties en beheer van regelgevingsproblemen op locatie." },
+        { "title": "Compliance managed services", "text": "Europees Technisch Bureau-model voor lokale supply chain logistiek en naleving van Belgische en EU-industrienormen." },
+        { "title": "PhD-geleide technische intelligentie", "text": "Expertteam onder leiding van PhD-ingenieurs voor complexe data-analyse en logische validatie tijdens de kritieke heet-inbedrijfstellingsfase." }
+      ]
+    }
+  },
+
   "go4zero": {
+    "order": 3,
     "folder": "projects/go4zero",
-    "images": [
-      "go4zero-1.jpg"
-    ]
-  },
-  "climatesolutions": {
-    "folder": "projects/climatesolutions",
-    "images": [
-      "climate-solutions-1.jpg"
-    ]
+    "cover": "go4zero-1.jpg",
+    "images": ["go4zero-1.jpg"],
+    "titre": {
+      "en": "GO4Zero — World's First Net-Zero Cement Plant",
+      "fr": "GO4Zero — Première cimenterie zéro carbone au monde",
+      "nl": "GO4Zero — 's Werelds eerste netto-nul cementfabriek"
+    },
+    "teaser": {
+      "en": "Holcim's €500M+ carbon-neutral flagship — cross-border regulatory & electrical engineering.",
+      "fr": "Projet phare de Holcim à +500M€ — ingénierie réglementaire et électrique transfrontalière.",
+      "nl": "Holcim's €500M+ vlaggenschip — grensoverschrijdende regelgeving & elektrotechniek."
+    },
+    "highlights": {
+      "en": ["€500M+ Investment", "China-EU Bridge", "100% Audit Success"],
+      "fr": ["Investissement +500M€", "Pont Chine-UE", "100% Audits réussis"],
+      "nl": ["€500M+ investering", "China-EU-brug", "100% auditssucces"]
+    },
+    "overview": {
+      "en": "The Holcim GO4ZERO initiative is the world's first net-zero cement plant equipped with advanced carbon capture technology. With a total investment exceeding €500 million, it stands as Europe's flagship project for heavy industry decarbonization.",
+      "fr": "L'initiative Holcim GO4ZERO est la première cimenterie zéro émission nette au monde, équipée d'une technologie avancée de capture du carbone. Avec un investissement total dépassant 500 millions d'euros, c'est le projet phare de l'Europe pour la décarbonation de l'industrie lourde.",
+      "nl": "Het Holcim GO4ZERO-initiatief is 's werelds eerste netto-nul cementfabriek met geavanceerde koolstofafvangtechnologie. Met een totale investering van meer dan €500 miljoen is het Europa's vlaggenschipproject voor de decarbonisatie van de zware industrie."
+    },
+    "stakeholders": {
+      "en": [
+        { "role": "Asset Owner", "name": "Holcim Group — Global Leader in Building Solutions" },
+        { "role": "Lead EPC Contractor", "name": "SINOMA CBMI — International Infrastructure Giant" },
+        { "role": "Strategic Compliance Partner", "name": "RENOMAN / RM ENERGY" }
+      ],
+      "fr": [
+        { "role": "Propriétaire de l'actif", "name": "Holcim Group — Leader mondial en matériaux de construction" },
+        { "role": "Entrepreneur EPC principal", "name": "SINOMA CBMI — Géant international de l'infrastructure" },
+        { "role": "Partenaire stratégique en conformité", "name": "RENOMAN / RM ENERGY" }
+      ],
+      "nl": [
+        { "role": "Activa-eigenaar", "name": "Holcim Group — Wereldleider in bouwoplossingen" },
+        { "role": "Hoofd EPC-aannemer", "name": "SINOMA CBMI — Internationale infrastructuurgigant" },
+        { "role": "Strategische compliance-partner", "name": "RENOMAN / RM ENERGY" }
+      ]
+    },
+    "contributions": {
+      "en": [
+        { "title": "Cross-Border Strategic Advisor", "text": "Core liaison between the Chinese contractor, Belgian governmental authorities, top-tier legal firms, and tax offices — navigating regulatory bottlenecks for large-scale infrastructure." },
+        { "title": "Compliance & Risk Mitigation", "text": "Spearheaded defense against Social Dumping risks, managed complex VAT compliance, and oversaw international labor regulations. 100% success in Belgian Ministry of Labor audits." },
+        { "title": "Industrial Electrical & Technical Alignment", "text": "Managed industrial-scale electrical works and led technical communications with RGIE/AREI, Synergrid, and Elia to harmonize international EPC standards with local requirements." }
+      ],
+      "fr": [
+        { "title": "Conseiller stratégique transfrontalier", "text": "Interface principale entre le contractant chinois, les autorités gouvernementales belges, les cabinets juridiques et les offices fiscaux." },
+        { "title": "Conformité & Gestion des risques", "text": "Défense contre les risques de dumping social, gestion de la conformité TVA et supervision des réglementations internationales du travail. 100% de succès aux audits du Ministère belge du Travail." },
+        { "title": "Alignement électrique & technique industriel", "text": "Gestion des travaux électriques industriels et communications techniques avec RGIE/AREI, Synergrid et Elia pour harmoniser les normes EPC internationales." }
+      ],
+      "nl": [
+        { "title": "Grensoverschrijdende strategisch adviseur", "text": "Kern-liaison tussen de Chinese aannemer, Belgische overheidsinstanties, topjuridische firma's en belastingkantoren." },
+        { "title": "Compliance & risicobeheer", "text": "Verdediging tegen Sociale Dumping-risico's, complexe BTW-compliance en toezicht op internationale arbeidsregelgeving. 100% succes bij audits van het Belgisch Ministerie van Arbeid." },
+        { "title": "Industriële elektrische & technische afstemming", "text": "Beheer van industriële elektrische werkzaamheden en technische communicatie met RGIE/AREI, Synergrid en Elia." }
+      ]
+    }
   }
 }
