@@ -951,6 +951,26 @@ function addCareersNavLink() {
   } else {
     nav.appendChild(li);
   }
+
+  // ---- Footer ----
+  // Cherche le lien Contact dans le footer pour insérer avant lui
+  var footerContactLink = document.querySelector('.footer__links a[href="#contact"], .footerlinks a[href="#contact"]');
+  if (footerContactLink && !document.getElementById('footer-link-careers')) {
+    var footerLi = document.createElement('li');
+    footerLi.id = 'footer-link-careers';
+    footerLi.innerHTML = '<a href="#careers">' + label + '</a>';
+
+    footerLi.querySelector('a').addEventListener('click', function(e) {
+      e.preventDefault();
+      var target = document.getElementById('careers');
+      if (!target) return;
+      var headerHeight = document.querySelector('.header').offsetHeight;
+      var top = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+
+    footerContactLink.closest('li').before(footerLi);
+  }
 }
 
 
